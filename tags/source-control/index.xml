@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Source Control on edd&#39;s Blog</title>
+    <link>https://eduuh.github.io/tags/source-control/</link>
+    <description>Recent content in Source Control on edd&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jan 2020 04:39:02 +0300</lastBuildDate>
+    
+	<atom:link href="https://eduuh.github.io/tags/source-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitLens Visual Studio code Extension</title>
+      <link>https://eduuh.github.io/posts/gitlens/</link>
+      <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/gitlens/</guid>
+      <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
+    </item>
+    
+  </channel>
+</rss>

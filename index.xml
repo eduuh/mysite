@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>edd&#39;s Blog</title>
+    <link>https://eduuh.github.io/</link>
+    <description>Recent content on edd&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jan 2020 04:39:02 +0300</lastBuildDate>
+    
+	<atom:link href="https://eduuh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitLens Visual Studio code Extension</title>
+      <link>https://eduuh.github.io/posts/gitlens/</link>
+      <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/gitlens/</guid>
+      <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
+    </item>
+    
+    <item>
+      <title>Entity FrameWork Core</title>
+      <link>https://eduuh.github.io/books/dera/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduuh.github.io/books/dera/</guid>
+      <description>This is a Java reference implementation of dynamic event-driven actors runtime aiming at providing adequate abstraction levels and mechanisms for modelling and developing (distributed) event-based systems. DERA leverages the intrinsic loose coupling of event-driven communication styles to support various kinds of run-time evolution and adaptation (i.</description>
+    </item>
+    
+    <item>
+      <title>About Edds Blog</title>
+      <link>https://eduuh.github.io/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduuh.github.io/about/</guid>
+      <description>Introduction A blog where i i will be writing on the following Technologies.
+ React React Native Dotnet core Linux Terminal  Maintainer A Self Taught Developer : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University</description>
+    </item>
+    
+  </channel>
+</rss>
