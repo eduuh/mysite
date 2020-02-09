@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.57.2" />
+
+    
+    
+    
+
+<title>Javascript deep Dive , Understanding the basic concepts • edd&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Javascript deep Dive , Understanding the basic concepts"/>
+<meta name="twitter:description" content="Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer."/>
+
+<meta property="og:title" content="Javascript deep Dive , Understanding the basic concepts" />
+<meta property="og:description" content="Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eduuh.github.io/posts/jsupandgoing/" />
+<meta property="article:published_time" content="2020-02-08T08:13:40+03:00" />
+<meta property="article:modified_time" content="2020-02-08T08:13:40+03:00" /><meta property="og:site_name" content="edds blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.7f2ff0da12985062cce77921cfa2cd509bc7a5da996ef422e3dd815e400f592c.css" integrity="sha256-fy/w2hKYUGLM53khz6LNUJvHpdqZbvQi492BXkAPWSw=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class="theme-base-09 layout-reverse">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://eduuh.github.io/">edd&#39;s Blog</a>
+      </span>
+      
+        
+      
+      
+      <p class="site__description">
+         Writing on everything about technology 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">edd&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Articles</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/books/">
+						<span>Books Reads</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/eduuhmuraya" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/eduuh" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/eduuhmuraya" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/edwin" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:edwinkamaumuraya0@gmail.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 @edwin
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Javascript deep Dive , Understanding the basic concepts</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 8, 8080
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/js">JS</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/programming">PROGRAMMING</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/backend">backend</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/frontend">frontend</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 11 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+
+<h2 id="javascript-deep-dive-tutorial">Javascript deep dive tutorial</h2>
+
+<p>This note are inspired by <code>KYLE SIMPSON</code> javascrip book series. I like how the ideas in the book are shared.
+I have being doing c# for the backend and to complete my journey for becoming a <code>full stack developer</code>.
+I needed to do alot of javascript, so immediately i started using typescript for my web development and i would say the experience with typescript is supper great. I was reading up on &lsquo;react&rsquo; and realized the documentation is not in <code>typescript</code>, and decided to do some research and answer the question</p>
+
+<p><code>when should i use typescript?</code> read the <a href="https://www.freecodecamp.org/news/when-should-i-use-typescript-311cb5fe801b">Alex blog</a> about the topic.</p>
+
+<p>I wount go into the detail of when i should use typescript. That could be a subject for another post. Being a student i have alot time to learn
+so i decide to at least spend some time learning javascript in a deep way to try and understand commonly misunderstood concepts. Hope you code along me when performing this examples.</p>
+
+<h3 id="up-and-going">Up and Going</h3>
+
+<p>In this deep dive you will learn about:
+1. Webstandards
+2. Sematic markup
+3. Well commented code</p>
+
+<p>The code isn&rsquo;t just your Job anymore, its your craft</p>
+
+<p>we will be intrested with javascript <code>syntax</code> and <code>understanding the terminology</code>. You already know javascript to be the foundation of <code>interactive expriences on the web</code>. I have come to understand that javascript is one of the easiest language to get started with, i had let the typescript advertisement get to me. I dont say typescript is not awesome , but it is transpiled to javascript eventually.
+The trouble with <code>javascript</code> is that is can be used without understanding how the internal works, the understanding of language is never attained.</p>
+
+<h4 id="we-get-answers-of-how-and-why">We get Answers of How and why</h4>
+
+<p>The language behave the way it does but before that let me promote the language first</p>
+
+<ul>
+<li>Javascript is awesome.</li>
+<li>Javascript is easy to learn and much harder to learn completely</li>
+</ul>
+
+<p>When we developers encounters confusion we usually tend to blame the language instead of their lack of understanding.</p>
+
+<h4 id="when-i-say-javascript-what-to-i-mean">when i say javascript what to i mean?</h4>
+
+<p>Yes! a programming language with a specific <code>syntax</code> used to write the <code>source code</code>.</p>
+
+<ol>
+<li>Syntax -&gt; the rule for valid format and combination of instructions.</li>
+<li>Source code -&gt; A set of instructions to tell the computer what task to perform.</li>
+</ol>
+
+<h4 id="statements">Statements</h4>
+
+<p>A group of words , numbers  and operators that performs a specific task . Example</p>
+
+<pre><code class="language-Js">a = b * 3;
+
+</code></pre>
+
+<ol>
+<li>3 -&gt; literal value</li>
+<li>a &amp; b are variables (sybolic placeholders for the values themselves.</li>
+</ol>
+
+<p>Most Javascript statements ends with a semicolon ; at the end.</p>
+
+<p>Programs are usually just a collection of many such statements which together describe all the steps.</p>
+
+<h4 id="expressions">Expressions</h4>
+
+<p>An expression is any reference to a variable or value , or a set of variables and values combined with operators.</p>
+
+<p>let take the above example</p>
+
+<pre><code class="language-JS">   a = b *3;
+</code></pre>
+
+<p>The above statement contains four expressions in it.</p>
+
+<ol>
+<li>2 -&gt; literal value</li>
+<li>b -. variable expression (used to retrieve its current value</li>
+<li>b * 3 -&gt; arithmetic expression which in this case its (multiplication)</li>
+<li>a = b * 3 -&gt; assignment oxpressions (assings the result of b * 3 to a )</li>
+</ol>
+
+<h4 id="executing-a-program">Executing a Program</h4>
+
+<p>Executiong is also refered to as <code>running the program</code>.</p>
+
+<p>statement like <code>a = b * 3</code> are good for developers to read and write code but not very uselful to the computer. A special utility on the computer can
+either be an <code>interpreter or a  compiler</code> is used to translate the code you write into command that computer can understand..</p>
+
+<p>Translation is done ahead of time is called <code>compiling code</code> so whe the program run later what is runnind is actually the compiled source code.
+Javascript is interpreted because your Js code is processed each time it&rsquo;s runs. This is not completely accurate since the JS engine actually compiles
+programm on the fly and then immediately runs the compied code.</p>
+
+<h4 id="output">Output</h4>
+
+<pre><code class="language-JS">  console.log( a );
+  // using the dom api
+  alert( a );
+</code></pre>
+
+<h4 id="input">Input</h4>
+
+<p>Receivind information from the users most common is to use html elememt like a text boxes to the user that she can type into and then JS to read those
+values.</p>
+
+<pre><code class="language-JS">
+ age = prompt ( 'please tell me your age' );
+
+</code></pre>
+
+<h4 id="operators">Operators</h4>
+
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Examples of Operators</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1. Mathematical operators</td>
+<td>+ , - , / , *</td>
+</tr>
+
+<tr>
+<td>2. Assignement operators</td>
+<td>a = 3</td>
+</tr>
+
+<tr>
+<td>3. Compound assignment</td>
+<td>+= , -= , and  /=  ie a +=2</td>
+</tr>
+
+<tr>
+<td>4. Increment /decrement</td>
+<td>++ (increment ) , &ndash;(decrement ) a++</td>
+</tr>
+
+<tr>
+<td>5. Equality operators</td>
+<td>==(loose equals) ,  ==== (strict equals) != (loose not equals) ,  !== (strict not equal)</td>
+</tr>
+
+<tr>
+<td>6. Comparison operators</td>
+<td>&lt; (less than ) , &gt; (greater than) , &lt;=(less than or loose equals )</td>
+</tr>
+
+<tr>
+<td>7. Logical operators</td>
+<td>&amp; (and) ,</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="values-and-types">Values and Types</h4>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>values examples</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>numbers</td>
+<td>45, 4, 35, 33, 555.45,</td>
+</tr>
+
+<tr>
+<td>strings</td>
+<td>&ldquo;Edwin&rdquo; , &lsquo;Muraya&rsquo;</td>
+</tr>
+
+<tr>
+<td>boolean</td>
+<td>true , false</td>
+</tr>
+</tbody>
+</table>
+
+<p>Combination of the Types and Values form <code>arrays and Objects</code>.</p>
+
+<h4 id="coersion-between-types">Coersion Between types.</h4>
+
+<p>This can be done explictly or implicit.</p>
+
+<h4 id="code-comments">Code comments</h4>
+
+<p>The choices you make about how to write program that works correctly but programs that make sense when examined.
+Code comments are bits of text in your program that inserted purely explains things to a human being reading your code.</p>
+
+<p>The interpreter/ compiler will ingnore these comments.
+A general guideline to writing comments in the code.</p>
+
+<ol>
+<li>code without comments is suboptimal</li>
+<li>Too many comments is probably a sign of poorly written code.</li>
+<li>Comment should explain why not what .</li>
+</ol>
+
+<p>types of comments</p>
+
+<pre><code class="language-Js">
+// single line comments
+
+/* multi line 
+     comments 
+          */
+
+</code></pre>
+
+<h4 id="variables-containers">Variables (containers)</h4>
+
+<p>Holds a specific type of a value. JS uses dynamic typing meaning variables can holds value of any type without any type enforment.</p>
+
+<pre><code class="language-JS">  var amount = 99.99;
+  amount = amount * 3;
+  console.log( amount );
+
+  amount = &quot;$&quot; + String( amount );
+  console.log( amount );
+
+</code></pre>
+
+<p>Amount holds a running value that changes ove the course of the program. Primary purpose of the variables is to manage the state of the
+application. (program state management).</p>
+
+<p><code>const</code> -&gt; useful just like variables with unchanged values except that constant also prevent accidentally changing value initially set.</p>
+
+<h4 id="block">Block</h4>
+
+<p>A group or a series of statement together which we often call a block. {}</p>
+
+<pre><code class="language-JS">{
+  amount = amount * 2;
+  console.log( amount );
+}
+</code></pre>
+
+<p>Blocks are usualyy attached to some other control statements such as an if statement.</p>
+
+<pre><code class="language-JS">var amount = 99.99;
+if( amount &gt; 10 ){
+   amount = amount * 2;
+   console.log( amount );
+   }
+
+</code></pre>
+
+<h4 id="conditionals">Conditionals</h4>
+
+<pre><code class="language-JS"> var bank_balance = 302.12;
+ var amount = 99.99;
+ if( amount &lt; bank_balance){
+    console.log(' I want to bu this &quot;);
+    }
+    else {
+     console.log( 'No thanks' );
+     }
+
+</code></pre>
+
+<p>Other conditionals include the Switch statement.</p>
+
+<h4 id="loops">Loops</h4>
+
+<p>Repeats a set of conditions until a certain condition fails, repeats only when condition holds.</p>
+
+<p>A loop includes a condition check as wells as a bloc of statements and each time a loop block executs , it called a <code>interation</code> .</p>
+
+<p>example</p>
+
+<pre><code class="language-Javascript"> // while loop code
+ while( numofCustomer &gt; 0) {
+    console.log('how may i help you?');
+    numofCustomer -=1; 
+    }
+ // do loop code
+ do{
+   console.log( 'how may i help you');
+   numberofCustomer = numberofCustomer - 1;
+   } while(numberofCustomer &gt; 0);
+</code></pre>
+
+<p>If condition is false , a while loop will not run but a do while loop will run just for the first time.</p>
+
+<p>The condition is tested on each iteration and you could use <code>break</code> statement to stop a loop.</p>
+
+<p>Example of another loop is the For loop.</p>
+
+<pre><code class="language-Js">for( var i = 0; i &lt; 9; i=i+1) {
+   console.log( i );
+   }
+</code></pre>
+
+<p>the loop contains the following.</p>
+
+<ol>
+<li>initialization clause var i = 0</li>
+<li>conditional test clause   i&lt;9</li>
+<li>update clause i=i + 1O</li>
+</ol>
+
+<h3 id="transpiling">Transpiling</h3>
+
+<p>There&rsquo;s no way to polyfill new syntax that been added to the language. The new syntax would throw an error in the old JS engine os recognisezed/invalid.
+The better option is to use a tool that convert your newer code into older equivalents.A process called &ldquo;transpiling&rdquo; a term for transforming + compiling.</p>
+
+<p>Your source code is authored in the new syntax form, but what is deploy to the browser is the transpiled code in old syntax form.
+The transpiler is inserted to your buil process, similar to your code linter or your minifier. Then why would you write new syntax only to have it
+transpiled away to older code- why not just write the older code directly?</p>
+
+<blockquote>
+<p>some reasons for this are
+1. The new syntax added to language is designed to make your code more readable and maintainable. You would prefer writing new syntax not only for
+yourselve but also for your development team.
+2. If you transpile only for older browsers, but serve the new syntax to the newest browsers, you get to take advantage of browser perfomance optimization
+with the new syntax. This also lets browser makes have more real-world code to test their implementations and optimizations on.
+3. New syntax allows it to be tested more robustly in the real world , which provides earlier feedback to the Javascript committee.</p>
+</blockquote>
+
+<pre><code class="language-Javascript">// ES6  code
+function foo( a = 2 ){
+  console.log( a );
+  }
+
+foo( ); // prints 2
+foo(5); //prints 5
+
+// transpiled to the code below
+function foo() {
+  var a = arguments[0] !==(void 0) ? arguments[0] : 2;
+  console.log( a );
+}
+
+</code></pre>
+
+<p>As you see it checks to see if the arguments[0] value is void 0 (aka undefined) and if so provides the 2 default value; otherwise, it assigns whatever was
+passed. Transpilers should now be thought of as a standar part of the JS developmend ecosystem and process. JS is going to continue to evolve, much more
+quickly than before, so every few months new syntax and new features will be added.</p>
+
+<blockquote>
+<p>Examples of transpilers for you to choose from. Here are good ones to try.</p>
+</blockquote>
+
+<ol>
+<li>BABEl
+
+<ul>
+<li>Transpiles ES6+ into ES5</li>
+</ul></li>
+<li>Traceur
+
+<ul>
+<li>Transpiles ES6 , ES7 and beyound into ES5</li>
+</ul></li>
+</ol>
+
+<h4 id="non-javascript">Non-JavaScript</h4>
+
+<p>The reality of this language is written to run in and interact with environments like browsers. A good chunk of the stuff that you write in your code is,
+strictly speaking, not directly controlled by Javascript. That probably sounds a little strange. A good example is the Dom Api for example.</p>
+
+<pre><code class="language-Js"> var el = document.getElementByID('foo');
+
+</code></pre>
+
+<p>The <code>document</code> varible exist as a <code>global variable</code> when your code is running in the browser. It&rsquo;s not provided by the Js engine, nor is
+it particulary controlled by the Javascript specification. It takes the form of something that looks an awful lot like a normal JS object, but it&rsquo;s not really exactly that. It&rsquo;s a special object, often called a <code>host object</code>.</p>
+
+<p>The getElementByID(..) method on document looks like a normal JS function, but it&rsquo;s just a thinly exposed interface to built-in method provided by the DOM
+from your browser. In newer browser the layer my be in JS but in older browser the layer is in <code>c/c++</code>.</p>
+
+<p>Another example could be the input/output (I/O).
+The <code>alert()</code> pops us a message box in the user&rsquo;s browser window. alert() is provided to your JS program by the browser, not by the JS engine itself.
+The call you make sends the message to the browser internals and it handles drawind and displayind the message box.</p>
+
+<p>The same goes to <code>console.log()</code> your browser provides such mechanisms and hooks them up to the developers tools.</p>
+
+<h4 id="review">Review</h4>
+
+<p>The first step to learning Js flavor of programming is to get a basic understanding ot its core mechanisms like :
+   1. values
+   2. types
+   3. function
+   4. closure
+   5. this
+   6. prototypes.</p>
+
+<p>Serious developers in other languages expect to put the effort to learn most of all of the language(s) they primarily write in, but JS developers
+seem to stant out from the crowd in the sence of typically not learning very much of the language. This is not a good thing, and it&rsquo;s not something
+we should continue to allow to be the norm.</p>
+
+<p>At this moment, am going to ask you guys.</p>
+
+<p>Are you up for the challenge, or do you want to learn the most minimum of js to get you started in code?</p>
+
+<p>Here is my answer, i would love to invest my time know to learn the internal of js and be able to answer the why question in code.</p>
+
+<p>So let go into it.</p>
+
+<p>we are going to go in this order and what we will cover in each step.</p>
+
+<ol>
+<li><p>Scope and Closures</p>
+
+<ul>
+<li>how scoping of variables really works in javascript.</li>
+<li>common misconceptions that js is an &lsquo;interpreted language&rsquo; and therefore not compiled.</li>
+<li>Deeper understanding of the compiler approach, how to find and deal with variables and functions declarations.</li>
+<li>Scope management (hoisting)</li>
+<li>lexical scope and closure as the main important concept of js
+<br /></li>
+</ul></li>
+
+<li><p>this and Object prototypes.</p>
+
+<ul>
+<li>Understant the this keyword and common mistakes.</li>
+<li>Prototype behaviour pattern, behaviour delegation</li>
+</ul></li>
+
+<li><p>type &amp; Grammar</p>
+
+<ul>
+<li>Type coersion. implicit coercion and explicit coersion.</li>
+<li>What part of coeasion make complete sense if given the time to learn. do you want to keep following what the crowds say or are you willing to
+set all the assumptions aside and look at coersion with a fresh perspective.</li>
+</ul></li>
+
+<li><p>Async &amp; Performance</p>
+
+<ul>
+<li>Asynchrony programming in not only critical to the performance of our applications , it&rsquo;s increasingly becoming the critical factor in writabiliy
+and maintainability.</li>
+<li>callbacks</li>
+<li>inversion of control.</li>
+<li>promises and generators.</li>
+<li>Parallelism with Web workers techniques.</li>
+<li>Performance optimization.</li>
+</ul></li>
+
+<li><p>ES6 &amp; Beyond</p>
+
+<ul>
+<li>Destructuring</li>
+<li>default paremeter values,</li>
+<li>symbols</li>
+<li>concise methods</li>
+<li>Computed properties</li>
+<li>arrow functions</li>
+<li>block scoping</li>
+<li>promises</li>
+<li>generators</li>
+<li>iterators</li>
+<li>Modules</li>
+<li>proxies</li>
+<li>weakmaps</li>
+</ul></li>
+</ol>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/jsargorithms/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">JavaScript Algorithm and Data Structures</span>
+    </a>
+    
+    
+    <a href="/posts/gitlens/" class="navigation-next">
+      <span class="navigation-tittle">GitLens Visual Studio code Extension</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

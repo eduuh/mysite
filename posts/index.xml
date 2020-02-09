@@ -6,7 +6,7 @@
     <description>Recent content in Posts on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Jan 2020 20:40:22 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
     
 	<atom:link href="https://eduuh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://eduuh.github.io/posts/gitlens/</guid>
       <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
+    </item>
+    
+    <item>
+      <title>Javascript deep Dive , Understanding the basic concepts</title>
+      <link>https://eduuh.github.io/posts/jsupandgoing/</link>
+      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/jsupandgoing/</guid>
+      <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer.</description>
     </item>
     
     <item>
