@@ -38,5 +38,14 @@
       <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size and also assuming the worst case scenario.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://eduuh.github.io/posts/neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/neovim/</guid>
+      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
+    </item>
+    
   </channel>
 </rss>

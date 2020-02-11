@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.57.2" />
+
+    
+    
+    
+
+<title> • edd&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&rsquo;s vim&rsquo;s killer feature."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&rsquo;s vim&rsquo;s killer feature." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eduuh.github.io/posts/neovim/" />
+<meta property="og:site_name" content="edds blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.7f2ff0da12985062cce77921cfa2cd509bc7a5da996ef422e3dd815e400f592c.css" integrity="sha256-fy/w2hKYUGLM53khz6LNUJvHpdqZbvQi492BXkAPWSw=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class="theme-base-09 layout-reverse">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://eduuh.github.io/">edd&#39;s Blog</a>
+      </span>
+      
+        
+      
+      
+      <p class="site__description">
+         Writing on everything about technology 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">edd&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Articles</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/books/">
+						<span>Books Reads</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/eduuhmuraya" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/eduuh" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/eduuhmuraya" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/edwin" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:edwinkamaumuraya0@gmail.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 @edwin
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1></h1>
+    
+    
+<div class="post__meta">
+    
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 10 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+
+<h2 id="modern-vim">Modern vim</h2>
+
+<p>Vim is ubiquitous. It runs on most computers, and many systems have vim
+installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&rsquo;s vim&rsquo;s killer feature.</p>
+
+<p>An an open source project vim is in good health. Bug fixes and new features are being developed continuously. On many systems, the version of vim that&rsquo;s installed by default is out of date, but you can enjoy the latest features by upgrading to vim 8.</p>
+
+<p>Version 8 of vim was released in September 2016. It introduced some new
+features that am writing about in this post.</p>
+
+<h3 id="what-is-neovim">What is NeoVim</h3>
+
+<p>Neovim is a community-run fork of vim that can be used as a drop-in replacemenfor vim. It supports all of the same features vim 8 offers and more. Therefore
+<code>vim 8</code> and <code>neovim</code> are interchangeable.</p>
+
+<p>The main goal ares:</p>
+
+<pre><code>to make the editor more hackable.
+Introducing a new plugin architucture
+sharing responsibility for the codebase with the community.
+</code></pre>
+
+<p><strong>Vim 8</strong> and <strong>Neovim</strong> follow different conventios on where to keep their
+configuration files. Vim 8 typically place them in the ~/.vim directory.
+whereas Neovim uses the ~/.config/nvim directory. This are important details,
+but it would get distracting if I mentioned them every time I referenced a
+runtime file.</p>
+
+<p>To avoid this problem , we&rsquo;ll refer to certain files and directories using
+environment variables. $MYVIMRC , $VIMCONFIG and $VIMDATA. when you see:</p>
+
+<ol>
+<li>$VIMCONFIG    =&gt; interprete to ~/.vim  or   ~/.config/nvim on neovim</li>
+</ol>
+
+<h3 id="other-software-requirements">Other Software Requirements</h3>
+
+<ol>
+<li>JavaScript, Node.js and Npm</li>
+</ol>
+
+<p>All examples will be illustrated using this technologies. Dont worry if you
+are not all things go Js you can still follow along.</p>
+
+<ol>
+<li>Bash shell (or Any other Shell)</li>
+</ol>
+
+<p>Feel feel to use any other shell you love i.e fish, zsh.</p>
+
+<ol>
+<li><p>Git
+We will use git commands such as clone, init and commit, You&rsquo;ll need an up to date installation of Git. You can find instruction online for installing git in your system.</p></li>
+
+<li><p>Ripgrep
+The ripgrep tool by Andrew gallant makes a couple of appearances. Much like
+grep, the primary purpose of Ripgrep is to search files for a pattern.Ripgrep
+also have a neat bonus feature: running <code>ripgrep --files</code> lists all the files beneath the current working directory, minus those that are ignored by your
+version control system.</p></li>
+</ol>
+
+<p>Depending on which platform you&rsquo;re using, you may be able to install ripgrep
+using your package manager. If that doesn&rsquo;t work, look at the realease page on
+github.</p>
+
+<h4 id="notation-for-simulating-vim-on-the-page">Notation for Simulating vim on the Page</h4>
+
+<p>Ctrl-s is a common convention for representing chordal key commands. It means
+&ldquo;when holding down the CTRl key, press the S key&rdquo;. This is not enough to show
+vim key combinations.</p>
+
+<p>we use the</p>
+
+<ol>
+<li>Playing Melodies</li>
+</ol>
+
+<p>In normal Mode, commands are composed by typing one or more keystrokes in
+sequence. These commands appeas as follows.</p>
+
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>x</td>
+<td>Press X once</td>
+</tr>
+
+<tr>
+<td>dw</td>
+<td>In sequence , press d, then w</td>
+</tr>
+
+<tr>
+<td>dap</td>
+<td>In sequece , press d, a, then p</td>
+</tr>
+</tbody>
+</table>
+
+<p>Most of these sequences involve two or three keystrokes, but some are longer.
+Deciphering the meaning of Vim&rsquo;s normal mode commands sequences can be challenging, but you&rsquo;ll get butter at if will practice.</p>
+
+<h4 id="playing-chords">Playing Chords</h4>
+
+<p>When you see a command like <code>&lt;C-p&gt;</code>. The nortation is equivalent to Ctrl-p,
+which means &ldquo;While holding the ctrl key, press the p key.</p>
+
+<p>Some vim&rsquo;s commands are formed by combining chords and keystrokes in sequence, and this notation handles them well. consider these examples.</p>
+
+<p>|Notation             | Meaning                  |
+|<c-n>                | while holding Ctrl press n |
+|g<c-]>               | press g, then while holding ctrl press ]|
+|<c-r>0               | while holding Ctrl press r, then release ctrl and press 0|
+|<c-w><c-=>           | while holding ctrl press w then = |</p>
+
+<h4 id="placeholders">Placeholders</h4>
+
+<p>Many of vim&rsquo;s commands require two or more keystrokes to be entered in sequence. Some commands must be followed by a paticular kind of keystroke, while other commands can be followed by any key on the keyboard. I use curly braces to
+denote the sed of valid keystrokes that can follow a command.</p>
+
+<p>Here are some examples.</p>
+
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>f{char}</td>
+<td>Press f, followed by any other character</td>
+</tr>
+
+<tr>
+<td>`{a-z}</td>
+<td>Press `, followed by any lowercase letter.</td>
+</tr>
+
+<tr>
+<td>m{a-zA-Z}</td>
+<td>press m, followed by any lowercase or uppercase letters</td>
+</tr>
+
+<tr>
+<td>d{motion}</td>
+<td>press d, followed by any motion command</td>
+</tr>
+
+<tr>
+<td><c-r>{register}</td>
+<td>while holding ctrl press r, then release ctrl and press the address of a register.</td>
+</tr>
+
+<tr>
+<td><c-v>{nondigit}</td>
+<td>while holding ctrl press v, then release ctrl and press any nondigit key.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="showing-special-keys">Showing special keys</h4>
+
+<p>Some keys are called by name. This table shows a selection of them:
+|Notation            | Meaning                 |
+|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|<br />
+|<esc>               | press the Escape key    |
+|<CR>                | press the carriage return key( Enter)|
+|<Tab>               | press the tab key       |
+|<s-Tab>             | while holding shift press tab|
+|<M-j>               | while holding meta press j |
+|<up>                | press the up arrow key    |
+|<Down>              | press the down arrow key |
+|<Space>    | press the space bar |
+|<Leader>g  | In sequence, press <Leader> then g |</p>
+
+<p>Note that the Meta key goes by other names such as ALT and Option.</p>
+
+<h4 id="the-leader-key">The Leader Key</h4>
+
+<p>The <leader> key can be customized to suit your preference. The default
+<Leader> key is \, but lots of people prefer to set it to the , key You can set the leader key by putting this in your vimrc file:</p>
+
+<p>I have mapped my vimrc to the spacekey</p>
+
+<pre><code>        let mapleader = ','
+</code></pre>
+
+<p>When you see the <Leader>g notation, you can translate the meaning to <space>g
+or whatever your configuration is.</p>
+
+<h4 id="interating-with-the-command-line">Interating with the command Line</h4>
+
+<p>Inside of vim , pressing the : key swithes from Normal mode to Command-line mode. In this mode, you can type out Ex commands such as :write and :quit, using
+the <cr> key to execute the command.</p>
+
+<p>The : prompt indicate that the command are to be executed using vim command line mode:</p>
+
+<pre><code> :s/cool/awesome/g
+ :write
+</code></pre>
+
+<p>Any time you see an Ex command listed inline, such as :write, assume that the
+<CR> key is pressed to execute the command. Nothing happens otherwise so
+consider <CR> to be implicit.</p>
+
+<p>In neovim you can run a shell inside of a terminal buffer, using the :terminal command.</p>
+
+<p>The &gt;&gt; promt indicate that the commands are to be executed in a shell within a terminal buffer:</p>
+
+<pre><code>&gt;&gt; cat readme.md
+&gt;&gt; top
+</code></pre>
+
+<h6 id="summary-of-all-the-prompts-available">Summary of all the prompts available.</h6>
+
+<p>| Prompt             | Meaning                       |
+| :  | Use Command-line mode to execute an Ex command|
+| $  | enter the command line in an external shell |
+| &gt;&gt; | Enter the command line in an internal shell (within a terminal buffer)|</p>
+
+<h4 id="installing-neovim-remote">Installing neovim-remote</h4>
+
+<p>Neovim-remote is a tool that lets you control Neovim processes remotely. It
+depends on thu python 3 Neovim client , so make sure you have that installed
+befor thes neovim-remote install</p>
+
+<p>$ pip3 install &ndash;user &ndash;upgrade neovim-remote</p>
+
+<p>The packages is called neovim-remote but the excutable is abbreviated to nvr.</p>
+
+<p>check is it is installed okey by running the following.</p>
+
+<p>$ nvr -h</p>
+
+<h4 id="installing-plugins-to-neovim">Installing Plugins to Neovim</h4>
+
+<p>Plugins adds new functionalit to vim. You&rsquo;ll use plugins throughout this post.you need to be able to install them in your command line. Historically vim&rsquo;s
+built-in support for installing plugins has been poor, so the vim communinity responded by creating plugin managers. However, since version 8, vim&rsquo;s package feature has made it easy to install plugins without relying on a plugin manager.</p>
+
+<h4 id="understanding-script-plugins-and-packages">Understanding Script, plugins and packages.</h4>
+
+<p>Packages are new features in vim8 that make it easy to mange your plugins.
+A package is a directory that contains one or more plugins. In turn a plugin
+is a directory that contains one or more scripts, and a script is a standalone file containing instructions written in Vim Script.</p>
+
+<h4 id="script-add-functionality-to-vim">Script Add Functionality to vim</h4>
+
+<p>A script is a standalone file containnig instructions written in vim script that adds new functinality to vim. Here&rsquo;s a simple script that defines a function, command, and a Normal mode mapping:</p>
+
+<p>Your vimrc file is one of the first scripts to be loaded, which makes it the
+ideal place to write your startup configuration.</p>
+
+<h4 id="plugins-make-it-easy-to-organize-and-share-scripts">plugins Make it Easy to Organize and Share Scripts</h4>
+
+<p>If you write a script that could be useful to other vim Users, you might like
+to turn it into a plugin. That simply means creating a directory with the name
+you want to give your plugin, then moving your script into a plugin subdirectory within.</p>
+
+<p>Vim has conventions on how the subdirectories within a plugin should be named.
+Depending on what a does, it might contains scripts within subdirectories
+named ftplugin, indent , syntax , among others. when a plugin is installed, Vim automatically sources the script it find in these subdirectories.</p>
+
+<p>Installing a plugin means adding it ot vims &lsquo;runtimepath&rsquo;</p>
+
+<pre><code>:set runtimepath+=$VIMCONFIG/arbitrary/demo-plugin
+</code></pre>
+
+<h4 id="packages-organize-and-load-your-plugins">Packages Organize and Load Your Plugins</h4>
+
+<p>A package is a directory that contains one or more plugins. By conventions,
+you create package with a $VIMCONFIG/pack directory. Your package should contain a subdirectory called start, which is where you install the plugin that you
+want to load when vim starts up.</p>
+
+<p>You can create as many packages as you like. you might create a plugin call it
+<code>bundle</code> where you install plugin written by other people.</p>
+
+<p>You might create another package called myplugins where you keep the plugins
+that you maintain by yourself.</p>
+
+<p>when vim launches , is searches for plugins under the <code>$VIMCONFIF/pack/*/start/ directory. Any plugin found there are addeg to the</code>runtimepath`.</p>
+
+<h4 id="indexing-the-documentation-for-installed-plugins">Indexing the Documentation for installed Plugins</h4>
+
+<p>When you add a plugin to one of your packages, all you need to do to start
+using that plugin is restart vim.But if you want to consult the documentation
+for a newly installed plugin, you have to do more thing: index its documentation . You do this with the :helptags command.</p>
+
+<p>Vim&rsquo;s documentation is written is a plaintext format that includes simple markup for defining <em>anchor</em> and <em>hyperlinks</em> .</p>
+
+<pre><code>:help user-manual
+</code></pre>
+
+<h4 id="installing-an-optional-plugin">Installing an Optional plugin</h4>
+
+<p>Some plugin are for everyday use, while others may come in hangy only
+occasionally. Vim&rsquo;s package can contain optional plugins, which you can load when needed. Let&rsquo;s install the Scriptease plugin this way. this plugin provides extra functionality that is useful whel developing vim script files.</p>
+
+<p>Start by creating an opt subdirectory in the bundle package, and then clone the plugin to that directory:</p>
+
+<pre><code>mkdir -p $VIMCONFIG/pack/bundle/opt
+cd !$
+git clone https://github.com/tpope/vim-scriptease.git
+</code></pre>
+
+<p>The optinal package is loaded with the :packadd and it will be available lntil vim quits. Next time you launch vim, the opitonal plugin won&rsquo;t be loaded.</p>
+
+<pre><code>:packadd vim-scriptease
+</code></pre>
+
+<h4 id="updating-plugins-in-your-package">Updating plugins in Your package</h4>
+
+<p>plugins, like all software are never complete. there will be bug fixes, new features and general imporvements. If you want to run the latest version of a plugin, you&rsquo;ll nee to update if from time to time.</p>
+
+<p>Installing plugin with Git means that you can easily update to the latest version by running git pull:</p>
+
+<pre><code>$ cd ~/.config/nvim/pack/start/vim-unimpaired
+$ git pull
+$ cd ~/.config/nvim/pack/bundle/opt/vim-scriptease
+$ git pull
+</code></pre>
+
+<p>As you install more plugin , the prospect of doing this by hang for each plugin
+become unappealing. You could automate the process by wirting a shell script.</p>
+
+<h4 id="managing-plugins-with-minpac">Managing plugins with minpac</h4>
+
+<p>Minpac is a minimal plugin manager that builds on tog of vim&rsquo;s new packages features. With minpac, you can easily install plugins, keep them up to date, and
+unistall them.</p>
+
+<h4 id="opening-files">Opening Files</h4>
+
+<p>Opening files is one of the most common tasks you perform when coding. vim&rsquo;s build-in functionality give you basic commands for opening any readable file by
+specifyilg its filepath. Tab-completion can save you from typing every character of a filepath, but you may still eng up using a lot of keystrokes to locate the files you want.</p>
+
+<h4 id="finding-files-using-fuzzy-path-matching">Finding Files using Fuzzy Path Matching</h4>
+
+<p>You can rely on Vim&rsquo;s built-in :edit {filepath} command for opening any file on your file system. We are going to untilize a fuzzy finder to reduce the number of keys typed.</p>
+
+<h4 id="preperations">Preperations</h4>
+
+<p>Vim users are spoild for choice whenn it come to fuzzy finder plugins. In this we will use Junegunn choi&rsquo;s exceleend fzf tool.</p>
+
+<p>This consist of two parts: a standalon fzf program, which you can run in your shell and a vim plugin, which depends upon the external program.</p>
+
+<h5 id="installing-and-configuiring-fzf">Installing and Configuiring fzf</h5>
+
+<p>You can instal the fzf repository to your bundle package like this:</p>
+
+<pre><code>$ cd ~/.config/nvim/pack/bundle/start
+# git clone https://github.com/junegunn/fzf
+</code></pre>
+
+<p>Not only does this repository include a simple vim plugin (which you&rsquo;ve now
+installed but is also contains source code for building the fzf executable. Run
+this command to install the executable in the repository bin directory.</p>
+
+<pre><code>$ ~/config/nvim/pack/bundle/start/fzf/install -bin
+</code></pre>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/posts/jsargorithms/" class="navigation-next">
+      <span class="navigation-tittle">JavaScript Algorithm and Data Structures</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>
