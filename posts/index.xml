@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>GitLens Visual Studio code Extension</title>
-      <link>https://eduuh.github.io/posts/gitlens/</link>
-      <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
-      
-      <guid>https://eduuh.github.io/posts/gitlens/</guid>
-      <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
-    </item>
-    
-    <item>
       <title>Javascript deep Dive , Understanding the basic concepts</title>
       <link>https://eduuh.github.io/posts/jsupandgoing/</link>
       <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
@@ -39,7 +30,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Understandint vim in an Expert Level</title>
       <link>https://eduuh.github.io/posts/neovim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
