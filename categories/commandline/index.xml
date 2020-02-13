@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CommandLine on edd&#39;s Blog</title>
+    <link>https://eduuh.github.io/categories/commandline/</link>
+    <description>Recent content in CommandLine on edd&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://eduuh.github.io/categories/commandline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understandint vim in an Expert Level</title>
+      <link>https://eduuh.github.io/posts/neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/neovim/</guid>
+      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>GitLens Visual Studio code Extension</title>
-      <link>https://eduuh.github.io/posts/gitlens/</link>
-      <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
-      
-      <guid>https://eduuh.github.io/posts/gitlens/</guid>
-      <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
-    </item>
-    
-    <item>
       <title>Javascript deep Dive , Understanding the basic concepts</title>
       <link>https://eduuh.github.io/posts/jsupandgoing/</link>
       <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
@@ -36,6 +27,15 @@
       
       <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
       <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size and also assuming the worst case scenario.</description>
+    </item>
+    
+    <item>
+      <title>Understandint vim in an Expert Level</title>
+      <link>https://eduuh.github.io/posts/neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/neovim/</guid>
+      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
     </item>
     
     <item>
@@ -55,15 +55,6 @@
       <guid>https://eduuh.github.io/about/</guid>
       <description>Introduction A blog where i i will be writing on the following Technologies.
  React React Native Dotnet core Linux Terminal  Maintainer A Self Taught Developer : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://eduuh.github.io/posts/neovim/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduuh.github.io/posts/neovim/</guid>
-      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
     </item>
     
   </channel>
