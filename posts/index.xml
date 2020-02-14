@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Errors I Faced and How I Solve Them</title>
+      <link>https://eduuh.github.io/posts/errorsfaced/</link>
+      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      
+      <guid>https://eduuh.github.io/posts/errorsfaced/</guid>
+      <description>Errors Faced and How I solved Them Dotnet core 1. Ominisharp Not Starting Ominisharp provides crossplatform .Net development. Yes i was using Linux on this one. OmniSharp is a family of Open Source projects, each with one goal: To enable a great .</description>
+    </item>
+    
+    <item>
       <title>JavaScript Algorithm and Data Structures</title>
       <link>https://eduuh.github.io/posts/jsargorithms/</link>
       <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
