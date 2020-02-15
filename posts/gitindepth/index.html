@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.57.2" />
+
+    
+    
+    
+
+<title>Advanced git • edd&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Advanced git"/>
+<meta name="twitter:description" content="This is my first time am running this workshop.I will start will a short demo on the command line.This will introduce the new material to you, and I will explain what I am doing as I go along ."/>
+
+<meta property="og:title" content="Advanced git" />
+<meta property="og:description" content="This is my first time am running this workshop.I will start will a short demo on the command line.This will introduce the new material to you, and I will explain what I am doing as I go along ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eduuh.github.io/posts/gitindepth/" />
+<meta property="article:published_time" content="2020-02-15T12:41:53+03:00" />
+<meta property="article:modified_time" content="2020-02-15T12:41:53+03:00" /><meta property="og:site_name" content="edds blog" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.6f3a0e6c4c65c3e9787b99df5513a1fbd09aa5733de9ecd2a219c50afba579c8.css" integrity="sha256-bzoObExlw&#43;l4e5nfVROh&#43;9CapXM96ezSohnFCvulecg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class="theme-base-09 layout-reverse">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://eduuh.github.io/">edd&#39;s Blog</a>
+      </span>
+      
+        
+      
+      
+      <p class="site__description">
+         Writing on everything about technology 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">edd&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Articles</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/books/">
+						<span>Books Reads</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/eduuhmuraya" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/eduuh" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/eduuhmuraya" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/edwin" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:edwinkamaumuraya0@gmail.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2020 @edwin    Writing Code is not a job, its My craft
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Advanced git</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 15, 15150
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/git">GIT</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/github">GITHUB</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/source-control">SOURCE CONTROL</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/git">git</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/commandline">commandline</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 10 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+
+<p>This is my first time am running this workshop.I will start will a short demo on the command line.This will introduce the new material to you, and I will explain what I am doing as I go along . After a bit we will have some exercise for you to practise what we were going through.</p>
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+<li>command Line that support unix style commands</li>
+<li>git version &gt; 2.0 (check with git &ndash;version)</li>
+<li>github.com account</li>
+<li>clone</li>
+</ul>
+
+<p>Are we all good at these requirements.</p>
+
+<p>I know when we learn git we memorize 6 command  the rest of git is usually a <code>black box</code> that we don&rsquo;t explore.</p>
+
+<p>Today we are going to go a <code>lot deeper to git</code> away from this
+basic commands:</p>
+
+<pre><code> // my assumption is you are familiar with this commands   
+1. git clone
+2. git push
+3. git fetch
+4. git push -f (when thing get tough)
+5. git init
+6. git commit
+</code></pre>
+
+<p>But if you are not famialiar with the above commands. Please bare with me, this are usually common conceps we can bare go anyware without them. When we came across them i will explain to you what they do.</p>
+
+<p>I felt this way untill i decided its time to level up a little bit.</p>
+
+<p>Most of the time we as git use feel git this way.!!
+<img src="./../../static/gitfeeling.png" alt="gitfeeling" /></p>
+
+<p>Its a sad place to be. Are you exited to not do this anymore!?</p>
+
+<p>I will try to get you out of this by using git the right way.</p>
+
+<p>Before you delete you could decide to look up some manual page for git online and this is what you might get.</p>
+
+<p>WAT?</p>
+
+<p><img src="./../../static/gitmanual.png" alt="git manual" /></p>
+
+<p>The <strong>SYNOPSIS</strong>  WTH does it mean??
+&gt; git refers to its self as <strong>A stupid content tracker</strong> funny
+  But this depents on how your use case.</p>
+
+<h4 id="take-home">Take home.</h4>
+
+<p>By understanding what is going on in git. People use git for
+different use cases. You should try to use the idea from
+this workshop and incoporate them to your workflows.</p>
+
+<p>I have divided this workshop into sections , and after each sections. Am going to give an exercise which you will attempt. And then we are going to them together.</p>
+
+<p>Lets focus more on doing and understanding the theory. This is what i mean. Instead of writing down the notes focus on trying out the <strong>commands</strong>. You have all these notes with you.</p>
+
+<p>Git is a tool to helps you,but not  work against you.</p>
+
+<h3 id="overview">Overview</h3>
+
+<h4 id="section-1-part-1">Section 1: Part 1</h4>
+
+<ol>
+<li>What is Git?</li>
+<li>Working with Area, staging area ,Repository</li>
+<li>Staging Area Deep Dive</li>
+<li>References, commits ,Branches</li>
+<li>Stashing</li>
+</ol>
+
+<h4 id="section-2-part-2">Section 2: Part 2</h4>
+
+<ol>
+<li>Merging + Rebasing</li>
+<li>History + Diffs</li>
+<li>Fixing Mistakes</li>
+<li>Rebase</li>
+<li>Forks, Remote Repositories</li>
+</ol>
+
+<h4 id="section-3-part-3">Section 3: Part 3</h4>
+
+<ol>
+<li>The Danger zone (how you could mess things up)</li>
+<li>Advanced tools</li>
+<li>Customizations: - configs, Ignore, Hooks, Templates</li>
+<li>Social git : intergrating Github with CI tools.</li>
+<li>Advanced Github: working with github api.</li>
+</ol>
+
+<h2 id="why-use-the-command-line">WHY USE THE COMMAND LINE?</h2>
+
+<blockquote>
+<p>Dont get me wrong here. here are some of my thoughts.</p>
+</blockquote>
+
+<h4 id="too-much-automation-as-a-hinderance-to-learning">Too much Automation as a hinderance to learning !!</h4>
+
+<p>This is the best time to be a software developer. Tools are
+now geered to automation which make our lifes as <code>dev</code> easy.
+but i think to much automation bring us to stead state. Where
+we can`t progress the learning proceess. Our human nature loves
+the easier way out and we get to a state we are more relient on
+the tools and not mastering the fundamentals.</p>
+
+<p><code>This is one of the reason i stoped using visual studio</code>.</p>
+
+<p>They are many tools out there that help it automation of git
+to the most advanced stuff for you under the hood. Going down
+to this road means you are never going to understand <code>git internal</code> and you will be sort of relient to the gui tools for
+their automation. <code>Trust me when mistakes rise</code> you will be left into the dust by your automation tools.</p>
+
+<h4 id="we-are-not-going-to-use-any-graphical-tools-here">We are not going to use any graphical tools here.</h4>
+
+<p>I want you to learn the <code>fundamentals</code> and we are going to use git how it was designed to be used.</p>
+
+<p><code>lets get started.</code></p>
+
+<h3 id="how-does-git-store-information">How does git store information</h3>
+
+<blockquote>
+<p>At its core, git is like a key value store.</p>
+</blockquote>
+
+<ul>
+<li>The <strong>Value</strong> = <strong>DATA</strong></li>
+<li>The <strong>Key</strong> = <strong>Hash of the Data</strong></li>
+</ul>
+
+<p>You can then use the key to retrieve the content.</p>
+
+<h3 id="the-key-sha1">The Key - (SHA1)</h3>
+
+<blockquote>
+<p>Its a crytographic hash function</p>
+
+<p>Given a piece of data , it produces a 40- digit hexadecimal number.</p>
+
+<p>This value should always be the same if the given input it the same</p>
+</blockquote>
+
+<h3 id="the-value-git-blobs">The Value - Git blobs</h3>
+
+<ul>
+<li><p>git stores the <strong>compressed</strong> data in a blob, along with the
+metadata in a header.</p></li>
+
+<li><p>the identifer <strong>blob</strong></p></li>
+
+<li><p>the size of the content</p></li>
+
+<li><p>\0 delimeters</p></li>
+
+<li><p>content</p></li>
+</ul>
+
+<h3 id="under-the-hood-git-hash-object-blob">Under the hood - Git hash object (blob)</h3>
+
+<p>Asking git for the SHA1 of content.</p>
+
+<pre><code>$ echo 'hello' | git hash-object --stdin
+
+$ ce013625030ba8dba906f756967f9e9ca394464a
+</code></pre>
+
+<p><strong>Try this and you will get the above same output.</strong></p>
+
+<p>There are many tools to generate generate <code>sha1</code> keys. For my system
+i believe its <code>openssl</code>.</p>
+
+<p>Generating the <code>SHA1</code> of the content with <code>metadata</code>:</p>
+
+<pre><code>$ echo 'blob 14\0'hello' | openssl sha1
+(stdin)= c6df3e4881a3d16c8bf544ff119151a5dbb8bb26
+</code></pre>
+
+<p>When you run the hash function on the same content you will always get the same result.</p>
+
+<p>When we do a :</p>
+
+<pre><code>$ git init 
+Initialized empty Git repository in /home/edd/test/.git/
+</code></pre>
+
+<p>The git repository is initialized in the <code>.git</code> folder.
+when you delete this folder you actually <code>blow up</code> the repository, but you <strong>code files are retains</strong>.</p>
+
+<h4 id="where-are-the-blob-stored">Where are the <code>blob</code> stored ?</h4>
+
+<p>lets run the above command for asking git to generate a
+sha1 key for our content but this time we want to write the
+object to the git repo. we pass <code>-w</code> which means its write.</p>
+
+<pre><code>$ # This generate a blob 
+$  echo 'hello' | git hash-object -w --stdin
+ce013625030ba8dba906f756967f9e9ca394464a
+
+$ # let remove hooks folder. we dont get confused
+$ rm -rf .git/hooks/
+$ tree .git
+.git
+    ├── branches
+    ├── config
+    ├── description
+    ├── HEAD
+    ├── info
+    │   └── exclude
+    ├── objects
+    │   ├── ce
+    │   │   └── 013625030ba8dba906f756967f9e9ca394464a
+    │   ├── info
+    │   └── pack
+    └── refs
+    ├── heads
+    └── tags
+</code></pre>
+
+<p>What go you notice ? (<strong>ce013625030ba8dba906f756967f9e9ca394464a</strong>)</p>
+
+<ol>
+<li>Our blob is stored in the object folder.</li>
+<li>Inside a subfolder which picks the first two char of the blob <code>(ce)</code></li>
+<li>The blob object os the rest of the chars (013625030ba8dba906f756967f9e9ca394464a)</li>
+</ol>
+
+<p>Because of this behaviour our blob will always be same. I don&rsquo;t know a case of two different content that generate the same blob.</p>
+
+<h4 id="lets-do-this-step-by-step">Lets do this step by step</h4>
+
+<ol>
+<li><p>Lets start by creating an empty directory.</p>
+
+<pre><code>$ mkdir gitobject
+$ cd gitobject
+</code></pre></li>
+
+<li><p>We create a new git repository using <code>git init</code> command</p>
+
+<pre><code>$ git init
+Initialized empty Git repository in /home/edd/gitobject/.git/
+</code></pre></li>
+</ol>
+
+<p>This command creates a <code>.git</code> directory, which is where git stores all informations. if you delete everything in the git repository you can build back your repository.</p>
+
+<p>The command here creates a few other empty directory for us. If you have never used the <code>.git</code> directory before lets start now.</p>
+
+<pre><code>    $ ls .git   # ll .git to get more info
+
+    $ # ll .git  #same as  (ls -la)
+    drwxr-xr-x 7 edd eduuh 4096 Feb 15 19:45 ./
+    drwxr-xr-x 3 edd eduuh 4096 Feb 15 19:45 ../
+    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 branches/
+    -rw-r--r-- 1 edd eduuh   92 Feb 15 19:45 config
+    -rw-r--r-- 1 edd eduuh   73 Feb 15 19:45 description
+    -rw-r--r-- 1 edd eduuh   23 Feb 15 19:45 HEAD
+    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 hooks/
+    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 info/
+    drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 objects/
+    drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 refs/
+   
+   $ rm -rf .git/hooks   # remove the hook folder
+   $ tree .git/
+    .git/
+    ├── branches
+    ├── config
+    ├── description
+    ├── HEAD
+    ├── info
+    │   └── exclude
+    ├── objects
+    │   ├── info
+    │   └── pack
+    └── refs
+        ├── heads
+        └── tags
+
+    8 directories, 4 files
+</code></pre>
+
+<ol>
+<li><p>What we have are the above directories and files. Lets create
+some files in our repository.</p>
+
+<pre><code>&gt; Storing individual files with the hash object.
+$ echo 'an awesome deep dive to git' &gt; learn.txt
+$ git hash-object -w learn.txt
+b8956fb060e39ac48d4ad69cc6402c13ed38f7aa
+</code></pre></li>
+
+<li><p>The <code>hash-object</code> command takes a path to a file, reads its content and saves the content of the file into a <code>Git object store</code>. It return a hex string <code>**(the ID of the object it just
+created.) If we look in</code>.git/object` we can see something with
+the same name.</p>
+
+<pre><code>$ find .git/object/ -type f   # f -&gt; file
+.git/objects/b8/956fb060e39ac48d4ad69cc6402c13ed38f7aa
+  
+</code></pre></li>
+</ol>
+
+<p>We&rsquo;ve created our first object! This object is a binary file that holds what we just saved.</p>
+
+<p>You’ll see the first two characters are a directory name. A typical repo has thousands of objects, so Git breaks up objects into subdirectories to avoid any one directory becoming too large.</p>
+
+<p>The <code>object ID</code> is choosen based on the <code>content</code> of the object.This is how git stores our object - the content of the
+object determines its ID. The techincal name for this is <code>content-addressable filesystem</code>.</p>
+
+<ol>
+<li><p>This means that if we try to save the file a second time, because content are the same nothing changes.</p>
+
+<pre><code>$ git hash-object -w learn.txt
+
+</code></pre></li>
+
+<li><p>Retrieve objects with the <code>cat-file</code>.</p>
+
+<pre><code>$ git cat-file -p b8956fb060e39ac48d4ad69cc6402c13ed38f7aa
+
+</code></pre></li>
+</ol>
+
+<p>The  <code>cat-file</code> is used to inspect objects stored in git. The <code>p</code> flag stands for <code>pretty text</code>. It pretty print the content of the object.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<p>These are some exercise to get used to the idea of storing to and
+retrieving files from git objects store.</p>
+
+<ol>
+<li>&gt; create a new directory, and initialize it.</li>
+<li>&gt; look inside the .git folder. make sure you indetify folders and files</li>
+<li>&gt; use a text editor or the command line to create multiple files and write some text to it.</li>
+<li>&gt; use git hash function to generate the <code>sha1</code> hash and save the object to the git object store.</li>
+<li>&gt; Use git command to inspect the object in the database.</li>
+</ol>
+
+<p>Repeat exercise 3 &amp; 5 a couple of times.</p>
+
+<ol>
+<li><blockquote>
+<p>make an edit to your file, then save the new version  to
+git object store. what go you see in <code>.git/object</code>.</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>Delete a file then recreate it with the object store.</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>what if you save two files with the same content , but different file names. What do you see in the <code>.git/objects</code> ?
+what do you expect to see.?</p>
+</blockquote></li>
+</ol>
+
+<h3 id="useful-commands">Useful commands</h3>
+
+<p><code>mkdir &lt;path&gt;</code></p>
+
+<pre><code>create a directory
+</code></pre>
+
+<p><code>git init</code></p>
+
+<pre><code>initialize Git in the current directory
+</code></pre>
+
+<p><code>ls .git</code></p>
+
+<pre><code>list the content of the .git directory
+</code></pre>
+
+<p><code>find .git/objects/ -type -f</code></p>
+
+<pre><code>list the files present in `.git/objects
+</code></pre>
+
+<p><code>git hash-object -w &lt;path&gt;</code></p>
+
+<pre><code>save the files to a git object store.
+</code></pre>
+
+<p><code>git cat-file -p &lt;object id&gt;</code></p>
+
+<pre><code>pretty print the content of the object in the git object store
+</code></pre>
+
+<h3 id="notes">Notes</h3>
+
+<p>A brief recap of the exercises: steps 1-5 are repeating what we just did earlier.</p>
+
+<p>In exercise 6, you see that git creates an entirely new object</p>
+
+<pre><code>$ echo 'am enjoying this git session' &gt;&gt; learn.txt
+$cat learn.txt
+an awesome deep dive to git
+Git store is amazing
+
+$ # you could then use find of tree
+$ tree .git/objects
+.git/objects/
+├── 99
+│   └── 7c8fb31f2f2d46c4c46931697ea291a87c43ee
+├── b8
+│   └── 956fb060e39ac48d4ad69cc6402c13ed38f7aa
+├── info
+└── pack
+
+4 directories, 2 files
+</code></pre>
+
+<p>For exercise 7. If you delete the file you can restore if using shell redirection.</p>
+
+<pre><code>$ rm learn.txt
+$ git cat-file -p 997c &gt; learn.txt
+$ cat learn.txt
+an awesome deep dive to git
+Git store is amazing
+</code></pre>
+
+<p>You could redirect the content of the blob to create a new file with the same content</p>
+
+<pre><code>$ git cat-file -p 997c &gt; learn-copy.txt
+</code></pre>
+
+<p>You can then add it to the <code>git object store</code> . Hopefully you can see that git store the content of the files - it is not saving
+anything about our the <code>file names</code>. Each object ID is a pointer to some text, but that text isn&rsquo;t associated with the filename.
+If you need to save more that one files, we need to know how the files are called .</p>
+
+<p>This takes us to the next section: how we use tree to save the <code>filename and directory structures.</code> in our repository.</p>
+
+<h4 id="we-need-other-stuff-right">We need other stuff, right?</h4>
+
+<p>Our blob is missing information.</p>
+
+<ol>
+<li>filenames.</li>
+<li>directory structure.</li>
+</ol>
+
+<p>wheres is this information stored in git?
+&gt; ## Tree
+Git stores filename , directory structure here.
+a <strong>tree</strong> contains pointers (using sha1).
+&gt; to blobs.
+&gt; to other trees.</p>
+
+<p>and <code>metadata</code></p>
+
+<ul>
+<li><strong>type</strong> of pointer</li>
+<li><strong>filename</strong> of directory name</li>
+<li><strong>mode</strong> (excutable file, symbolic link,..)</li>
+</ul>
+
+<p>Has anyone ever tried to add empty directories to git?
+git can&rsquo;t of dont store empty directories.</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/jsupandgoing/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Javascript deep Dive , Understanding the basic concepts</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>
