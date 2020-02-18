@@ -1,51 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on edd&#39;s Blog</title>
     <link>https://eduuh.github.io/posts/</link>
     <description>Recent content in Posts on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
+    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
+    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 26 Jan 2020 20:40:22 +0300</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-	<atom:link href="https://eduuh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Javascript deep Dive , Understanding the basic concepts</title>
-      <link>https://eduuh.github.io/posts/jsupandgoing/</link>
-      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+    
+
       
-      <guid>https://eduuh.github.io/posts/jsupandgoing/</guid>
-      <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer.</description>
-    </item>
-    
-    <item>
-      <title>Errors I Faced and How I Solve Them</title>
-      <link>https://eduuh.github.io/posts/errorsfaced/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>GitLens Visual Studio code Extension</title>
+        <link>https://eduuh.github.io/posts/gitlens/</link>
+        <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Sun, 26 Jan 2020 09:20:48 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/gitlens/</guid>
+        <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code
+block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.
+Effortlessly explore the history and history and evolution of a codebase. Dive right in and see how Gitlens can help!.
+While Gitlen is powesful and feature rich, it is also highly customizable to meet your specific needs - Find code lens intrusive or the current line blame annotations distracting - no problem, it is quick and easy to turn them off or change how they behave via the build-in settings editor, an interactive editor covering many of Gitlens powerful settings.</description>
+        
+        <dc:creator>Edwin Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Development</category>
+            
+          
+            
+              <category>Source Control</category>
+            
+          
+        
+        
+          
+            
+              <category>vscode</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/posts/errorsfaced/</guid>
-      <description>Errors Faced and How I solved Them Dotnet core 1. Ominisharp Not Starting Ominisharp provides crossplatform .Net development. Yes i was using Linux on this one. OmniSharp is a family of Open Source projects, each with one goal: To enable a great .</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Algorithm and Data Structures</title>
-      <link>https://eduuh.github.io/posts/jsargorithms/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>JavaScript Algorithm and Data Structures</title>
+        <link>https://eduuh.github.io/posts/jsargorithms/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Mon, 27 Jan 2020 22:39:00 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
+        <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
+and also assuming the worst case scenario.
+ Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
+Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Js</category>
+            
+          
+            
+              <category>DataStructures</category>
+            
+          
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>Development</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
-      <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size and also assuming the worst case scenario.</description>
-    </item>
-    
-    <item>
-      <title>Understandint vim in an Expert Level</title>
-      <link>https://eduuh.github.io/posts/neovim/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduuh.github.io/posts/neovim/</guid>
-      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
-    </item>
+
     
   </channel>
 </rss>

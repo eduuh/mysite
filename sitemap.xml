@@ -1,121 +1,130 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eduuh.github.io/posts/jsupandgoing/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <loc>https://eduuh.github.io/showcase/websites/eddsblog/</loc>
+    <lastmod>2020-02-18T21:52:19+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/errorsfaced/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <loc>https://eduuh.github.io/posts/gitlens/</loc>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/presentation/</loc>
+    <lastmod>2020-02-18T23:05:34+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/posts/jsargorithms/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/neovim/</loc>
+    <loc>https://eduuh.github.io/showcase/websites/</loc>
+    <lastmod>2020-02-18T21:52:19+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/backend/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <loc>https://eduuh.github.io/showcase/</loc>
+    <lastmod>2020-02-18T21:52:19+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/categories/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <lastmod>2020-02-18T22:44:32+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <loc>https://eduuh.github.io/gallery/</loc>
+    <lastmod>2020-02-18T22:44:32+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/frontend/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <loc>https://eduuh.github.io/gallery/hackassembly/</loc>
+    <lastmod>2020-02-18T22:44:32+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/categories/js/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/posts/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/categories/programming/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <loc>https://eduuh.github.io/series/</loc>
+    <lastmod>2020-02-18T22:44:32+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/tags/</loc>
-    <lastmod>2020-02-08T08:13:40+03:00</lastmod>
+    <lastmod>2020-02-18T22:44:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/contact/</loc>
+    <lastmod>2020-02-18T21:52:19+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/tags/datastructures/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/tags/debuging/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/categories/development/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/tags/errors/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/categories/javascript/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/tags/js/</loc>
-    <lastmod>2020-01-26T20:40:22+03:00</lastmod>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/books/</loc>
-    <lastmod>2018-06-21T00:00:00+00:00</lastmod>
+    <loc>https://eduuh.github.io/posts/</loc>
+    <lastmod>2020-01-27T22:39:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/tags/development/</loc>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/categories/git/</loc>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/tags/source-control/</loc>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.github.io/categories/vscode/</loc>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/books/dera/</loc>
-    <lastmod>2018-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-25T16:58:31+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://eduuh.github.io/about/</loc>
-    <priority>0</priority>
+    <lastmod>2020-01-26T09:20:48+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/categories/commandline/</loc>
+    <loc>https://eduuh.github.io/</loc>
+    <lastmod>2020-02-18T21:52:19+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/open-source/</loc>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/tags/productivity/</loc>
+    <loc>https://eduuh.github.io/books/</loc>
+    <lastmod>2020-01-25T16:58:31+03:00</lastmod>
   </url>
   
 </urlset>

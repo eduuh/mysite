@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>vscode on edd&#39;s Blog</title>
     <link>https://eduuh.github.io/categories/vscode/</link>
     <description>Recent content in vscode on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
+    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 26 Jan 2020 04:39:02 +0300</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-	<atom:link href="https://eduuh.github.io/categories/vscode/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/categories/vscode/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>GitLens Visual Studio code Extension</title>
-      <link>https://eduuh.github.io/posts/gitlens/</link>
-      <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+    
+
       
-      <guid>https://eduuh.github.io/posts/gitlens/</guid>
-      <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.</description>
-    </item>
+      <item>
+        <title>GitLens Visual Studio code Extension</title>
+        <link>https://eduuh.github.io/posts/gitlens/</link>
+        <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Sun, 26 Jan 2020 09:20:48 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/gitlens/</guid>
+        <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code
+block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.
+Effortlessly explore the history and history and evolution of a codebase. Dive right in and see how Gitlens can help!.
+While Gitlen is powesful and feature rich, it is also highly customizable to meet your specific needs - Find code lens intrusive or the current line blame annotations distracting - no problem, it is quick and easy to turn them off or change how they behave via the build-in settings editor, an interactive editor covering many of Gitlens powerful settings.</description>
+        
+        <dc:creator>Edwin Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Development</category>
+            
+          
+            
+              <category>Source Control</category>
+            
+          
+        
+        
+          
+            
+              <category>vscode</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

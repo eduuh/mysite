@@ -1,69 +1,216 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>edd&#39;s Blog</title>
     <link>https://eduuh.github.io/</link>
     <description>Recent content on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
+    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
+    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-	<atom:link href="https://eduuh.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Javascript deep Dive , Understanding the basic concepts</title>
-      <link>https://eduuh.github.io/posts/jsupandgoing/</link>
-      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+    
       
-      <guid>https://eduuh.github.io/posts/jsupandgoing/</guid>
-      <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer.</description>
-    </item>
-    
-    <item>
-      <title>Errors I Faced and How I Solve Them</title>
-      <link>https://eduuh.github.io/posts/errorsfaced/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
       
-      <guid>https://eduuh.github.io/posts/errorsfaced/</guid>
-      <description>Errors Faced and How I solved Them Dotnet core 1. Ominisharp Not Starting Ominisharp provides crossplatform .Net development. Yes i was using Linux on this one. OmniSharp is a family of Open Source projects, each with one goal: To enable a great .</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Algorithm and Data Structures</title>
-      <link>https://eduuh.github.io/posts/jsargorithms/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
       
-      <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
-      <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size and also assuming the worst case scenario.</description>
-    </item>
-    
-    <item>
-      <title>Understandint vim in an Expert Level</title>
-      <link>https://eduuh.github.io/posts/neovim/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
       
-      <guid>https://eduuh.github.io/posts/neovim/</guid>
-      <description>Modern vim Vim is ubiquitous. It runs on most computers, and many systems have vim installeg by default. Knowing vim is a skill set you can take with you wherever you go, and fo many people , that&amp;rsquo;s vim&amp;rsquo;s killer feature.</description>
-    </item>
-    
-    <item>
-      <title>Entity FrameWork Core</title>
-      <link>https://eduuh.github.io/books/dera/</link>
-      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      <item>
+        <title>Eddsblog</title>
+        <link>https://eduuh.github.io/showcase/websites/eddsblog/</link>
+        <pubDate>Tue, 18 Feb 2020 21:05:09 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Tue, 18 Feb 2020 21:52:19 +0300</atom:modified>
+        <guid>https://eduuh.github.io/showcase/websites/eddsblog/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/books/dera/</guid>
-      <description>This is a Java reference implementation of dynamic event-driven actors runtime aiming at providing adequate abstraction levels and mechanisms for modelling and developing (distributed) event-based systems. DERA leverages the intrinsic loose coupling of event-driven communication styles to support various kinds of run-time evolution and adaptation (i.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://eduuh.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <item>
+        <title>GitLens Visual Studio code Extension</title>
+        <link>https://eduuh.github.io/posts/gitlens/</link>
+        <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Sun, 26 Jan 2020 09:20:48 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/gitlens/</guid>
+        <description>GitLens Features Gitlens simply helps you better understand code.Quicly glimpse into whom, why and when a line or code
+block was changed. Jump back through history to gain furthur insights as to how and why the code evolved.
+Effortlessly explore the history and history and evolution of a codebase. Dive right in and see how Gitlens can help!.
+While Gitlen is powesful and feature rich, it is also highly customizable to meet your specific needs - Find code lens intrusive or the current line blame annotations distracting - no problem, it is quick and easy to turn them off or change how they behave via the build-in settings editor, an interactive editor covering many of Gitlens powerful settings.</description>
+        
+        <dc:creator>Edwin Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Development</category>
+            
+          
+            
+              <category>Source Control</category>
+            
+          
+        
+        
+          
+            
+              <category>vscode</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/about/</guid>
-      <description>Maintainer A Self Taught Developer , A Geomatic Student : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University of Technology.</description>
-    </item>
+      <item>
+        <title>JavaScript Algorithm and Data Structures</title>
+        <link>https://eduuh.github.io/posts/jsargorithms/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Mon, 27 Jan 2020 22:39:00 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
+        <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
+and also assuming the worst case scenario.
+ Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
+Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Js</category>
+            
+          
+            
+              <category>DataStructures</category>
+            
+          
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>Development</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Hack Assembly</title>
+        <link>https://eduuh.github.io/gallery/hackassembly/</link>
+        <pubDate>Tue, 18 Feb 2020 20:57:16 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Tue, 18 Feb 2020 22:44:32 +0300</atom:modified>
+        <guid>https://eduuh.github.io/gallery/hackassembly/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Contact</title>
+        <link>https://eduuh.github.io/contact/</link>
+        <pubDate>Tue, 18 Feb 2020 20:53:11 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Tue, 18 Feb 2020 21:52:19 +0300</atom:modified>
+        <guid>https://eduuh.github.io/contact/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Entity FrameWork Core</title>
+        <link>https://eduuh.github.io/books/dera/</link>
+        <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Sat, 25 Jan 2020 16:58:31 +0300</atom:modified>
+        <guid>https://eduuh.github.io/books/dera/</guid>
+        <description>This is a Java reference implementation of dynamic event-driven actors runtime aiming at providing adequate abstraction levels and mechanisms for modelling and developing (distributed) event-based systems. DERA leverages the intrinsic loose coupling of event-driven communication styles to support various kinds of run-time evolution and adaptation (i.e., enabling run-time flexibility) while minimizing the non-deterministic nature of traditional event-based applications (i.e., supporting formal analysis).</description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>About Edds Blog</title>
+        <link>https://eduuh.github.io/about/</link>
+        <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Sun, 26 Jan 2020 09:20:48 +0300</atom:modified>
+        <guid>https://eduuh.github.io/about/</guid>
+        <description>Introduction A blog where i i will be writing on the following Technologies.
+ React React Native Dotnet core Linux Terminal  Maintainer A Self Taught Developer : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University</description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

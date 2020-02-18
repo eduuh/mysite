@@ -1,87 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on edd&#39;s Blog</title>
     <link>https://eduuh.github.io/tags/</link>
     <description>Recent content in Tags on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
+    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
+    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 18 Feb 2020 20:57:16 +0300</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-	<atom:link href="https://eduuh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>backend</title>
-      <link>https://eduuh.github.io/tags/backend/</link>
-      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+    
+
       
-      <guid>https://eduuh.github.io/tags/backend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>frontend</title>
-      <link>https://eduuh.github.io/tags/frontend/</link>
-      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+      <item>
+        <title>DataStructures</title>
+        <link>https://eduuh.github.io/tags/datastructures/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        
+        <guid>https://eduuh.github.io/tags/datastructures/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DataStructures</title>
-      <link>https://eduuh.github.io/tags/datastructures/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>Js</title>
+        <link>https://eduuh.github.io/tags/js/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        
+        <guid>https://eduuh.github.io/tags/js/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/tags/datastructures/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debuging</title>
-      <link>https://eduuh.github.io/tags/debuging/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>Development</title>
+        <link>https://eduuh.github.io/tags/development/</link>
+        <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        
+        <guid>https://eduuh.github.io/tags/development/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/tags/debuging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Errors</title>
-      <link>https://eduuh.github.io/tags/errors/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>Source Control</title>
+        <link>https://eduuh.github.io/tags/source-control/</link>
+        <pubDate>Sun, 26 Jan 2020 04:39:02 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        
+        <guid>https://eduuh.github.io/tags/source-control/</guid>
+        <description></description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/tags/errors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Js</title>
-      <link>https://eduuh.github.io/tags/js/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
-      
-      <guid>https://eduuh.github.io/tags/js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>open source</title>
-      <link>https://eduuh.github.io/tags/open-source/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduuh.github.io/tags/open-source/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Productivity</title>
-      <link>https://eduuh.github.io/tags/productivity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduuh.github.io/tags/productivity/</guid>
-      <description></description>
-    </item>
+
     
   </channel>
 </rss>

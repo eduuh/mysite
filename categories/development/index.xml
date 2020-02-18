@@ -1,33 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Development on edd&#39;s Blog</title>
     <link>https://eduuh.github.io/categories/development/</link>
     <description>Recent content in Development on edd&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
+    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 26 Jan 2020 20:40:22 +0300</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-	<atom:link href="https://eduuh.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Errors I Faced and How I Solve Them</title>
-      <link>https://eduuh.github.io/posts/errorsfaced/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+    
+
       
-      <guid>https://eduuh.github.io/posts/errorsfaced/</guid>
-      <description>Errors Faced and How I solved Them Dotnet core 1. Ominisharp Not Starting Ominisharp provides crossplatform .Net development. Yes i was using Linux on this one. OmniSharp is a family of Open Source projects, each with one goal: To enable a great .</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Algorithm and Data Structures</title>
-      <link>https://eduuh.github.io/posts/jsargorithms/</link>
-      <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+      <item>
+        <title>JavaScript Algorithm and Data Structures</title>
+        <link>https://eduuh.github.io/posts/jsargorithms/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
+        <atom:modified>Mon, 27 Jan 2020 22:39:00 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
+        <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
+and also assuming the worst case scenario.
+ Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
+Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
+        
+        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Js</category>
+            
+          
+            
+              <category>DataStructures</category>
+            
+          
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>Development</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
-      <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size and also assuming the worst case scenario.</description>
-    </item>
+
     
   </channel>
 </rss>
