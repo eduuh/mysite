@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>frontend on edd&#39;s Blog</title>
+    <title>frontend on eduuh</title>
     <link>https://eduuh.github.io/tags/frontend/</link>
-    <description>Recent content in frontend on edd&#39;s Blog</description>
+    <description>Recent content in frontend on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
+    <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
     
-	<atom:link href="https://eduuh.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Javascript deep Dive , Understanding the basic concepts</title>
-      <link>https://eduuh.github.io/posts/jsupandgoing/</link>
-      <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+    
+
       
-      <guid>https://eduuh.github.io/posts/jsupandgoing/</guid>
-      <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared. I have being doing c# for the backend and to complete my journey for becoming a full stack developer.</description>
-    </item>
+      <item>
+        <title>Javascript deep Dive , Understanding the basic concepts</title>
+        <link>https://eduuh.github.io/posts/jsupngoing/</link>
+        <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Sat, 08 Feb 2020 08:13:40 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/jsupngoing/</guid>
+        <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared.
+I have being doing c# for the backend and to complete my journey for becoming a full stack developer.
+I needed to do alot of javascript, so immediately i started using typescript for my web development and i would say the experience with typescript is supper great.</description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>backend</category>
+            
+          
+            
+              <category>frontend</category>
+            
+          
+        
+        
+          
+            
+              <category>programming</category>
+            
+          
+            
+              <category>Js</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>
