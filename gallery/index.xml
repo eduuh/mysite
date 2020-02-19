@@ -6,16 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Galleries on edd&#39;s Blog</title>
+    <title>Galleries on eduuh</title>
     <link>https://eduuh.github.io/gallery/</link>
-    <description>Recent content in Galleries on edd&#39;s Blog</description>
+    <description>Recent content in Galleries on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
-    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
+    <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 18 Feb 2020 20:57:16 +0300</lastBuildDate>
-    <sy:updatePeriod>weekly</sy:updatePeriod>
+    <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,32 +23,38 @@
 
       
       <item>
-        <title>Hack Assembly</title>
+        <title>HackAssembly</title>
         <link>https://eduuh.github.io/gallery/hackassembly/</link>
-        <pubDate>Tue, 18 Feb 2020 20:57:16 +0300</pubDate>
-        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
-        <atom:modified>Tue, 18 Feb 2020 22:44:32 +0300</atom:modified>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
         <guid>https://eduuh.github.io/gallery/hackassembly/</guid>
         <description></description>
         
-        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        <dc:creator>Eduuh Muraya</dc:creator>
         
         
         
         
-          
-            
-          
         
         
-          
-            
-          
+      </item>
+      
+      <item>
+        <title>Photo</title>
+        <link>https://eduuh.github.io/gallery/photo/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>https://eduuh.github.io/gallery/photo/</guid>
+        <description>Sample images from Pixabay</description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-          
-            
-          
+        
+        
         
       </item>
       
