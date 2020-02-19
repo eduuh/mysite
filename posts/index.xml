@@ -14,13 +14,52 @@
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 08 Feb 2020 08:13:40 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 11:37:37 +0300</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Managing Dotfiles Like a Pro</title>
+        <link>https://eduuh.github.io/posts/mngdotfilelikeapro/</link>
+        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/mngdotfilelikeapro/</guid>
+        <description>A simpler way to manage your dotfiles I relatively new to linux,working with it fulltime for only a 3 months. I
+found that i have a problem with dotfile consistence across my two machines an wanted to find a solution for my dotfiles sync to ensure have a
+similar environment all the time.
+What a dotfile Dotfile are file in the linux system that starts with a period. They are</description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Javascript deep Dive , Understanding the basic concepts</title>
@@ -56,6 +95,82 @@ I needed to do alot of javascript, so immediately i started using typescript for
           
             
               <category>Js</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Quickstart to Installing React and React ES6 Review</title>
+        <link>https://eduuh.github.io/posts/gettingstartedwithreact/</link>
+        <pubDate>Wed, 29 Jan 2020 05:16:56 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Wed, 29 Jan 2020 05:16:56 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/gettingstartedwithreact/</guid>
+        <description>Quickstart to React  React is a Javascript library created by Facebook. React is a User Interface (UI) library. React is a tool for building UI components React is used to build single page components React allow us to create reusable components.
+You see how i repeat myself here. You get the point Its react! am writing about.  Before jumping to react you will need to have the basics of the following:</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/react.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>React</category>
+            
+          
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>Frontend</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>JavaScript Algorithm and Data Structures</title>
+        <link>https://eduuh.github.io/posts/jsargorithms/</link>
+        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Sun, 26 Jan 2020 20:40:22 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
+        <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
+and also assuming the worst case scenario.
+ Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
+Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Js</category>
+            
+          
+            
+              <category>DataStructures</category>
+            
+          
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>Development</category>
             
           
         
