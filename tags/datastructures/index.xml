@@ -6,16 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>DataStructures on edd&#39;s Blog</title>
+    <title>DataStructures on eduuh</title>
     <link>https://eduuh.github.io/tags/datastructures/</link>
-    <description>Recent content in DataStructures on edd&#39;s Blog</description>
+    <description>Recent content in DataStructures on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</managingEditor>
-    <webMaster>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</webMaster>
+    <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
+    <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 26 Jan 2020 20:40:22 +0300</lastBuildDate>
-    <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://eduuh.github.io/tags/datastructures/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,15 +26,15 @@
         <title>JavaScript Algorithm and Data Structures</title>
         <link>https://eduuh.github.io/posts/jsargorithms/</link>
         <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
-        <author>edwinkamaumuraya0@gmail.com (Edwin Muraya Kamau)</author>
-        <atom:modified>Mon, 27 Jan 2020 22:39:00 +0300</atom:modified>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Sun, 26 Jan 2020 20:40:22 +0300</atom:modified>
         <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
         <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
 and also assuming the worst case scenario.
  Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
 Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
         
-        <dc:creator>Edwin Muraya Kamau</dc:creator>
+        <dc:creator>Eduuh Muraya</dc:creator>
         
         
         
