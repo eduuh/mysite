@@ -14,7 +14,7 @@
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 20:48:10 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 19:45:20 +0900</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/presentation/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,110 +23,30 @@
 
       
       <item>
-        <title>Fourth</title>
-        <link>https://eduuh.github.io/presentation/dir/fourth/</link>
-        <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 30 Oct 2019 20:48:10 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/dir/fourth/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Third</title>
-        <link>https://eduuh.github.io/presentation/third/</link>
-        <pubDate>Wed, 30 Oct 2019 20:46:30 +0900</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 30 Oct 2019 20:46:30 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/third/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Second</title>
-        <link>https://eduuh.github.io/presentation/second/</link>
-        <pubDate>Wed, 30 Oct 2019 20:45:24 +0900</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 30 Oct 2019 20:45:24 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/second/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
         <title>First</title>
-        <link>https://eduuh.github.io/presentation/first/</link>
-        <pubDate>Wed, 30 Oct 2019 19:45:20 +0900</pubDate>
+        <link>https://eduuh.github.io/presentation/gitworkshop/</link>
+        <pubDate>Mon, 30 Mar 2020 19:45:20 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 30 Oct 2019 19:45:20 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/first/</guid>
+        <atom:modified>Mon, 30 Mar 2020 19:45:20 +0900</atom:modified>
+        <guid>https://eduuh.github.io/presentation/gitworkshop/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
+            
+              <category>source</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>github</category>
             
           
         

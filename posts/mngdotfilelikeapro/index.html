@@ -1415,7 +1415,19 @@
       
       
       
-        <a href="/workshops" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">workshops</a>
+        <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+          <a href="/workshops" class="navbar__menu-item " dir="ltr">
+            workshops
+            <span class="navbar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+            </span>
+          </a>        
+          <div class="navbar__dropdown--content">
+            
+            <a href="/presentation" class="navbar__dropdown--item" dir="ltr">Presentation</a>        
+            
+          </div>
+        </div>
       
     
       
@@ -1497,7 +1509,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 12, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 3 min read </span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 12, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 4 min read </span>
   <span class="single__info">
     
   </span>
@@ -1520,15 +1532,15 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <h3 id="a-simpler-way-to-manage-your-dotfiles">A simpler way to manage your dotfiles</h3>
-<p>I relatively new to linux,working with it fulltime for only a 3 months. I<br />
-found that i have a problem with dotfile consistence across my two machines an wanted to find a solution for my <code>dotfiles</code> sync to ensure have a<br />
-similar environment all the time.</p>
+<p>Hello am edd I have been having trouble with configuration since i started using <code>docker</code> for my <code>development</code>.<br />
+For consistecy and time saving , i decided it would be great to manage my dotfiles using <code>git and github</code> and when creating <code>new enviroments</code>.</p>
+<p>I wrote the solution in this post, for easy reference if i need to in the future.</p>
 <h3 id="what-a-dotfile">What a dotfile</h3>
 <p>Dotfile are file in the linux system that starts with a period. They are<br />
 mainly used to store configuration files for the User instance for various<br />
 applications. For me the dotfiles that i would love to manage are as<br />
 follow.</p>
-<pre><code>1. .bashrc
+<pre><code>1. .bashrc or .zshrc (dependent on the shell your using.)
 2. .vimrc
 3. .setup.sh
 </code></pre>
@@ -1553,34 +1565,133 @@ a git repo with no working directory) in there. All git commands will be run wit
 <h3 id="first-time-setup">First Time Setup</h3>
 <p>Setting this method up the first time is really easy. First, let&rsquo;s create<br />
 our bare repository. I chose to name my placeholder <code>.dotfiles</code></p>
-<pre><code>mkdir $HOME/.dotfiles
-git init --bare $HOME/.dotfiles
-</code></pre>
-<p>Now for fun part. We will make an alias for running git commands in our<br />
-<code>.dotfiles</code> repository. I&rsquo;m calling my alias <code>dotfiles:</code></p>
-<pre><code>alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dofiles/ --work-tree=$HOME'
-</code></pre>
-<p>Add this alias to your <code>.bashrc</code>. From now any git operation you would like to do in the .dotfiles repository can be done by the dotfiles alias. The<br />
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">	mkdir <span class="nv">$HOME</span>/.dotfiles
+	git init --bare <span class="nv">$HOME</span>/.dotfiles
+</code></pre></td></tr></table>
+</div>
+</div><p>Now for fun part. We will make an alias for running git commands in our<br />
+<code>.dotfiles</code> repository. I&rsquo;m calling my alias <code>dotfiles:</code> .Make sure you reference the right <code>dotfiles</code><br />
+folder in you home folder.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">	<span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Add this alias to your <code>.bashrc</code>. From now any git operation you would like to do in the .dotfiles repository can be done by the dotfiles alias. The<br />
 cool thing is that you can run dotfiles from anywhere.</p>
 <p>Lets add a remot and also set status now to show untracked files.</p>
-<pre><code>dotfiles config --local status.showUntrackedFiles no
-dotfiles remote add origin https://github.com/eduuh/dotfiles.git
-</code></pre>
-<h3 id="setting-up-a-new-machine">Setting Up a New Machine</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">
+	dotfiles config --local status.showUntrackedFiles no
+	dotfiles remote add origin https://github.com/eduuh/dotfiles.git
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="setting-up-a-new-machine">Setting Up a New Machine</h3>
 <p>To set up a new machine to use your version controlled config files, all<br />
 you need to do is to clone the repository on your new machine telling git that it is a bare repository:</p>
-<pre><code>git clone --separate-git-dir=$HOME/.dotfiles https://github.com/eduuh/dotfiles.git
-</code></pre>
-<p>However, some programs create default config files, so this might fail if git finds an existing config file in your $HOME. In that case a simple sol is to clone to a temporayry directory and then delete it once you are done:</p>
-<pre><code>git clone --separate-git-dir=$HOME/.dotfiles https://github.com/eduuh/dotfiles.git
-</code></pre>
-<p>So this might fail if git finds an existing config file in your $HOME. In that case, a simple solution is to clone to a temporary directory , and then delete it once you are done:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">
+	git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
+
+</code></pre></td></tr></table>
+</div>
+</div><p>However, some programs create default config files, so this might fail if git finds an existing config file in your $HOME. In that case a simple sol is to clone to a temporayry directory and then delete it once you are done:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> 	git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
+</code></pre></td></tr></table>
+</div>
+</div><p>So this might fail if git finds an existing config file in your $HOME. In that case, a simple solution is to clone to a temporary directory , and then delete it once you are done:</p>
 <pre><code>git clone --separate-git-dir=$HOME/.dotfiles https://github.com/eduuh/dotfiles.git --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/  
 
 rm -r tmpdotfiles
 </code></pre>
-<p>There you go. No symlink mess.</p>
-<p>My dotfiles are <code>here</code> for reference.</p>
+<p>The last step is to add the <code>dotfile</code> alias in your <code>bashrc</code> or <code>zshrc</code> according to the shell you are<br />
+using.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="using-the-dotfiles-alias">Using the <code>dotfiles alias</code></h4>
+<p>For the Dotfiles repository, Your will use <code>dotfiles instead of git</code>. Use it as you normally use git<br />
+commands.</p>
+<p>Example of some Commands:</p>
+<p>A <code>commit</code> command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ dotfiles commit -m <span class="s2">&#34;zshrc =&gt; zsh oh my god configuration files &#34;</span>
+<span class="o">[</span>master 64a553b<span class="o">]</span> <span class="nv">zshrc</span> <span class="o">=</span>&gt; zsh oh my god configuration files
+ <span class="m">1</span> file changed, <span class="m">91</span> insertions<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> .zshrc
+
+</code></pre></td></tr></table>
+</div>
+</div><p>A <code>push</code> action.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ dotfiles push
+Enumerating objects: 4, <span class="k">done</span>.
+Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+Delta compression using up to <span class="m">4</span> threads
+Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, 1.45 KiB <span class="p">|</span> 1.45 MiB/s, <span class="k">done</span>.
+Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+To https://github.com/eduuh/dotfiles.git
+   7d507e7..64a553b  master -&gt; master
+</code></pre></td></tr></table>
+</div>
+</div><p>There you go. No symlink mess.</p>
+<p>My dotfiles are <a href="https://github.com/eduuh/dotfiles">here</a> for reference.</p>
 
     </article>
     <script>
@@ -1787,33 +1898,6 @@ rm -r tmpdotfiles
 
     <section class="related">
     
-    
-    <h1 class="related__title">
-      <hr class="hr-dots"/>
-      <div>
-        See Also
-      </div>
-      <hr class="hr-dots"/>
-    </h1>
-    <ul class="related-ul">
-        
-        <li>
-          <a href="/presentation/dir/fourth/" class="related__link">Fourth</a>
-        </li>
-        
-        <li>
-          <a href="/presentation/third/" class="related__link">Third</a>
-        </li>
-        
-        <li>
-          <a href="/presentation/second/" class="related__link">Second</a>
-        </li>
-        
-        <li>
-          <a href="/presentation/first/" class="related__link">First</a>
-        </li>
-        
-    </ul>
     
   </section>
     <div class="grow"></div>
@@ -2190,7 +2274,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#a-simpler-way-to-manage-your-dotfiles">A simpler way to manage your dotfiles</a></li>
         <li><a href="#what-a-dotfile">What a dotfile</a></li>
         <li><a href="#first-time-setup">First Time Setup</a></li>
-        <li><a href="#setting-up-a-new-machine">Setting Up a New Machine</a></li>
+        <li><a href="#setting-up-a-new-machine">Setting Up a New Machine</a>
+          <ul>
+            <li><a href="#using-the-dotfiles-alias">Using the dotfiles alias</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

@@ -29,10 +29,10 @@
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
         <guid>https://eduuh.github.io/posts/mngdotfilelikeapro/</guid>
-        <description>A simpler way to manage your dotfiles I relatively new to linux,working with it fulltime for only a 3 months. I
-found that i have a problem with dotfile consistence across my two machines an wanted to find a solution for my dotfiles sync to ensure have a
-similar environment all the time.
-What a dotfile Dotfile are file in the linux system that starts with a period. They are</description>
+        <description>A simpler way to manage your dotfiles Hello am edd I have been having trouble with configuration since i started using docker for my development.
+For consistecy and time saving , i decided it would be great to manage my dotfiles using git and github and when creating new enviroments.
+I wrote the solution in this post, for easy reference if i need to in the future.
+What a dotfile Dotfile are file in the linux system that starts with a period.</description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
         <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>

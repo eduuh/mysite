@@ -14,13 +14,53 @@
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 19 Feb 2020 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 19:45:20 +0900</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>First</title>
+        <link>https://eduuh.github.io/presentation/gitworkshop/</link>
+        <pubDate>Mon, 30 Mar 2020 19:45:20 +0900</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Mon, 30 Mar 2020 19:45:20 +0900</atom:modified>
+        <guid>https://eduuh.github.io/presentation/gitworkshop/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>source</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>github</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Advanced Git WorkShop</title>
