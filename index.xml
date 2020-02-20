@@ -55,7 +55,7 @@ For consistecy and time saving , i decided it would be great to manage my dotfil
 I wrote the solution in this post, for easy reference if i need to in the future.
 What a dotfile Dotfile are file in the linux system that starts with a period.</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
@@ -93,7 +93,7 @@ What a dotfile Dotfile are file in the linux system that starts with a period.</
 I have being doing c# for the backend and to complete my journey for becoming a full stack developer.
 I needed to do alot of javascript, so immediately i started using typescript for my web development and i would say the experience with typescript is supper great.</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         
         
         
@@ -169,7 +169,7 @@ and also assuming the worst case scenario.
  Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
 Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         
         
         
@@ -205,8 +205,9 @@ Time complexity of an algorithm signifies the total time required by the program
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         <atom:modified>Wed, 19 Feb 2020 12:00:06 +0900</atom:modified>
         <guid>https://eduuh.github.io/workshops/git/advancedgit/</guid>
-        <description>Advanced Git WorkShop This is my first time am running this workshop.I will start will a short demo on the command line.This will introduce the new material to you, and I will explain what I am doing as I go along . After a bit we will have some exercise for you to practise what we were going through.
-Requirements  command Line that support unix style commands git version &amp;gt; 2.</description>
+        <description>Advanced Git WorkShop Hello am Edd and I will be taking you through this workshop.By the end of this workshop, if you follow along you have a completely different understanding of Git and how you work with it.
+How we will go along I will start will a short demo on the command line to introduce the new material.
+After a bit we will have some exercise for you to practise what we were going through.</description>
         
         <dc:creator>eduuh</dc:creator>
         <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -245,7 +246,7 @@ Requirements  command Line that support unix style commands git version &amp;gt;
         <description>Introduction A blog where i i will be writing on the following Technologies.
  React React Native Dotnet core Linux Terminal  Maintainer A Self Taught Developer : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         
         
         

@@ -34,7 +34,7 @@ For consistecy and time saving , i decided it would be great to manage my dotfil
 I wrote the solution in this post, for easy reference if i need to in the future.
 What a dotfile Dotfile are file in the linux system that starts with a period.</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
@@ -72,7 +72,7 @@ What a dotfile Dotfile are file in the linux system that starts with a period.</
 I have being doing c# for the backend and to complete my journey for becoming a full stack developer.
 I needed to do alot of javascript, so immediately i started using typescript for my web development and i would say the experience with typescript is supper great.</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         
         
         
@@ -148,7 +148,7 @@ and also assuming the worst case scenario.
  Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
 Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
         
-        <dc:creator>Eduuh Muraya</dc:creator>
+        <dc:creator>eduuh</dc:creator>
         
         
         

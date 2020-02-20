@@ -1514,7 +1514,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 14 min read </span>&middot; <span class="single__info" title="WRITTEN BY">👻&nbsp;eduuh</span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 15 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   <span class="single__info">
     
   </span>
@@ -1548,92 +1548,127 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h3 id="advanced-git-workshop">Advanced Git WorkShop</h3>
-<p>This is my first time am running this workshop.I will start will a short demo on the command line.This will introduce the new material to you, and I will explain what I am doing as I go along . After a bit we will have some exercise for you to practise what we were going through.</p>
+      <h4 id="advanced-git-workshop">Advanced Git WorkShop</h4>
+<p>Hello am Edd and I will be taking you through this workshop.By the end of this workshop, if you follow along you have a completely different understanding of <code>Git</code> and how you work with it.</p>
+<h5 id="how-we-will-go-along">How we will go along</h5>
+<p>I will start will a <code>short demo</code> on the <code>command line</code> to introduce the new material.<br />
+After a bit we will have some exercise for you to practise what we were going through. After you  finish the exercises we are<br />
+then going to it together, to make sure you understand.</p>
 <h3 id="requirements">Requirements</h3>
-<ul>
-<li>command Line that support unix style commands</li>
-<li>git version &gt; 2.0 (check with git &ndash;version)</li>
-<li>github.com account</li>
-<li>clone</li>
-</ul>
-<p>Are we all good at these requirements.</p>
-<p>I know when we learn git we memorize 6 command  the rest of git is usually a <code>black box</code> that we don&rsquo;t explore.</p>
-<p>Today we are going to go a <code>lot deeper to git</code> away from this<br />
-basic commands:</p>
-<pre><code> // my assumption is you are familiar with this commands   
-1. git clone
-2. git push
-3. git fetch
-4. git push -f (when thing get tough)
-5. git init
-6. git commit
-</code></pre>
-<p>But if you are not famialiar with the above commands. Please bare with me, this are usually common conceps we can bare go anyware without them. When we came across them i will explain to you what they do.</p>
-<p>I felt this way untill i decided its time to level up a little bit.</p>
-<p>Most of the time we as git use feel git this way.!!<br />
-<img src="./../../static/gitfeeling.png" alt="gitfeeling" /></p>
-<p>Its a sad place to be. Are you exited to not do this anymore!?</p>
-<p>I will try to get you out of this by using git the right way.</p>
+<ol>
+<li><strong>Command Line</strong> that support unix style commands</li>
+<li><strong>git version &gt; 2.0</strong> (check with git &ndash;version)</li>
+<li><strong><a href="github.com">github.com</a></strong> account</li>
+<li><strong><a href="https://github.com/eduuh/Advanced-GitWorkshop">This Repository</a></strong> 👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">         git clone git@github.com:eduuh/Advanced-GitWorkshop.git 
+</code></pre></td></tr></table>
+</div>
+</div><p>Are we all good at these requirements. Okay Let get into it.</p>
+<p>I know when we learn git we memorize 6 command  the rest of git is usually a <code>black box</code> that we don&rsquo;t explore. We reach at a point where we really on the GUI tool available for working with git. I.e <code>visual studio code</code>.Today we are going to go a <code>lot deeper to git</code> away from this basic commands and explore <code>git</code> further.</p>
+<p>My &ldquo;<del>assumption</del>&rdquo; is you are familiar with this commands. <em><strong>Don&rsquo;t worry if you are a beginner you will get into pace soon.</strong></em></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>git clone</strong></td>
+<td>clone a remote repository : <strong>github</strong>, <strong>gitlab</strong> , <strong>azure repos</strong></td>
+</tr>
+<tr>
+<td><strong>git push</strong></td>
+<td>Push local repository to remote service</td>
+</tr>
+<tr>
+<td><strong>git fetch</strong></td>
+<td>Pull changes to a local repository</td>
+</tr>
+<tr>
+<td><strong>git pull</strong> -f</td>
+<td><strong>git fetch</strong> + <strong>git merge</strong> (used flags right)</td>
+</tr>
+<tr>
+<td><strong>git init</strong></td>
+<td>Initialize a repository locally</td>
+</tr>
+<tr>
+<td><strong>git add &amp; git commit</strong></td>
+<td>Add changes to a local repository.</td>
+</tr>
+</tbody>
+</table>
+<p><em>If you are not famialiar with the above commands. Please bare with me, this are usually common concept that we can&rsquo;t do without them. When we come across them i will explain to you what they do.</em></p>
+<p>I felt this way untill i decided its time to <strong>level up a little bit</strong> and come out of my confort zone. Using <code>GUI</code> tools. In my case <strong>visual studio code</strong>.</p>
+<p>Do you feel this way?<br />
+<img src="/images/gitfeeling.png" alt="gitfeeling" /></p>
+<p>Its a sad place to be. <em><strong>Are you exited to not do this anymore!?</strong></em></p>
+<p>I will try to get you out of this showing you how to <strong>use git the right way.</strong></p>
 <p>Before you delete you could decide to look up some manual page for git online and this is what you might get.</p>
 <p>WAT?</p>
-<p><img src="./../../static/gitmanual.png" alt="git manual" /></p>
-<p>The <strong>SYNOPSIS</strong>  WTH does it mean??</p>
+<p><img src="/images/gitmanual.png" alt="git manual" /></p>
+<p>The <strong>SYNOPSIS</strong>  <del>WTH</del> does it mean??</p>
 <blockquote>
 <p>git refers to its self as <strong>A stupid content tracker</strong> funny<br />
-But this depents on how your use case.</p>
+But this depends on how your use case and mood.</p>
 </blockquote>
-<h4 id="take-home">Take home.</h4>
-<p>By understanding what is going on in git. People use git for<br />
-different use cases. You should try to use the idea from<br />
-this workshop and incoporate them to your workflows.</p>
+<blockquote>
+<h4 id="notes">Notes</h4>
+</blockquote>
+<p>People use git for different use cases. You should try to use the idea from this workshop and incoporate them to your workflows.</p>
+<blockquote>
+<h4 id="heading"></h4>
+</blockquote>
 <p>I have divided this workshop into sections , and after each sections. Am going to give an exercise which you will attempt. And then we are going to them together.</p>
 <p>Lets focus more on doing and understanding the theory. This is what i mean. Instead of writing down the notes focus on trying out the <strong>commands</strong>. You have all these notes with you.</p>
 <p>Git is a tool to helps you,but not  work against you.</p>
 <h3 id="overview">Overview</h3>
 <h4 id="section-1-part-1">Section 1: Part 1</h4>
-<ol>
-<li>What is Git?</li>
-<li>Working with Area, staging area ,Repository</li>
-<li>Staging Area Deep Dive</li>
-<li>References, commits ,Branches</li>
-<li>Stashing</li>
-</ol>
+<pre><code>1. What is Git?
+2. Working with Area, staging area ,Repository
+3. Staging Area Deep Dive
+4. References, commits ,Branches
+5. Stashing
+</code></pre>
 <h4 id="section-2-part-2">Section 2: Part 2</h4>
-<ol>
-<li>Merging + Rebasing</li>
-<li>History + Diffs</li>
-<li>Fixing Mistakes</li>
-<li>Rebase</li>
-<li>Forks, Remote Repositories</li>
-</ol>
+<pre><code>1. Merging + Rebasing
+2. History + Diffs
+3. Fixing Mistakes
+4. Rebase
+5. Forks, Remote Repositories
+</code></pre>
 <h4 id="section-3-part-3">Section 3: Part 3</h4>
-<ol>
-<li>The Danger zone (how you could mess things up)</li>
-<li>Advanced tools</li>
-<li>Customizations: - configs, Ignore, Hooks, Templates</li>
-<li>Social git : intergrating Github with CI tools.</li>
-<li>Advanced Github: working with github api.</li>
-</ol>
-<h2 id="why-use-the-command-line">WHY USE THE COMMAND LINE?</h2>
+<pre><code>1. The Danger zone (how you could mess things up)
+2. Advanced tools
+3. Customizations: - configs, Ignore, Hooks, Templates
+4. Social git : intergrating Github with CI tools.
+5. Advanced Github: working with github api.
+</code></pre>
+<h5 id="why-use-the-command-line">WHY USE THE COMMAND LINE?</h5>
 <blockquote>
-<p>Dont get me wrong here. here are some of my thoughts.</p>
+<p><strong>Don&rsquo;t get me wrong here. here are some of my thoughts.</strong></p>
 </blockquote>
-<h4 id="too-much-automation-as-a-hinderance-to-learning-">Too much Automation as a hinderance to learning !!</h4>
-<p>This is the best time to be a software developer. Tools are<br />
-now geered to automation which make our lifes as <code>dev</code> easy.<br />
-but i think to much automation bring us to stead state. Where<br />
-we can`t progress the learning proceess. Our human nature loves<br />
-the easier way out and we get to a state we are more relient on<br />
-the tools and not mastering the fundamentals.</p>
-<p><code>This is one of the reason i stoped using visual studio</code>.</p>
-<p>They are many tools out there that help it automation of git<br />
-to the most advanced stuff for you under the hood. Going down<br />
-to this road means you are never going to understand <code>git internal</code> and you will be sort of relient to the gui tools for<br />
-their automation. <code>Trust me when mistakes rise</code> you will be left into the dust by your automation tools.</p>
-<h4 id="we-are-not-going-to-use-any-graphical-tools-here">We are not going to use any graphical tools here.</h4>
-<p>I want you to learn the <code>fundamentals</code> and we are going to use git how it was designed to be used.</p>
-<p><code>lets get started.</code></p>
+<h5 id="too-much-automation-as-a-hinderance-to-learning-">Too much Automation as a hinderance to learning !</h5>
+<p>This is the best time to be a software developer. Tools are now geered to automation which make our lifes as <code>dev</code> easy. But i think to much automation bring us to stead state. Where we can&rsquo;t progress the learning proceess. Our human nature loves the easier way out and we get to a state we are more relient on the tools and not mastering the fundamentals.<br />
+<code>This is one of the reason i stoped using visual studio</code>.</p>
+<p>They are <strong>many tools</strong> out there that help to <strong>automation of git to the most advanced stuff for you under the hood.</strong> Going down to this road means you are never going to understand <code>git internal</code> and you will be sort of relient to the gui tools for their automation. <strong>Trust me when mistakes rise you will be left into the dust by your automation tools.</strong></p>
+<h3 id="section-1">Section 1</h3>
+<hr />
+<blockquote>
+<h6 id="using-command-line----am-using-zsh-in-ubuntu">Using Command Line :   (Am using zsh in ubuntu)</h6>
+</blockquote>
+<p>I want you to learn the <code>fundamentals</code> and we are going to <strong>use git how it was designed to be used.</strong></p>
+<blockquote>
+<h4 id="lets-get-started">lets get started</h4>
+</blockquote>
 <h3 id="how-does-git-store-information">How does git store information</h3>
 <blockquote>
 <p>At its core, git is like a key value store.</p>
@@ -1869,7 +1904,7 @@ what do you expect to see.?</p>
 <p><code>git cat-file -p &lt;object id&gt;</code></p>
 <pre><code>pretty print the content of the object in the git object store
 </code></pre>
-<h3 id="notes">Notes</h3>
+<h3 id="notes-1">Notes</h3>
 <p>A brief recap of the exercises: steps 1-5 are repeating what we just did earlier.</p>
 <p>In exercise 6, you see that git creates an entirely new object</p>
 <pre><code>$ echo 'am enjoying this git session' &gt;&gt; learn.txt
@@ -2206,7 +2241,7 @@ in your working area you could accidentally commit this file.</p>
     
     
       
-        <img data-src="/images/whoami/avatar.jpg" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" alt="Eduuh Muraya" class="lazyload whoami__image"/>
+        <img data-src="/images/edd.jpg" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" alt="Eduuh Muraya" class="lazyload whoami__image"/>
       
     
   </div>
@@ -2221,7 +2256,7 @@ in your working area you could accidentally commit this file.</p>
     </div>
     <div class="whoami__desc">
       
-        Selftaught FullStack Developer
+        Selftaught Web and Mobile Developer
       
     </div>
     <div class="whoami__social">
@@ -2695,10 +2730,15 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
     <li>
       <ul>
-        <li><a href="#advanced-git-workshop">Advanced Git WorkShop</a></li>
+        <li>
+          <ul>
+            <li><a href="#advanced-git-workshop">Advanced Git WorkShop</a></li>
+          </ul>
+        </li>
         <li><a href="#requirements">Requirements</a>
           <ul>
-            <li><a href="#take-home">Take home.</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#heading"></a></li>
           </ul>
         </li>
         <li><a href="#overview">Overview</a>
@@ -2708,14 +2748,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><a href="#section-3-part-3">Section 3: Part 3</a></li>
           </ul>
         </li>
-      </ul>
-    </li>
-    <li><a href="#why-use-the-command-line">WHY USE THE COMMAND LINE?</a>
-      <ul>
-        <li>
+        <li><a href="#section-1">Section 1</a>
           <ul>
-            <li><a href="#too-much-automation-as-a-hinderance-to-learning-">Too much Automation as a hinderance to learning !!</a></li>
-            <li><a href="#we-are-not-going-to-use-any-graphical-tools-here">We are not going to use any graphical tools here.</a></li>
+            <li></li>
+            <li><a href="#lets-get-started">lets get started</a></li>
           </ul>
         </li>
         <li><a href="#how-does-git-store-information">How does git store information</a></li>
@@ -2732,7 +2768,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#exercises">Exercises</a>
       <ul>
         <li><a href="#useful-commands">Useful commands</a></li>
-        <li><a href="#notes">Notes</a>
+        <li><a href="#notes-1">Notes</a>
           <ul>
             <li><a href="#we-need-other-stuff-right">We need other stuff, right?</a></li>
           </ul>
