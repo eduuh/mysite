@@ -1514,7 +1514,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 15 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 14 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   <span class="single__info">
     
   </span>
@@ -1630,314 +1630,381 @@ But this depends on how your use case and mood.</p>
 <p>I have divided this workshop into sections , and after each sections. Am going to give an exercise which you will attempt. And then we are going to them together.</p>
 <p>Lets focus more on doing and understanding the theory. This is what i mean. Instead of writing down the notes focus on trying out the <strong>commands</strong>. You have all these notes with you.</p>
 <p>Git is a tool to helps you,but not  work against you.</p>
-<h3 id="overview">Overview</h3>
-<h4 id="section-1-part-1">Section 1: Part 1</h4>
-<pre><code>1. What is Git?
-2. Working with Area, staging area ,Repository
-3. Staging Area Deep Dive
-4. References, commits ,Branches
-5. Stashing
-</code></pre>
-<h4 id="section-2-part-2">Section 2: Part 2</h4>
-<pre><code>1. Merging + Rebasing
-2. History + Diffs
-3. Fixing Mistakes
-4. Rebase
-5. Forks, Remote Repositories
-</code></pre>
-<h4 id="section-3-part-3">Section 3: Part 3</h4>
-<pre><code>1. The Danger zone (how you could mess things up)
-2. Advanced tools
-3. Customizations: - configs, Ignore, Hooks, Templates
-4. Social git : intergrating Github with CI tools.
-5. Advanced Github: working with github api.
-</code></pre>
-<h5 id="why-use-the-command-line">WHY USE THE COMMAND LINE?</h5>
+<h4 id="git-concepts">Git concepts</h4>
 <blockquote>
-<p><strong>Don&rsquo;t get me wrong here. here are some of my thoughts.</strong></p>
+<h4 id="untracked-files">Untracked Files</h4>
 </blockquote>
-<h5 id="too-much-automation-as-a-hinderance-to-learning-">Too much Automation as a hinderance to learning !</h5>
-<p>This is the best time to be a software developer. Tools are now geered to automation which make our lifes as <code>dev</code> easy. But i think to much automation bring us to stead state. Where we can&rsquo;t progress the learning proceess. Our human nature loves the easier way out and we get to a state we are more relient on the tools and not mastering the fundamentals.<br />
-<code>This is one of the reason i stoped using visual studio</code>.</p>
-<p>They are <strong>many tools</strong> out there that help to <strong>automation of git to the most advanced stuff for you under the hood.</strong> Going down to this road means you are never going to understand <code>git internal</code> and you will be sort of relient to the gui tools for their automation. <strong>Trust me when mistakes rise you will be left into the dust by your automation tools.</strong></p>
-<h3 id="section-1">Section 1</h3>
-<hr />
+<p>New files that git have not requested to track previously.</p>
 <blockquote>
-<h6 id="using-command-line----am-using-zsh-in-ubuntu">Using Command Line :   (Am using zsh in ubuntu)</h6>
+<h4 id="working-area">Working Area</h4>
 </blockquote>
-<p>I want you to learn the <code>fundamentals</code> and we are going to <strong>use git how it was designed to be used.</strong></p>
+<p>Worked that is tracked by git that has been modified but have not yet been commited.</p>
 <blockquote>
-<h4 id="lets-get-started">lets get started</h4>
+<h4 id="staging-area">Staging Area</h4>
 </blockquote>
-<h3 id="how-does-git-store-information">How does git store information</h3>
-<blockquote>
+<p>Modified files that have been marked to go the next commit.</p>
+<p>This are terms that will appear mostly in this workshop.</p>
+<h2 id="how-is-information-stored">How is information stored.</h2>
 <p>At its core, git is like a key value store.</p>
-</blockquote>
-<ul>
-<li>The <strong>Value</strong> = <strong>DATA</strong></li>
-<li>The <strong>Key</strong> = <strong>Hash of the Data</strong></li>
-</ul>
-<p>You can then use the key to retrieve the content.</p>
-<h3 id="the-key---sha1">The Key - (SHA1)</h3>
+<ol>
+<li><strong>Value</strong> = Data (our files)</li>
+<li><strong>Key</strong> =&gt; Sha1 Key</li>
+</ol>
 <blockquote>
-<p>Its a crytographic hash function</p>
+<h4 id="key">Key</h4>
 </blockquote>
+<p>Its a <strong>crytographic hash function</strong>. Given a piece of data , it produces a <strong>40 - digit hexadecimal numbers.</strong> You will see this in a bit.</p>
+<p>This <strong>value should always be the same if the given Input it the same</strong>.</p>
 <blockquote>
-<p>Given a piece of data , it produces a 40- digit hexadecimal number.</p>
+<h4 id="value">Value</h4>
 </blockquote>
+<p>Git store  the <strong>compressed</strong> data in a blob , along with the metadata in a header. Holds the <strong>identifier of the</strong>, <strong>size of the content</strong> and the <strong>content</strong> itself.</p>
+<p><strong>Note:</strong> The content is compressed and when you cat into it you will get a whole lot of nothings.</p>
+<h4 id="under-the-hood---lets-create-a-git-hash-object">Under the Hood - Lets create a git hash object.</h4>
+<p>Git will take <strong>our content</strong> and use it to generate the <code>hash</code> key. For now we could supply some content to git using <strong>echo command</strong>.</p>
+<p>If you  run the command. Here we are <strong>piping</strong> the output of the echo command to the git hash function requesting to use the <strong>stdin</strong></p>
+<p>The hash function returns the a <strong>hash</strong> which should be the same for all of us.<strong>your can try this</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> hello <span class="p">|</span> git hash-object --stdin
+<span class="c1"># ce013625030ba8dba906f756967f9e9ca394464a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We already know some tools that are used to generate <strong>sha1</strong> keys. For my system I believe its <strong>openssl</strong></p>
+<p>lets generate <strong>Sha1</strong> using <strong>openssl</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> <span class="nb">echo</span> hello <span class="p">|</span> openssl sha1
+<span class="c1"># (stdin)= f572d396fae9206628714fb2ce00f72e94f2258f</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Thes hash are different. This is because git hash function **prepends thes string &ldquo;blob&rdquo; followed by the file size and a null to the file&rsquo;s content before hashing.</p>
+<p>This is how git calculates the <strong>sha1</strong> for the file (in git term a blob)</p>
+<p>Git calculate the files metadata + content , not just the content.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># sha1(&#34;blob&#34; + filesize + &#34;\0&#34; + data)  # not \0 is a null byte</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>When you run the hash function on the same content you will always get the same result.</p>
+<h3 id="lets-initialize-a-repository">Lets initialize a repository</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git init
+<span class="c1"># Initialized empty Git repository in $HOME/username/dir/.git/</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The initialized repository is store at <code>.git</code> directory.</p>
+<p>Whey you <strong>delete</strong> this folder in a repository you actually blow up the repository, but you retains the files that were availble in the working area.</p>
 <blockquote>
-<p>This value should always be the same if the given input it the same</p>
+<h4 id="question-where-are-blob-stored">question: where are blob stored?</h4>
 </blockquote>
-<h3 id="the-value---git-blobs">The Value - Git blobs</h3>
-<ul>
-<li>
-<p>git stores the <strong>compressed</strong> data in a blob, along with the<br />
-metadata in a header.</p>
-</li>
-<li>
-<p>the identifer <strong>blob</strong></p>
-</li>
-<li>
-<p>the size of the content</p>
-</li>
-<li>
-<p>\0 delimeters</p>
-</li>
-<li>
-<p>content</p>
-</li>
-</ul>
-<h3 id="under-the-hood---git-hash-object-blob">Under the hood - Git hash object (blob)</h3>
-<p>Asking git for the SHA1 of content.</p>
-<pre><code>$ echo 'hello' | git hash-object --stdin
-
-$ ce013625030ba8dba906f756967f9e9ca394464a
-</code></pre>
-<p><strong>Try this and you will get the above same output.</strong></p>
-<p>There are many tools to generate generate <code>sha1</code> keys. For my system<br />
-i believe its <code>openssl</code>.</p>
-<p>Generating the <code>SHA1</code> of the content with <code>metadata</code>:</p>
-<pre><code>$ echo 'blob 14\0'hello' | openssl sha1
-(stdin)= c6df3e4881a3d16c8bf544ff119151a5dbb8bb26
-</code></pre>
-<p>When you run the hash function on the same content you will always get the same result.</p>
-<p>When we do a :</p>
-<pre><code>$ git init 
-Initialized empty Git repository in /home/edd/test/.git/
-</code></pre>
-<p>The git repository is initialized in the <code>.git</code> folder.<br />
-when you delete this folder you actually <code>blow up</code> the repository, but you <strong>code files are retains</strong>.</p>
-<h4 id="where-are-the-blob-stored-">Where are the <code>blob</code> stored ?</h4>
-<p>lets run the above command for asking git to generate a<br />
-sha1 key for our content but this time we want to write the<br />
-object to the git repo. we pass <code>-w</code> which means its write.</p>
-<pre><code>$ # This generate a blob 
-$  echo 'hello' | git hash-object -w --stdin
+<p>We are going to rerun the command that ask git to generate a <code>sha1</code> key for the content but this time we pass a option , <strong>-w</strong> that indicates we want to <strong>write the object to the git repo.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> hello <span class="p">|</span> git hash-object -w --stdin
 ce013625030ba8dba906f756967f9e9ca394464a
-
-$ # let remove hooks folder. we dont get confused
-$ rm -rf .git/hooks/
-$ tree .git
-.git
-    ├── branches
-    ├── config
-    ├── description
-    ├── HEAD
-    ├── info
-    │   └── exclude
-    ├── objects
-    │   ├── ce
-    │   │   └── 013625030ba8dba906f756967f9e9ca394464a
-    │   ├── info
-    │   └── pack
-    └── refs
-    ├── heads
-    └── tags
-</code></pre>
-<p>What go you notice ? (<strong>ce013625030ba8dba906f756967f9e9ca394464a</strong>)</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Take a note at the <code>hash</code> generated at this point. and lets access how it is saved in the git folder.</p>
+<blockquote>
+<p>lets do some clean up first</p>
+</blockquote>
+<p>Remove the <code>hooks</code> directory in the repository, so that it does not get into our way.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf .git/hooks  <span class="c1"># r =&gt; recusive f =&gt; folders</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now you can <strong>tree</strong> into the <strong>.git</strong> folder to pic at all the content.</p>
+<p>Note if you have alot of files in your working directory u are going to have a longer structure. ***The output look something like.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tree .git/ 
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">.git/
+├── branches
+├── config
+├── description
+├── HEAD
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       ├── heads
+│       │   └── master
+│       └── remotes
+│           └── origin
+│               └── HEAD
+├── objects
+│   ├── <span class="m">07</span>
+│   │   └── 9830d5ae8de34a3faf6bd8ff8b680684948bec
+│   ├── ce
+│   │   └── 013625030ba8dba906f756967f9e9ca394464a
+</code></pre></td></tr></table>
+</div>
+</div><p>Our initial <code>sha1</code> file was <strong>ce013625030ba8dba906f756967f9e9ca394464a</strong>.</p>
+<h5 id="what-do-you-notice">what do you notice?</h5>
 <ol>
-<li>Our blob is stored in the object folder.</li>
-<li>Inside a subfolder which picks the first two char of the blob <code>(ce)</code></li>
-<li>The blob object os the rest of the chars (013625030ba8dba906f756967f9e9ca394464a)</li>
+<li>Our blob is stored in the object folder. You can&rsquo;t see that yet but you will.</li>
 </ol>
-<p>Because of this behaviour our blob will always be same. I don&rsquo;t know a case of two different content that generate the same blob.</p>
-<h4 id="lets-do-this-step-by-step">Lets do this step by step</h4>
+<p>2 Inside a subfolder which picks the <strong>first two char of the blob</strong> (ce)</p>
+<p>3.The blob object as the rest of the char <strong>(013625030ba8dba906f756967f9e9ca394464a)</strong></p>
+<h3 id="do-this-step-by-step">Do this Step by step</h3>
 <ol>
-<li>Lets start by creating an empty directory.</li>
+<li>Create an empty directory and initialize a new repository</li>
 </ol>
-<pre><code>    $ mkdir gitobject
-    $ cd gitobject
-</code></pre><ol start="2">
-<li>We create a new git repository using <code>git init </code> command</li>
+<p>Copy the command as it will work.</p>
+<ul>
+<li><code>mkdir</code> makes a directory.</li>
+<li><code>cd</code> move into the directory</li>
+<li><code>git init</code> initiaze the repository</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  mkdir <span class="nb">test</span> <span class="p">;</span> <span class="nb">cd</span> <span class="nb">test</span> <span class="p">;</span> git init
+</code></pre></td></tr></table>
+</div>
+</div><p>One you initialize a repository <strong>a .git</strong> folder is created where all git information is stored.</p>
+<p>The <strong>.git</strong> folder have a few empty directories. If you have never checked the <strong>.git</strong> directory <strong>lets start now</strong>.</p>
+<ol start="2">
+<li>Check the folder structure of the <code>.git</code> directory.</li>
 </ol>
-<pre><code>    $ git init
-    Initialized empty Git repository in /home/edd/gitobject/.git/
-</code></pre><p>This command creates a <code>.git</code> directory, which is where git stores all informations. if you delete everything in the git repository you can build back your repository.</p>
-<p>The command here creates a few other empty directory for us. If you have never used the <code>.git</code> directory before lets start now.</p>
-<pre><code>    $ ls .git   # ll .git to get more info
-
-    $ # ll .git  #same as  (ls -la)
-    drwxr-xr-x 7 edd eduuh 4096 Feb 15 19:45 ./
-    drwxr-xr-x 3 edd eduuh 4096 Feb 15 19:45 ../
-    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 branches/
-    -rw-r--r-- 1 edd eduuh   92 Feb 15 19:45 config
-    -rw-r--r-- 1 edd eduuh   73 Feb 15 19:45 description
-    -rw-r--r-- 1 edd eduuh   23 Feb 15 19:45 HEAD
-    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 hooks/
-    drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 info/
-    drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 objects/
-    drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 refs/
-   
-   $ rm -rf .git/hooks   # remove the hook folder
-   $ tree .git/
-    .git/
-    ├── branches
-    ├── config
-    ├── description
-    ├── HEAD
-    ├── info
-    │   └── exclude
-    ├── objects
-    │   ├── info
-    │   └── pack
-    └── refs
-        ├── heads
-        └── tags
-
-    8 directories, 4 files
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ls -la .git
+</code></pre></td></tr></table>
+</div>
+</div><pre><code>drwxr-xr-x 7 edd eduuh 4096 Feb 15 19:45 ./
+drwxr-xr-x 3 edd eduuh 4096 Feb 15 19:45 ../
+drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 branches/
+-rw-r--r-- 1 edd eduuh   92 Feb 15 19:45 config
+-rw-r--r-- 1 edd eduuh   73 Feb 15 19:45 description
+-rw-r--r-- 1 edd eduuh   23 Feb 15 19:45 HEAD
+drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 hooks/
+drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 info/
+drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 objects/
+drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 refs/
 </code></pre><ol start="3">
-<li>What we have are the above directories and files. Lets create<br />
-some files in our repository.</li>
+<li>Remove the <code>.git/hooks</code> folder. you dont need for now</li>
 </ol>
-<pre><code>&gt; Storing individual files with the hash object.
-    $ echo 'an awesome deep dive to git' &gt; learn.txt
-    $ git hash-object -w learn.txt
-    b8956fb060e39ac48d4ad69cc6402c13ed38f7aa
-</code></pre><ol start="4">
-<li>The <code>hash-object</code> command takes a path to a file, reads its content and saves the content of the file into a <code>Git object store</code>. It return a hex string <code>**(the ID of the object it just created.) If we look in </code>.git/object` we can see something with<br />
-the same name.</li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf <span class="sb">`</span>.git/hooks<span class="sb">`</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Look at the folder structure in a graphical way using the tree command.</li>
 </ol>
-<pre><code>    $ find .git/object/ -type f   # f -&gt; file
-    .git/objects/b8/956fb060e39ac48d4ad69cc6402c13ed38f7aa
-  
-</code></pre><p>We&rsquo;ve created our first object! This object is a binary file that holds what we just saved.</p>
-<p>You’ll see the first two characters are a directory name. A typical repo has thousands of objects, so Git breaks up objects into subdirectories to avoid any one directory becoming too large.</p>
-<p>The <code>object ID</code> is choosen based on the <code>content</code> of the object.This is how git stores our object - the content of the<br />
-object determines its ID. The techincal name for this is <code>content-addressable filesystem</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tree .git/
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Lets add a file in our repository. Using the echo command you can <strong>redirect</strong> the output to a file.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># will write the line ot gitstuff.txt file</span>
+<span class="nb">echo</span> <span class="s1">&#39;an awesome guide to git&#39;</span> &gt; gitstuff.txt
+
+<span class="c1"># you can check the content of the file using cat command</span>
+cat gitstuff.txt
+
+git hash-object -w gitstuff.txt
+<span class="c1"># 24997081c3c51eeac9df4309dbcc9452112a8f1f</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>You should the same <code>hash</code> code as i get here as long us you use the same content as i did.</p>
+<p>This time the <strong>git hash function</strong> command takes a path to a file unlike intially where <strong>echo</strong> was used to input to the <strong>stdin</strong> of the <strong>function</strong></p>
+<ol start="4">
+<li>Something i realize with the <strong>ls -la</strong> command that actually the blob is a file. We can just read from it since it compressed into a <strong>c binary</strong> file. Lets try fo fun</li>
+</ol>
+<p>lets us the find command to look for all files. Since we now know the blob are store in the <strong>object</strong> we could narrow our search in <strong>directory</strong>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">find .git/object/ --type f
+<span class="c1"># .git/objects/24/997081c3c51eeac9df4309dbcc9452112a8f1f</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We&rsquo;ve created our first object! this is a binary file that holds what we just saved.</p>
+<h5 id="note">Note</h5>
+<p>The <strong>object id</strong> is choosen based on the <strong>content</strong> of the object. This is how git stores our object. Let me use the right word here <strong>content-addressable filesystem</strong>.</p>
 <ol start="5">
-<li>This means that if we try to save the file a second time, because content are the same nothing changes.</li>
+<li>Lets try to save the same file again.</li>
 </ol>
-<pre><code>    $ git hash-object -w learn.txt
-
-</code></pre><ol start="6">
-<li>Retrieve objects with the <code>cat-file</code>.</li>
-</ol>
-<pre><code>    $ git cat-file -p b8956fb060e39ac48d4ad69cc6402c13ed38f7aa
-
-</code></pre><p>The  <code>cat-file</code> is used to inspect objects stored in git. The <code>p</code> flag stands for <code>pretty text</code>. It pretty print the content of the object.</p>
-<h2 id="exercises">Exercises</h2>
-<p>These are some exercise to get used to the idea of storing to and<br />
-retrieving files from git objects store.</p>
-<ol>
-<li>
-<blockquote>
-<p>create a new directory, and initialize it.</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>look inside the .git folder. make sure you indetify folders and files</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>use a text editor or the command line to create multiple files and write some text to it.</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>use git hash function to generate the <code>sha1</code> hash and save the object to the git object store.</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>Use git command to inspect the object in the database.</p>
-</blockquote>
-</li>
-</ol>
-<p>Repeat exercise 3 &amp; 5 a couple of times.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git hash-object -w gitstuff.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Because it the same content, nothing changes we will receive the same <strong>sha1 hash key</strong></p>
 <ol start="6">
 <li>
-<blockquote>
-<p>make an edit to your file, then save the new version  to<br />
-git object store. what go you see in <code>.git/object</code>.</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>Delete a file then recreate it with the object store.</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>what if you save two files with the same content , but different file names. What do you see in the <code>.git/objects</code> ?<br />
-what do you expect to see.?</p>
-</blockquote>
+<h4 id="question-how-can-we-see-the-content-of-the-blob">Question: How can we see the content of the blob??</h4>
 </li>
 </ol>
-<h3 id="useful-commands">Useful commands</h3>
-<p><code>mkdir &lt;path&gt;</code></p>
-<pre><code>create a directory
-</code></pre>
-<p><code>git init</code></p>
-<pre><code>initialize Git in the current directory
-</code></pre>
-<p><code>ls .git</code></p>
-<pre><code>list the content of the .git directory
-</code></pre>
-<p><code>find .git/objects/ -type -f</code></p>
-<pre><code>list the files present in `.git/objects
-</code></pre>
-<p><code>git hash-object -w &lt;path&gt;</code></p>
-<pre><code>save the files to a git object store.
-</code></pre>
-<p><code>git cat-file -p &lt;object id&gt;</code></p>
-<pre><code>pretty print the content of the object in the git object store
-</code></pre>
-<h3 id="notes-1">Notes</h3>
-<p>A brief recap of the exercises: steps 1-5 are repeating what we just did earlier.</p>
-<p>In exercise 6, you see that git creates an entirely new object</p>
-<pre><code>$ echo 'am enjoying this git session' &gt;&gt; learn.txt
-$cat learn.txt
-an awesome deep dive to git
-Git store is amazing
+<p>When you cat <code>pathtofile</code> you will get a whole lot of <strong>nothing</strong>.To be more accurate <strong>a binary output</strong></p>
+<p>Lets try</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># use the find command to get the path</span>
+ find .git/objects -type f
+<span class="c1"># .git/objects/24/997081c3c51eeac9df4309dbcc9452112a8f1f</span>
 
-$ # you could then use find of tree
-$ tree .git/objects
-.git/objects/
-├── 99
-│   └── 7c8fb31f2f2d46c4c46931697ea291a87c43ee
-├── b8
-│   └── 956fb060e39ac48d4ad69cc6402c13ed38f7aa
-├── info
-└── pack
+cat .git/objects/24/997081c3c51eeac9df4309dbcc9452112a8f1f
+<span class="c1"># xK��OR02aH�SH,O-��MUH/�LIU(�WH�,���</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Git provides a functions to view the content of blobs.<strong>cat-file</strong></p>
+<ul>
+<li>-p =&gt; print out <strong>pretty print</strong></li>
+<li>-t =&gt; print out the type</li>
+</ul>
+<p>For this command you use the <strong>sha1 hash</strong> as the arguement.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git cat-file -p <span class="m">24997081</span>
+<span class="c1"># an awesome guide to git</span>
 
-4 directories, 2 files
-</code></pre>
-<p>For exercise 7. If you delete the file you can restore if using shell redirection.</p>
-<pre><code>$ rm learn.txt
-$ git cat-file -p 997c &gt; learn.txt
-$ cat learn.txt
-an awesome deep dive to git
-Git store is amazing
-</code></pre>
-<p>You could redirect the content of the blob to create a new file with the same content</p>
-<pre><code>$ git cat-file -p 997c &gt; learn-copy.txt
-</code></pre>
-<p>You can then add it to the <code>git object store</code> . Hopefully you can see that git store the content of the files - it is not saving<br />
-anything about our the <code>file names</code>. Each object ID is a pointer to some text, but that text isn&rsquo;t associated with the filename.<br />
-If you need to save more that one files, we need to know how the files are called .</p>
-<p>This takes us to the next section: how we use tree to save the <code>filename and directory structures.</code> in our repository.</p>
+git cat-file -t <span class="m">24997081</span>
+<span class="c1"># blob</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="useful-commands">Useful commands</h4>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>kkdir</strong> <path></td>
+<td>creates a directory</td>
+</tr>
+<tr>
+<td><strong>git init</strong></td>
+<td>initialize git in the directory</td>
+</tr>
+<tr>
+<td><strong>ls -la .git</strong></td>
+<td>lists the content of the <strong>.git</strong> directory</td>
+</tr>
+<tr>
+<td><strong>find .git/object/ -type -f</strong></td>
+<td>list all files available in a directory</td>
+</tr>
+<tr>
+<td><strong>git hash-object -w <path></strong></td>
+<td>Saves the files to a git object store.</td>
+</tr>
+<tr>
+<td>**git cat-file -p <objectid></td>
+<td>pretty print the content of the object in the git object store.</td>
+</tr>
+</tbody>
+</table>
+<p>This takes you to <a href="exercises/1exerciseone.md">exercise one</a></p>
 <h4 id="we-need-other-stuff-right">We need other stuff, right?</h4>
 <p>Our blob is missing information.</p>
 <ol>
@@ -2067,7 +2134,7 @@ HEAD  -&gt; a pointer to the current commit.</p>
 <li>Staging area</li>
 <li>Repository</li>
 </ol>
-<h5 id="working-area">Working area</h5>
+<h5 id="working-area-1">Working area</h5>
 <p>The files in your working area that are also not in the staging area are not handled by git.</p>
 <p>Also called <strong>untracked files</strong></p>
 <h4 id="the-staging-area">The staging area</h4>
@@ -2739,37 +2806,33 @@ document.addEventListener('DOMContentLoaded', function () {
           <ul>
             <li><a href="#notes">Notes</a></li>
             <li><a href="#heading"></a></li>
-          </ul>
-        </li>
-        <li><a href="#overview">Overview</a>
-          <ul>
-            <li><a href="#section-1-part-1">Section 1: Part 1</a></li>
-            <li><a href="#section-2-part-2">Section 2: Part 2</a></li>
-            <li><a href="#section-3-part-3">Section 3: Part 3</a></li>
-          </ul>
-        </li>
-        <li><a href="#section-1">Section 1</a>
-          <ul>
-            <li></li>
-            <li><a href="#lets-get-started">lets get started</a></li>
-          </ul>
-        </li>
-        <li><a href="#how-does-git-store-information">How does git store information</a></li>
-        <li><a href="#the-key---sha1">The Key - (SHA1)</a></li>
-        <li><a href="#the-value---git-blobs">The Value - Git blobs</a></li>
-        <li><a href="#under-the-hood---git-hash-object-blob">Under the hood - Git hash object (blob)</a>
-          <ul>
-            <li><a href="#where-are-the-blob-stored-">Where are the blob stored ?</a></li>
-            <li><a href="#lets-do-this-step-by-step">Lets do this step by step</a></li>
+            <li><a href="#git-concepts">Git concepts</a></li>
+            <li><a href="#untracked-files">Untracked Files</a></li>
+            <li><a href="#working-area">Working Area</a></li>
+            <li><a href="#staging-area">Staging Area</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#exercises">Exercises</a>
+    <li><a href="#how-is-information-stored">How is information stored.</a>
       <ul>
-        <li><a href="#useful-commands">Useful commands</a></li>
-        <li><a href="#notes-1">Notes</a>
+        <li>
           <ul>
+            <li><a href="#key">Key</a></li>
+            <li><a href="#value">Value</a></li>
+            <li><a href="#under-the-hood---lets-create-a-git-hash-object">Under the Hood - Lets create a git hash object.</a></li>
+          </ul>
+        </li>
+        <li><a href="#lets-initialize-a-repository">Lets initialize a repository</a>
+          <ul>
+            <li><a href="#question-where-are-blob-stored">question: where are blob stored?</a></li>
+          </ul>
+        </li>
+        <li><a href="#do-this-step-by-step">Do this Step by step</a>
+          <ul>
+            <li></li>
+            <li><a href="#question-how-can-we-see-the-content-of-the-blob">Question: How can we see the content of the blob??</a></li>
+            <li><a href="#useful-commands">Useful commands</a></li>
             <li><a href="#we-need-other-stuff-right">We need other stuff, right?</a></li>
           </ul>
         </li>

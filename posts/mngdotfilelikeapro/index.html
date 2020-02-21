@@ -1514,7 +1514,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 12, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 4 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 12, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 5 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   <span class="single__info">
     
   </span>
@@ -1577,8 +1577,8 @@ our bare repository. I chose to name my placeholder <code>.dotfiles</code></p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">	mkdir <span class="nv">$HOME</span>/.dotfiles
-	git init --bare <span class="nv">$HOME</span>/.dotfiles
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/.dotfiles
+git init --bare <span class="nv">$HOME</span>/.dotfiles
 </code></pre></td></tr></table>
 </div>
 </div><p>Now for fun part. We will make an alias for running git commands in our<br />
@@ -1594,19 +1594,15 @@ folder in you home folder.</p>
 </div>
 </div><p>Add this alias to your <code>.bashrc</code>. From now any git operation you would like to do in the .dotfiles repository can be done by the dotfiles alias. The<br />
 cool thing is that you can run dotfiles from anywhere.</p>
-<p>Lets add a remot and also set status now to show untracked files.</p>
+<p>Lets add a remote and also set status now to show untracked files.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">
-	dotfiles config --local status.showUntrackedFiles no
-	dotfiles remote add origin https://github.com/eduuh/dotfiles.git
-
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles config --local status.showUntrackedFiles no
+dotfiles remote add origin https://github.com/eduuh/dotfiles.git
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="setting-up-a-new-machine">Setting Up a New Machine</h3>
@@ -1615,13 +1611,9 @@ you need to do is to clone the repository on your new machine telling git that i
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">
-	git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
-
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
 </code></pre></td></tr></table>
 </div>
 </div><p>However, some programs create default config files, so this might fail if git finds an existing config file in your $HOME. In that case a simple sol is to clone to a temporayry directory and then delete it once you are done:</p>
@@ -1630,7 +1622,7 @@ you need to do is to clone the repository on your new machine telling git that i
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"> 	git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git
 </code></pre></td></tr></table>
 </div>
 </div><p>So this might fail if git finds an existing config file in your $HOME. In that case, a simple solution is to clone to a temporary directory , and then delete it once you are done:</p>
@@ -1642,9 +1634,9 @@ you need to do is to clone the repository on your new machine telling git that i
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">	$ git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git --recursive --verbose --exclude <span class="s1">&#39;.git&#39;</span> tmpdotfiles/ <span class="nv">$HOME</span>/  
-	
-	$ rm -r tmpdotfiles
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git --recursive --verbose --exclude <span class="s1">&#39;.git&#39;</span> tmpdotfiles/ <span class="nv">$HOME</span>/  
+
+$ rm -r tmpdotfiles
 
 </code></pre></td></tr></table>
 </div>
@@ -1704,7 +1696,32 @@ To https://github.com/eduuh/dotfiles.git
    7d507e7..64a553b  master -&gt; master
 </code></pre></td></tr></table>
 </div>
-</div><p>There you go. No symlink mess.</p>
+</div><p>The repository will be downloaded but there might exist some configuration files in your home<br />
+directory to make sure you are using the right configuration file use git checkout to actually copy<br />
+the copy in your repository to the working directory.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles checkout <span class="nv">$HOME</span>/.bashrc
+</code></pre></td></tr></table>
+</div>
+</div><p>Or easy is to checkout to the latest commit. Remember Head points to the latest commit use that.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles reset --hard HEAD
+HEAD is now at 64a553b <span class="nv">zshrc</span> <span class="o">=</span>&gt; zsh oh my god configuration files
+</code></pre></td></tr></table>
+</div>
+</div><p><code>64a553b</code> at this time this is my latest commit.<br />
+Do not worry <code>git reset --hard</code> copied files available in your <code>repository</code> to both the <strong>staging area</strong> and the <strong>working area</strong> . It should not mess with your untracted files which i believe they are<br />
+many, since this is a repository monitoring the $HOME directory.</p>
+<p>There you go. No symlink mess.</p>
 <p>My dotfiles are <a href="https://github.com/eduuh/dotfiles">here</a> for reference.</p>
 
     </article>
