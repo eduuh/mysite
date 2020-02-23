@@ -1514,7 +1514,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 14 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 21 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   <span class="single__info">
     
   </span>
@@ -1548,13 +1548,16 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h4 id="advanced-git-workshop">Advanced Git WorkShop</h4>
+      <h1 id="section-1">Section 1</h1>
 <p>Hello am Edd and I will be taking you through this workshop.By the end of this workshop, if you follow along you have a completely different understanding of <code>Git</code> and how you work with it.</p>
-<h5 id="how-we-will-go-along">How we will go along</h5>
+<blockquote>
+<h5 id="how-we-will-go-along"><a href="">How we will go along</a></h5>
+</blockquote>
+<hr />
 <p>I will start will a <code>short demo</code> on the <code>command line</code> to introduce the new material.<br />
 After a bit we will have some exercise for you to practise what we were going through. After you  finish the exercises we are<br />
 then going to it together, to make sure you understand.</p>
-<h3 id="requirements">Requirements</h3>
+<h2 id="requirements">Requirements</h2>
 <ol>
 <li><strong>Command Line</strong> that support unix style commands</li>
 <li><strong>git version &gt; 2.0</strong> (check with git &ndash;version)</li>
@@ -1621,16 +1624,13 @@ then going to it together, to make sure you understand.</p>
 But this depends on how your use case and mood.</p>
 </blockquote>
 <blockquote>
-<h4 id="notes">Notes</h4>
+<h4 id="notes"><a href="">Notes</a></h4>
 </blockquote>
 <p>People use git for different use cases. You should try to use the idea from this workshop and incoporate them to your workflows.</p>
-<blockquote>
-<h4 id="heading"></h4>
-</blockquote>
 <p>I have divided this workshop into sections , and after each sections. Am going to give an exercise which you will attempt. And then we are going to them together.</p>
 <p>Lets focus more on doing and understanding the theory. This is what i mean. Instead of writing down the notes focus on trying out the <strong>commands</strong>. You have all these notes with you.</p>
 <p>Git is a tool to helps you,but not  work against you.</p>
-<h4 id="git-concepts">Git concepts</h4>
+<h2 id="git-concepts">Git concepts</h2>
 <blockquote>
 <h4 id="untracked-files">Untracked Files</h4>
 </blockquote>
@@ -1644,7 +1644,7 @@ But this depends on how your use case and mood.</p>
 </blockquote>
 <p>Modified files that have been marked to go the next commit.</p>
 <p>This are terms that will appear mostly in this workshop.</p>
-<h2 id="how-is-information-stored">How is information stored.</h2>
+<h3 id="how-is-information-stored">How is information stored.</h3>
 <p>At its core, git is like a key value store.</p>
 <ol>
 <li><strong>Value</strong> = Data (our files)</li>
@@ -1653,11 +1653,13 @@ But this depends on how your use case and mood.</p>
 <blockquote>
 <h4 id="key">Key</h4>
 </blockquote>
+<hr />
 <p>Its a <strong>crytographic hash function</strong>. Given a piece of data , it produces a <strong>40 - digit hexadecimal numbers.</strong> You will see this in a bit.</p>
 <p>This <strong>value should always be the same if the given Input it the same</strong>.</p>
 <blockquote>
 <h4 id="value">Value</h4>
 </blockquote>
+<hr />
 <p>Git store  the <strong>compressed</strong> data in a blob , along with the metadata in a header. Holds the <strong>identifier of the</strong>, <strong>size of the content</strong> and the <strong>content</strong> itself.</p>
 <p><strong>Note:</strong> The content is compressed and when you cat into it you will get a whole lot of nothings.</p>
 <h4 id="under-the-hood---lets-create-a-git-hash-object">Under the Hood - Lets create a git hash object.</h4>
@@ -1698,7 +1700,10 @@ But this depends on how your use case and mood.</p>
 </code></pre></td></tr></table>
 </div>
 </div><p>When you run the hash function on the same content you will always get the same result.</p>
-<h3 id="lets-initialize-a-repository">Lets initialize a repository</h3>
+<blockquote>
+<h4 id="lets-initialize-a-repository">Lets initialize a repository</h4>
+</blockquote>
+<hr />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1714,6 +1719,7 @@ But this depends on how your use case and mood.</p>
 <blockquote>
 <h4 id="question-where-are-blob-stored">question: where are blob stored?</h4>
 </blockquote>
+<hr />
 <p>We are going to rerun the command that ask git to generate a <code>sha1</code> key for the content but this time we pass a option , <strong>-w</strong> that indicates we want to <strong>write the object to the git repo.</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1742,14 +1748,6 @@ ce013625030ba8dba906f756967f9e9ca394464a
 <p>Note if you have alot of files in your working directory u are going to have a longer structure. ***The output look something like.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">tree .git/ 
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -1771,29 +1769,33 @@ ce013625030ba8dba906f756967f9e9ca394464a
 </span><span class="lnt">19
 </span><span class="lnt">20
 </span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">.git/
-├── branches
-├── config
-├── description
-├── HEAD
-├── index
-├── info
-│   └── exclude
-├── logs
-│   ├── HEAD
-│   └── refs
-│       ├── heads
-│       │   └── master
-│       └── remotes
-│           └── origin
-│               └── HEAD
-├── objects
-│   ├── <span class="m">07</span>
-│   │   └── 9830d5ae8de34a3faf6bd8ff8b680684948bec
-│   ├── ce
-│   │   └── 013625030ba8dba906f756967f9e9ca394464a
+<pre class="chroma"><code class="language-bash" data-lang="bash">tree .git/ 
+
+    .git/
+    ├── branches
+    ├── config
+    ├── description
+    ├── HEAD
+    ├── index
+    ├── info
+    │   └── exclude
+    ├── logs
+    │   ├── HEAD
+    │   └── refs
+    │       ├── heads
+    │       │   └── master
+    │       └── remotes
+    │           └── origin
+    │               └── HEAD
+    ├── objects
+    │   ├── <span class="m">07</span>
+    │   │   └── 9830d5ae8de34a3faf6bd8ff8b680684948bec
+    │   ├── ce
+    │   │   └── 013625030ba8dba906f756967f9e9ca394464a
 </code></pre></td></tr></table>
 </div>
 </div><p>Our initial <code>sha1</code> file was <strong>ce013625030ba8dba906f756967f9e9ca394464a</strong>.</p>
@@ -1803,9 +1805,9 @@ ce013625030ba8dba906f756967f9e9ca394464a
 </ol>
 <p>2 Inside a subfolder which picks the <strong>first two char of the blob</strong> (ce)</p>
 <p>3.The blob object as the rest of the char <strong>(013625030ba8dba906f756967f9e9ca394464a)</strong></p>
-<h3 id="do-this-step-by-step">Do this Step by step</h3>
+<h2 id="do-this-step-by-step">Do this Step by step</h2>
 <ol>
-<li>Create an empty directory and initialize a new repository</li>
+<li><strong><code>Create an empty directory and initialize a new repository</code></strong></li>
 </ol>
 <p>Copy the command as it will work.</p>
 <ul>
@@ -1824,27 +1826,39 @@ ce013625030ba8dba906f756967f9e9ca394464a
 </div><p>One you initialize a repository <strong>a .git</strong> folder is created where all git information is stored.</p>
 <p>The <strong>.git</strong> folder have a few empty directories. If you have never checked the <strong>.git</strong> directory <strong>lets start now</strong>.</p>
 <ol start="2">
-<li>Check the folder structure of the <code>.git</code> directory.</li>
+<li><code>Check the folder structure of the </code>.git<code> directory.</code></li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">ls -la .git
+
+drwxr-xr-x <span class="m">7</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 ./
+drwxr-xr-x <span class="m">3</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 ../
+drwxr-xr-x <span class="m">2</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 branches/
+-rw-r--r-- <span class="m">1</span> edd eduuh   <span class="m">92</span> Feb <span class="m">15</span> 19:45 config
+-rw-r--r-- <span class="m">1</span> edd eduuh   <span class="m">73</span> Feb <span class="m">15</span> 19:45 description
+-rw-r--r-- <span class="m">1</span> edd eduuh   <span class="m">23</span> Feb <span class="m">15</span> 19:45 HEAD
+drwxr-xr-x <span class="m">2</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 hooks/
+drwxr-xr-x <span class="m">2</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 info/
+drwxr-xr-x <span class="m">4</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 objects/
+drwxr-xr-x <span class="m">4</span> edd eduuh <span class="m">4096</span> Feb <span class="m">15</span> 19:45 refs/
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>drwxr-xr-x 7 edd eduuh 4096 Feb 15 19:45 ./
-drwxr-xr-x 3 edd eduuh 4096 Feb 15 19:45 ../
-drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 branches/
--rw-r--r-- 1 edd eduuh   92 Feb 15 19:45 config
--rw-r--r-- 1 edd eduuh   73 Feb 15 19:45 description
--rw-r--r-- 1 edd eduuh   23 Feb 15 19:45 HEAD
-drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 hooks/
-drwxr-xr-x 2 edd eduuh 4096 Feb 15 19:45 info/
-drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 objects/
-drwxr-xr-x 4 edd eduuh 4096 Feb 15 19:45 refs/
-</code></pre><ol start="3">
+</div><ol start="3">
 <li>Remove the <code>.git/hooks</code> folder. you dont need for now</li>
 </ol>
 <div class="highlight"><div class="chroma">
@@ -1891,10 +1905,10 @@ git hash-object -w gitstuff.txt
 <span class="c1"># 24997081c3c51eeac9df4309dbcc9452112a8f1f</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>You should the same <code>hash</code> code as i get here as long us you use the same content as i did.</p>
+</div><p>You should have the same <code>hash</code> code as i get here as long us you use the same content as i did.</p>
 <p>This time the <strong>git hash function</strong> command takes a path to a file unlike intially where <strong>echo</strong> was used to input to the <strong>stdin</strong> of the <strong>function</strong></p>
 <ol start="4">
-<li>Something i realize with the <strong>ls -la</strong> command that actually the blob is a file. We can just read from it since it compressed into a <strong>c binary</strong> file. Lets try fo fun</li>
+<li><code>Something i realize with the **ls -la** command that actually the blob is a file. We can just read from it since it compressed into a **c binary** file. Lets try fo fun</code></li>
 </ol>
 <p>lets us the find command to look for all files. Since we now know the blob are store in the <strong>object</strong> we could narrow our search in <strong>directory</strong>.</p>
 <div class="highlight"><div class="chroma">
@@ -1923,9 +1937,7 @@ git hash-object -w gitstuff.txt
 </div>
 </div><p>Because it the same content, nothing changes we will receive the same <strong>sha1 hash key</strong></p>
 <ol start="6">
-<li>
-<h4 id="question-how-can-we-see-the-content-of-the-blob">Question: How can we see the content of the blob??</h4>
-</li>
+<li><strong>Question</strong>: How can we see the content of the blob??</li>
 </ol>
 <p>When you cat <code>pathtofile</code> you will get a whole lot of <strong>nothing</strong>.To be more accurate <strong>a binary output</strong></p>
 <p>Lets try</p>
@@ -1969,7 +1981,7 @@ git cat-file -t <span class="m">24997081</span>
 <span class="c1"># blob</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="useful-commands">Useful commands</h4>
+</div><h2 id="useful-commands">Useful commands</h2>
 <table>
 <thead>
 <tr>
@@ -1979,7 +1991,7 @@ git cat-file -t <span class="m">24997081</span>
 </thead>
 <tbody>
 <tr>
-<td><strong>kkdir</strong> <path></td>
+<td><strong>mkdir</strong> <path></td>
 <td>creates a directory</td>
 </tr>
 <tr>
@@ -1999,136 +2011,376 @@ git cat-file -t <span class="m">24997081</span>
 <td>Saves the files to a git object store.</td>
 </tr>
 <tr>
-<td>**git cat-file -p <objectid></td>
+<td><strong>git cat-file -p <objectid></strong></td>
 <td>pretty print the content of the object in the git object store.</td>
 </tr>
 </tbody>
 </table>
-<p>This takes you to <a href="exercises/1exerciseone.md">exercise one</a></p>
-<h4 id="we-need-other-stuff-right">We need other stuff, right?</h4>
-<p>Our blob is missing information.</p>
+<h2 id="exercise-1">Exercise 1</h2>
+<p>These are some exercise to get used to the idea of storing to and<br />
+retrieving files from git objects store.</p>
+<ol>
+<li>
+<blockquote>
+<p>create a new directory, and initialize it.</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>look inside the .git folder. make sure you indetify folders and files</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>use a text editor or the command line to create multiple files and write some text to it.</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>use git hash function to generate the <code>sha1</code> hash and save the object to the git object store.</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Use git command to inspect the object in the database.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="under-the-hood-of-a-commit">Under the Hood of a commit</h2>
+<p>For a commit to be complete we need to store <strong>the information about thefile</strong></p>
+<p>The basic way git store information is using <strong>blob</strong> and <strong>trees</strong> .</p>
+<p>Our blob does not store all the information.</p>
 <ol>
 <li>filenames.</li>
 <li>directory structure.</li>
 </ol>
-<p>wheres is this information stored in git?</p>
-<blockquote>
-<h2 id="tree">Tree</h2>
-</blockquote>
-<p>Git stores filename , directory structure here.<br />
-a <strong>tree</strong> contains pointers (using sha1).</p>
-<blockquote>
-<p>to blobs.<br />
-to other trees.</p>
-</blockquote>
-<p>and <code>metadata</code></p>
+<h4 id="question-wheres-is-this-information-stored-in-git">Question: wheres is this information stored in git?</h4>
+<h4 id="trees">Trees</h4>
+<p>A <strong>git tree object</strong> creates a hierachy between files in the git repository and the directory structures.<br />
+Every <strong>commit</strong> holds a <strong>single tree</strong> . A tree holds the following informantion.</p>
+<p>Tree points  to other.</p>
+<ol>
+<li>blob</li>
+<li>Also point to other trees.</li>
+</ol>
+<p>Metadata of the <strong>tree</strong></p>
 <ul>
 <li><strong>type</strong> of pointer</li>
 <li><strong>filename</strong> of directory name</li>
 <li><strong>mode</strong> (excutable file, symbolic link,..)</li>
 </ul>
-<p>Has anyone ever tried to add empty directories to git?<br />
-git can&rsquo;t of dont store empty directories.</p>
-<p>Identical content is only store once.</p>
-<h2 id="other-optimization---packfilse-and-deltas">Other Optimization - Packfilse and Deltas</h2>
-<ol>
-<li>Git object are compressed</li>
-<li>As files change, their content remains mostly similar.</li>
-<li>Git optimize for this by compressing  these files together, into a Packfiles.</li>
-<li>The packfile stores the object and <code>deltas</code> , of the differences between one version of the file<br />
-and the next.</li>
-<li>Packfiles are generated when:<br />
-You have too many objects , during gc, or during a push to remote.</li>
-</ol>
-<p>You kind start to understand what happens during a git push where you see that message.</p>
+<h2 id="lets-do-it-step-by-step">Lets do it step by step</h2>
+<p>Let&rsquo;s start with a new sample repository again,but this time we doing things manually, so we <strong>get the feeling of what is happening under the hood</strong>.</p>
+<p>For the repository we created a while back lets delete the <code>.git</code> folder . and initilize a new repository.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf .git
+<span class="c1"># create a file again</span>
+<span class="nb">echo</span> <span class="s1">&#39;Hello , Edwin&#39;</span> &gt; greeting.txt
+git init 
+git add greating.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Lets say it all start when we add the file to the <strong>index / staging area</strong>. When I added the file to , <strong>a change occured in my repository</strong> this can&rsquo;t be view as a commit yet but there is a command to see what happened.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git ls-files --stage
+<span class="c1"># 100644 9f704ffe0495c8f1416cc004f5638e06e78bf14e 0       greeting.txt</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We have not commited anything yet but we already have <strong>an object</strong> in our repo. Let get the hash id of<br />
+our content in the <strong>file</strong> we already know how to do that.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git hash-object greeting.txt
+<span class="c1"># 9f704ffe0495c8f1416cc004f5638e06e78bf14e</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>You realizes the the <strong>hash key</strong> is the same as that of the content of the <strong>greeting.txt</strong></p>
+<p>You could also use the <strong>cat-file -t</strong> on the hash to see the type of the object it represent. At this case you will find that its a blob.</p>
+<h6 id="the-same-file-will-always-result-with-the-same-blob">the same file will always result with the same blob.</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git cat-file -t 9f704ffe0495c
+<span class="c1"># blob</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>At this point , The <strong>blob</strong> is not reference by any tree and there are no commits yet. At this point the object is anly referenced from a file named <strong>.git/index</strong> which reference the blob and the tree that makes up the current index.</p>
+<h5 id="lets-make-a-tree">Lets make a tree</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git write-tree #
+438fa6e39f5e86e72bd959b0c12019f1e39cc70d
+</code></pre></td></tr></table>
+</div>
+</div><p>A <strong>tree</strong> containing the same <strong>blob</strong> or <strong>sub-blobs</strong> will always have the same <strong>hash id</strong>.  We dont have a commit but we have a tree now.</p>
 <blockquote>
-<p><code>compressing deltas</code></p>
+<p>Lets make a commit manually by using the tree directly</p>
 </blockquote>
-<h2 id="commit-object">Commit OBJECT</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s1">&#39;Initial commit&#39;</span> <span class="p">|</span> git commit-tree 438fa6e39f5e
+<span class="c1"># 672df89e038ea79fdac61e8686afe65d07b49dbb</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>the raw commit function takes the tree&rsquo;s hash id and makes a <strong>commit object</strong> to hold it. If i wanted the commit to have a parent i could specify the parent commit with <strong>-p</strong> .</p>
+<p>Note my commit <strong>hash id</strong> and your will be different since it uses <strong>my name</strong> and <strong>the current date</strong> as the content to generate the commit object.</p>
+<h4 id="let-see-a-commit-object">let see a commit object.</h4>
 <p>A commit is a code snapshot.</p>
 <p>A commit points to</p>
 <ol>
 <li>A tree</li>
+<li>A parent commit</li>
 </ol>
-<p>and contains metadata:</p>
+<p>and contains metadata: The content used to generate the <strong>Sha1</strong> files.</p>
 <blockquote>
 <p>author and committer<br />
 date<br />
 message<br />
 parend commit (one or more)</p>
 </blockquote>
-<p>The <code>sha1</code> of the commit is the hash of all this information.</p>
+<p>Identical content is only store once.</p>
+<h4 id="optimization---packfiles-and-deltas">Optimization - Packfiles and Deltas</h4>
+<ol>
+<li>
+<p>Git object are compressed .</p>
+</li>
+<li>
+<p>As files change, their content remains mostly similar.</p>
+<pre><code> you might add a method here or there.
+</code></pre>
+</li>
+<li>
+<p>Git optimize for this by compressing  these files together, into a <strong>Packfiles</strong>.</p>
+</li>
+<li>
+<p>The packfile stores the object and <code>deltas</code> , of the differences between one version of the file and the next.</p>
+</li>
+<li>
+<p>Packfiles are generated when:<br />
+You have too many objects , during garabage collection, or <strong>during a push to remote.</strong></p>
+</li>
+</ol>
+<p>Git perform a garbage collection once in a few weeks or when you explicity request it to.</p>
+<p>You kind of start to understand what happens during a git push where you see that message.</p>
+<blockquote>
+<p><code>compressing deltas</code><br />
+The <code>sha1</code> of the commit is the hash of all this information.</p>
+</blockquote>
 <p><img src="./../../static/graphical.png" alt="commit graphical" /></p>
 <h4 id="practically">Practically</h4>
 <ol>
-<li>
-<p>lets perfom a git status on the repo we created.</p>
-<pre><code> $ git status
- On branch master
-
- No commits yet
-
- Untracked files:
- (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
- learn-copy.txt
- learn.txt
-
- $ git add . # add all the files to the staging area
- $ git commit -m &quot;finished working on gitworkshop&quot;
- [master (root-commit) 3cb087a] finished working on git workshop
- 2 files changed, 4 insertions(+)
- create mode 100644 learn-copy.txt
- create mode 100644 learn.txt
-    
- $ tree .git/objects
- .git/objects/
- ├── 1e
- │   └── 234f233918794921501400511445247278c890
- ├── 3c
- │   └── b087a3be11296eee71a0527dfe77a139688d68
-</code></pre>
-</li>
+<li>lets perfom a git status on the repo we created.</li>
 </ol>
-<p>Note after a commit, git provide the first character of the <code>sha1 hash</code> identifier for the commit. for this case its <strong>3cb087a</strong> .</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    <span class="o">(</span>use <span class="s2">&#34;git add &lt;file&gt;...&#34;</span> to include in what will be committed<span class="o">)</span>
+
+    learn-copy.txt
+    learn.txt
+
+git add . <span class="c1"># add all the files to the staging area</span>
+git commit -m <span class="s2">&#34;finished working on gitworkshop&#34;</span>
+    <span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> 3cb087a<span class="o">]</span> finished working on git workshop
+    <span class="m">2</span> files changed, <span class="m">4</span> insertions<span class="o">(</span>+<span class="o">)</span>
+    create mode <span class="m">100644</span> learn-copy.txt
+    create mode <span class="m">100644</span> learn.txt
+
+tree .git/objects
+    .git/objects/
+    ├── 1e
+    │   └── 234f233918794921501400511445247278c890
+    ├── 3c
+    │   └── b087a3be11296eee71a0527dfe77a139688d68
+</code></pre></td></tr></table>
+</div>
+</div><p>Note after a commit, git provide the first character of the <code>sha1 hash</code> identifier for the commit. for this case its <strong>3cb087a</strong> .</p>
+<p>A commit object is also store similary to the blobs.</p>
 <p>When you look into the <code>.git/objects</code> directory using the tree<br />
 command. you notice that the commit create a folder structure and has an object in it.</p>
 <h4 id="git-file--t-type-and--p-print-the-content">Git-file -T (Type) and -P (PRINT) THE CONTENT</h4>
-<pre><code>    $  git cat-file -t 3cb087a
-     commit
-    
-    $  git cat-file -p 3cb087a
-    tree 1e234f233918794921501400511445247278c890
-    author eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1581803358 +0300
-    committer eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1581803358 +0300
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$  git cat-file -t 3cb087a
+    commit
 
-    finished working on git workshop
-</code></pre>
-<h2 id="take-away-from-this">Take away from this</h2>
+$  git cat-file -p 3cb087a
+tree 1e234f233918794921501400511445247278c890
+author eduuh &lt;edwinkamaumuraya0@outlook.com&gt; <span class="m">1581803358</span> +0300
+committer eduuh &lt;edwinkamaumuraya0@outlook.com&gt; <span class="m">1581803358</span> +0300
+
+finished working on git workshop
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="what-we-learn-from-this">What we Learn from this</h4>
 <blockquote>
-<p>We can&rsquo;t change the Commits!</p>
+<p>We can&rsquo;t change the Commits! You cannot rewrite history.<br />
+we can&rsquo;t go back and  change the <strong>author</strong> or any other data.</p>
 </blockquote>
 <ul>
 <li>
-<p>if you change any data about the commit, the<br />
-commit will have a new <code>SHA1</code> hash.</p>
+<p>If you change any data about the commit, the commit will have a new <code>SHA1</code> hash.</p>
 </li>
 <li>
-<p>even ef the files dont change the date will .</p>
+<p>Even if the files don&rsquo;t change the date will and this result to a new <code>hash</code></p>
+</li>
+<li>
+<p>This give use the sense of high security in git and you will always know that your commit history will always maintaint its integrity. No one in your team can mess with your commit message without becoming obvious.</p>
+</li>
+<li>
+<p>It also secures agaish corruption. If files on the disk change, the repository will notify that the content do not match.</p>
 </li>
 </ul>
-<h4 id="this-give-use-the-sense-of-high-security-in">This give use the sense of high security in</h4>
-<p>git and you will always know that you commit history will always maintaint its integrity. No one in your team can mess with your commit message without becoming obvious.</p>
-<p>It also secures agaish corruption. If files on the disk change, the repository will notify that the content do not match.</p>
-<h4 id="references---pointers-to-commits">REFERENCES - POINTERS TO COMMITS</h4>
-<blockquote>
-<p>tags<br />
-branch<br />
-HEAD  -&gt; a pointer to the current commit.</p>
-</blockquote>
-<h4 id="why-are-checkout-in-git-really-fast">Why are checkout in git really fast?</h4>
-<p>This is because, it not pulling in other data. but its just changing the pointers.</p>
-<h3 id="three-areas-where-code-lives">Three areas where code lives</h3>
+<h2 id="references">REFERENCES</h2>
+<hr />
+<p><strong>POINTERS TO COMMITS</strong>  . Are stored in <code>.git/refs</code> directory</p>
+<p>Examples of References.</p>
+<ul>
+<li>tags      =&gt; <strong>Points to a speciefic commit. They don&rsquo;t change : used to version you code.</strong></li>
+<li>branch    =&gt; <strong>Points to the latest commit.</strong></li>
+<li>HEAD      =&gt; <strong>Point to the current branch</strong></li>
+</ul>
+<h4 id="folder-stucture-of-the-git-folder">Folder Stucture of the <code>.git</code> folder</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Just copied a section.It is bigger that this.</span>
+        ├── HEAD
+        ├── index
+        ├── info
+        │   └── exclude
+        ├── logs
+        │   ├── HEAD                        <span class="c1"># point to the latest commit</span>
+        │   └── refs
+        │       ├── heads                   <span class="c1"># all the branches lives here</span>
+        │       │   ├── git1
+        │       │   ├── git2
+        │       │   └── master
+        │       └── remotes
+        │           └── origin
+        │               ├── HEAD
+        │               └── master
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="note-the-branches-live-in-the-gitrefsheadsmaster">Note: the branches live in the <strong>.git/refs/heads/master</strong></h5>
+<p>let check the master branch and see what it points to. we could use the <strong>cat</strong> command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat .git/refs/heads/master/
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1
+
+<span class="c1"># Confirm this with git log</span>
+git log HEAD --oneline
+<span class="c1">#3811dbf (HEAD -&gt; git2, origin/master, origin/HEAD, master, git1) Section one: part one covered</span>
+
+<span class="c1">#head is the pointer to the current branch</span>
+cat .git/HEAD
+<span class="c1"># ref: refs/heads/git2</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>There are instance when head can point to <strong>commits</strong> we are goint to review the cases.</p>
+<h4 id="questions--why-are-checkouts-in-git-really-fast">Questions:  Why are checkouts in git really fast?</h4>
+<p>This is because, <strong>there in no pulling in other data.</strong> but its just <strong>changing the pointers.</strong></p>
+<h2 id="review-places-where-code-lives">Review: Places where code lives</h2>
 <ol>
 <li>Working area</li>
 <li>Staging area</li>
@@ -2142,90 +2394,242 @@ HEAD  -&gt; a pointer to the current commit.</p>
 <li>What files are going to be part of your next commit.</li>
 <li>the staging area is how git knows what will change between the current commit and the next commit.</li>
 </ul>
-<p>Tip: a clean staging area isn&rsquo;t empty!<br />
-consider the baseline staging are as being an exact copy of the latest commit.</p>
+<h5 id="tip-a-clean-staging-area-isnt-empty-consider-the-baseline-staging-area-as-being-an-exact-copy-of-the-latest-commit">Tip: a clean staging area isn&rsquo;t empty! consider the baseline staging area as being an exact copy of the latest commit.</h5>
 <h4 id="the-repository">The Repository</h4>
-<p>The files git knows about !<br />
-Contans all of your commit.</p>
+<p>The files git knows about ! Contans all of your commit.</p>
 <p>the repository is stored in the <code>.git</code> folder.</p>
 <h3 id="moving-files-in--of-the-staging-area">Moving files in &amp; of the staging area</h3>
-<p>Add a file to the next commit.</p>
-<pre><code>git add &lt;filename&gt;
-</code></pre>
-<p>delete a file in the next commit</p>
-<pre><code>git rm &lt;file&gt;
-</code></pre>
-<p>rename a file in the next commit:</p>
-<pre><code>git mv &lt;file&gt;
-</code></pre>
-<h3 id="git-add--p">Git ADD -p</h3>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git add <filename></td>
+<td>Add a file to the next commit.</td>
+</tr>
+<tr>
+<td>git rm <file></td>
+<td>delete a file in the next commit</td>
+</tr>
+<tr>
+<td>git mv <file></td>
+<td>rename a file in the next commit:</td>
+</tr>
+</tbody>
+</table>
+<h4 id="git-add--p">Git ADD -p</h4>
 <ol>
 <li>One of my favorite tools</li>
 </ol>
-<p>allows you to stage commits in hunks<br />
-Interactively</p>
-<p>It&rsquo;s especially useful if you&rsquo;ve done too much work for one commit.</p>
+<p>allows you to stage commits in hunks Interactively<br />
+It&rsquo;s especially useful if you&rsquo;ve done too much work for one commit.</p>
 <h3 id="unstage-files-fron-the-staging-area">Unstage files fron the staging area</h3>
 <p>Not removing the files</p>
 <p>You&rsquo;re replacing them with a copy that&rsquo;s currently in the repository.</p>
 <p><img src="./../../static/gitstagingarea.png" alt="gitstaging" /></p>
-<h3 id="git-stash">Git STASH</h3>
-<p>This is usually a way to save uncommited work.</p>
-<p>The stash is <strong>safe</strong> from destructive operations.</p>
+<h2 id="git-stash">Git STASH</h2>
+<p>This is usually a way to save uncommited work. The stash is <strong>safe</strong> from destructive operations.</p>
 <pre><code>changing between branches which requires you to have
 commited all your changes.
 </code></pre>
 <p><img src="./../../static/gitstash.png" alt="gitsafe" /></p>
 <h4 id="git-stash-basic-use">Git stash Basic use</h4>
-<p>Stash changes</p>
-<pre><code>git stash
-</code></pre>
-<p>list changes</p>
-<pre><code>git stash list
-</code></pre>
-<p>show content</p>
-<pre><code>git stash show stash@{0}
-</code></pre>
-<p>apply the last stash</p>
-<pre><code>git stash apply
-</code></pre>
-<p>apply specific stash</p>
-<pre><code>git stash apply stash@{0}
-</code></pre>
-<p>by default <code>git stash</code> stash tracked files that are either in the repository or staging area.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git stash</td>
+<td>stash changes</td>
+</tr>
+<tr>
+<td>git stash list</td>
+<td>list stashed changes</td>
+</tr>
+<tr>
+<td>git stash show stash{0}</td>
+<td>show content of the stash</td>
+</tr>
+<tr>
+<td>git stash apply</td>
+<td>apply the last stash to the working directory</td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>applys the last stash and deletes it</td>
+</tr>
+<tr>
+<td>git stash drop stash{0}</td>
+<td>deletes a specified stash from memory</td>
+</tr>
+</tbody>
+</table>
+<p>By default <code>git stash</code> stash tracked files that are either in the repository or staging area.</p>
 <h4 id="advanced-stashing---operations">Advanced STASHING - Operations</h4>
 <p>Let give a scenario. You have added a new file in the repository and you dont want to <code>git add</code> it yet, but you need<br />
 to switch to a different branch. Advanced stashing comes in<br />
 handy. If you switch to a different branch with untracted files<br />
 in your working area you could accidentally commit this file.</p>
 <h5 id="keeping-untracted-file-it-a-stash">Keeping untracted file it a stash</h5>
-<pre><code>git stash --include-untracked
-</code></pre>
-<h5 id="you-this-with-cautions">you this with cautions</h5>
-<pre><code>git stash -all
-</code></pre>
-<p>this could add even ingored files.</p>
-<h5 id="name-stashes-for-easy-reference">Name stashes for easy reference</h5>
-<pre><code>git stash save &quot;WIP: making progress on foo&quot;
-</code></pre>
-<h5 id="start-a-new-brance-from-a-stash">start a new brance from a stash</h5>
-<pre><code>git stash branch &lt;optional branch name&gt;
-</code></pre>
-<h5 id="grab-a-single-files-from-a-stash">Grab a single files from a stash</h5>
-<pre><code>git checkout &lt;stash name&gt; --&lt;filename&gt;
-</code></pre>
-<h5 id="remove-the-last-stash-and-applying-changes">Remove the last stash and applying changes</h5>
-<pre><code>git stash pop
-</code></pre>
-<p>tip : doest remove if there are a merge conflict</p>
-<h5 id="remove-the-last-stash">Remove the last stash</h5>
-<pre><code>git stash drop stash@{0}
-</code></pre>
-<h5 id="remove-all-stashes">Remove all stashes</h5>
-<pre><code>git stash clear
-</code></pre>
-<h3 id="exercise">Exercise</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git stash &ndash;include-untracked</td>
+<td>Stash even the untracked files (very uselful)</td>
+</tr>
+<tr>
+<td>git stash -all</td>
+<td>Use this with caution. Stashes even ingnored files</td>
+</tr>
+<tr>
+<td>git stash save &ldquo;WIP: making progress on foo&rdquo;</td>
+<td>Names stashes for easy reference</td>
+</tr>
+<tr>
+<td>git stash branch <optional brance name></td>
+<td>Make a new branch from a stash</td>
+</tr>
+<tr>
+<td>git checkout <stash name> &ndash;filename</td>
+<td>Grab a single files from a stash</td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>applies the last stash. Does not apply if there is a conflict</td>
+</tr>
+<tr>
+<td>git stash drop stash@{0}</td>
+<td>Remove the specified stash</td>
+</tr>
+<tr>
+<td>git stash clear</td>
+<td>Removes all the stash</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercise-2">Exercise 2</h2>
+<ol>
+<li>Create a new folder and initialize it as a git repo</li>
+<li>Create a file, stage it, and commit it to your new repo</li>
+<li>Look at your <code>.git</code> folder, using <code>tree</code> if you have it</li>
+<li>Inspect the objects in your <code>.git/objects</code> folder using <code>git cat-file</code>. See if you can find the tree, blob, and commit objects for your recent commit.</li>
+<li>Look at your <code>.git/HEAD</code> and <code>.git/refs/heads/master</code> files and see if you can figure out where these references are pointing to.</li>
+</ol>
+<h3 id="solutions">Solutions</h3>
+<h4 id="step-1---initialize-the-repo">Step 1 - Initialize the Repo</h4>
+<p>Create a new sample project folder. Run <code>git status</code> to see that it is not yet a git repository. Use <code>git init</code> to initialize it as a repository.</p>
+<pre><code>$&gt; mkdir -p ~/projects/sample
 
+$&gt; cd ~/projects/sample
+
+$&gt; git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+$&gt; git init
+Initialized empty Git repository in /Users/nnja/projects/sample/.git/
+</code></pre><h4 id="step-2---first-commit">Step 2 - First Commit</h4>
+<p>Create a new document, stage it for a commit, then commit it to your repository.</p>
+<pre><code>$&gt; echo 'Hello World!' &gt; hello.txt
+
+$&gt; git add hello.txt
+
+$&gt; git commit -m &quot;Initial commit&quot;
+[master (root-commit) aceb9e8] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+</code></pre><h4 id="step-3---view-the-git-folder">Step 3 - View the .git Folder</h4>
+<p>Using <code>tree</code>, look in your <code>.git/objects</code> folder, you should now see three objects, represented by long SHA1 hashes. These represent the tree, blob, and commit that we created in the last step.</p>
+<pre><code>$&gt; tree .git
+
+.git
+├── COMMIT_EDITMSG
+├── HEAD
+├── config
+├── description
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       └── heads
+│           └── master
+├── objects
+│   ├── 43
+│   │   └── 388fee19744e8893467331d7853a6475a227b8
+│   ├── 58
+│   │   └── 1caa0fe56cf01dc028cc0b089d364993e046b6
+│   ├── 98
+│   │   └── 0a0d5f19a64b4b30a87d4206aade58726b60e3
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    │   └── master
+    └── tags
+</code></pre><h4 id="step-4---inspect-the-objects">Step 4 - Inspect the Objects:</h4>
+<p>Note: The SHA1 hash for your commit will be different than the one displayed here. The SHA1 hash for your <code>blob</code> and <code>tree</code> will be the same as mine, as long as the content is the same.</p>
+<p>One of the objects should be a tree object. The tree contains the filename <code>hello.txt</code> and a pointer to the blob.</p>
+<pre><code>$&gt; git cat-file -t 581caa
+tree
+
+$&gt; git cat-file -p 581caa
+100644 blob 980a0d5f19a64b4b30a87d4206aade58726b60e3	hello.txt
+</code></pre><p>The blob object, pointed to by the tree, contains the contents of the file <code>hello.txt</code></p>
+<pre><code>$&gt; git cat-file -t 980a0d5
+blob
+
+$&gt; git cat-file -p 980a0d5
+Hello World!
+</code></pre><p>The commit object contains a pointer to the tree, along with metadata for the commit, such as the author and commit message.</p>
+<pre><code>$&gt; git cat-file -t 43388f
+commit
+
+$&gt; git cat-file -p 43388f
+tree 581caa0fe56cf01dc028cc0b089d364993e046b6
+author Nina Zakharenko &lt;nina@nnja.io&gt; 1507168309 -0700
+committer Nina Zakharenko &lt;nina@nnja.io&gt; 1507168309 -0700
+
+Initial commit
+</code></pre><p>Because this is our very first commit, it doesn&rsquo;t have a parent. The next commit we make will point to our initial commit as the parent.</p>
+<h4 id="step-5---look-at-refs">Step 5 - Look at refs</h4>
+<p>Let&rsquo;s look under the hood at our <code>HEAD</code> variable. <code>HEAD</code> is just git&rsquo;s pointer to &ldquo;where you are now,&rdquo; usually referring to the current branch. More on this later. We can see that right now, it points to our current branch - <code>master</code></p>
+<p>Now, if we look at our <code>master</code> reference, we can see that it points to the latest commit.</p>
+<pre><code>$&gt; cat .git/HEAD
+ref: refs/heads/master
+
+$&gt; cat .git/refs/heads/master
+43388fee19744e8893467331d7853a6475a227b8
+</code></pre><p><code>43388f...</code> is the hash of the commit we saw in the last step. You can confirm this by running <code>git log</code></p>
+<pre><code>$&gt; git log --oneline
+43388f Initial commit
+</code></pre><p>Git stores references in the <code>.git/refs/heads/</code> directory, and the <code>HEAD</code> pointer in <code>.git/HEAD</code></p>
+<p>We can verify this by creating a new branch.</p>
+<pre><code>$&gt; git branch new_branch
+</code></pre><p>The <code>git branch</code> command will create a new branch without switching to it.</p>
+<p>Now, if we look in <code>.git/refs</code>, we&rsquo;ll see two branches. The <code>master</code> branch, which is created by default, and <code>new_branch</code>.</p>
+<pre><code>$&gt; tree .git/refs
+.git/refs
+├── heads
+│   ├── master
+│   └── new_branch
+└── tags
+
+</code></pre>
     </article>
     <script>
   'use strict';
@@ -2799,83 +3203,123 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li>
           <ul>
-            <li><a href="#advanced-git-workshop">Advanced Git WorkShop</a></li>
+            <li></li>
           </ul>
         </li>
-        <li><a href="#requirements">Requirements</a>
+      </ul>
+    </li>
+    <li><a href="#requirements">Requirements</a>
+      <ul>
+        <li>
           <ul>
             <li><a href="#notes">Notes</a></li>
-            <li><a href="#heading"></a></li>
-            <li><a href="#git-concepts">Git concepts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#git-concepts">Git concepts</a>
+      <ul>
+        <li>
+          <ul>
             <li><a href="#untracked-files">Untracked Files</a></li>
             <li><a href="#working-area">Working Area</a></li>
             <li><a href="#staging-area">Staging Area</a></li>
           </ul>
         </li>
-      </ul>
-    </li>
-    <li><a href="#how-is-information-stored">How is information stored.</a>
-      <ul>
-        <li>
+        <li><a href="#how-is-information-stored">How is information stored.</a>
           <ul>
             <li><a href="#key">Key</a></li>
             <li><a href="#value">Value</a></li>
             <li><a href="#under-the-hood---lets-create-a-git-hash-object">Under the Hood - Lets create a git hash object.</a></li>
-          </ul>
-        </li>
-        <li><a href="#lets-initialize-a-repository">Lets initialize a repository</a>
-          <ul>
+            <li><a href="#lets-initialize-a-repository">Lets initialize a repository</a></li>
             <li><a href="#question-where-are-blob-stored">question: where are blob stored?</a></li>
           </ul>
         </li>
-        <li><a href="#do-this-step-by-step">Do this Step by step</a>
+      </ul>
+    </li>
+    <li><a href="#do-this-step-by-step">Do this Step by step</a>
+      <ul>
+        <li>
           <ul>
             <li></li>
-            <li><a href="#question-how-can-we-see-the-content-of-the-blob">Question: How can we see the content of the blob??</a></li>
-            <li><a href="#useful-commands">Useful commands</a></li>
-            <li><a href="#we-need-other-stuff-right">We need other stuff, right?</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#tree">Tree</a></li>
-    <li><a href="#other-optimization---packfilse-and-deltas">Other Optimization - Packfilse and Deltas</a></li>
-    <li><a href="#commit-object">Commit OBJECT</a>
+    <li><a href="#useful-commands">Useful commands</a></li>
+    <li><a href="#exercise-1">Exercise 1</a></li>
+    <li><a href="#under-the-hood-of-a-commit">Under the Hood of a commit</a>
       <ul>
         <li>
           <ul>
+            <li><a href="#question-wheres-is-this-information-stored-in-git">Question: wheres is this information stored in git?</a></li>
+            <li><a href="#trees">Trees</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#lets-do-it-step-by-step">Lets do it step by step</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+            <li><a href="#let-see-a-commit-object">let see a commit object.</a></li>
+            <li><a href="#optimization---packfiles-and-deltas">Optimization - Packfiles and Deltas</a></li>
             <li><a href="#practically">Practically</a></li>
             <li><a href="#git-file--t-type-and--p-print-the-content">Git-file -T (Type) and -P (PRINT) THE CONTENT</a></li>
+            <li><a href="#what-we-learn-from-this">What we Learn from this</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#take-away-from-this">Take away from this</a>
+    <li><a href="#references">REFERENCES</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#this-give-use-the-sense-of-high-security-in">This give use the sense of high security in</a></li>
-            <li><a href="#references---pointers-to-commits">REFERENCES - POINTERS TO COMMITS</a></li>
-            <li><a href="#why-are-checkout-in-git-really-fast">Why are checkout in git really fast?</a></li>
+            <li><a href="#folder-stucture-of-the-git-folder">Folder Stucture of the .git folder</a></li>
+            <li><a href="#questions--why-are-checkouts-in-git-really-fast">Questions:  Why are checkouts in git really fast?</a></li>
           </ul>
         </li>
-        <li><a href="#three-areas-where-code-lives">Three areas where code lives</a>
+      </ul>
+    </li>
+    <li><a href="#review-places-where-code-lives">Review: Places where code lives</a>
+      <ul>
+        <li>
           <ul>
             <li></li>
             <li><a href="#the-staging-area">The staging area</a></li>
             <li><a href="#the-repository">The Repository</a></li>
           </ul>
         </li>
-        <li><a href="#moving-files-in--of-the-staging-area">Moving files in & of the staging area</a></li>
-        <li><a href="#git-add--p">Git ADD -p</a></li>
+        <li><a href="#moving-files-in--of-the-staging-area">Moving files in & of the staging area</a>
+          <ul>
+            <li><a href="#git-add--p">Git ADD -p</a></li>
+          </ul>
+        </li>
         <li><a href="#unstage-files-fron-the-staging-area">Unstage files fron the staging area</a></li>
-        <li><a href="#git-stash">Git STASH</a>
+      </ul>
+    </li>
+    <li><a href="#git-stash">Git STASH</a>
+      <ul>
+        <li>
           <ul>
             <li><a href="#git-stash-basic-use">Git stash Basic use</a></li>
             <li><a href="#advanced-stashing---operations">Advanced STASHING - Operations</a></li>
           </ul>
         </li>
-        <li><a href="#exercise">Exercise</a></li>
+      </ul>
+    </li>
+    <li><a href="#exercise-2">Exercise 2</a>
+      <ul>
+        <li><a href="#solutions">Solutions</a>
+          <ul>
+            <li><a href="#step-1---initialize-the-repo">Step 1 - Initialize the Repo</a></li>
+            <li><a href="#step-2---first-commit">Step 2 - First Commit</a></li>
+            <li><a href="#step-3---view-the-git-folder">Step 3 - View the .git Folder</a></li>
+            <li><a href="#step-4---inspect-the-objects">Step 4 - Inspect the Objects:</a></li>
+            <li><a href="#step-5---look-at-refs">Step 5 - Look at refs</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
