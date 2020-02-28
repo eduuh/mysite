@@ -6,29 +6,29 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Showcase overview on eduuh</title>
-    <link>https://eduuh.github.io/showcase/</link>
-    <description>Recent content in Showcase overview on eduuh</description>
+    <title>Websites on eduuh</title>
+    <link>https://eduuh.github.io/showcase/blog/</link>
+    <description>Recent content in Websites on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 19 Jan 2020 15:43:38 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 21:04:11 +0900</lastBuildDate>
     
-        <atom:link href="https://eduuh.github.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.github.io/showcase/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>Websites</title>
-        <link>https://eduuh.github.io/showcase/blog/</link>
-        <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
+        <title>Edd&#39;s Journal: A personal Journal and blog</title>
+        <link>https://eduuh.github.io/showcase/blog/eddsblog/</link>
+        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
-        <guid>https://eduuh.github.io/showcase/blog/</guid>
+        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
+        <guid>https://eduuh.github.io/showcase/blog/eddsblog/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
