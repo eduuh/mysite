@@ -3,12 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eduuh.github.io/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduuh.github.io/showcase/hugo/hugo-theme-zdoc/</loc>
+    <loc>https://eduuh.github.io/showcase/blog/eddsblog/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url>
   
@@ -163,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/showcase/hugo/</loc>
+    <loc>https://eduuh.github.io/showcase/blog/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url>
   

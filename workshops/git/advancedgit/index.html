@@ -1514,7 +1514,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 21 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 19, 2020 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 36 min read </span>&middot; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   <span class="single__info">
     
   </span>
@@ -2016,7 +2016,7 @@ git cat-file -t <span class="m">24997081</span>
 </tr>
 </tbody>
 </table>
-<h2 id="exercise-1">Exercise 1</h2>
+<h2 id="-exercise-1"><a href="#"> Exercise 1</a></h2>
 <p>These are some exercise to get used to the idea of storing to and<br />
 retrieving files from git objects store.</p>
 <ol>
@@ -2431,7 +2431,7 @@ It&rsquo;s especially useful if you&rsquo;ve done too much work for one commit.<
 <p>Not removing the files</p>
 <p>You&rsquo;re replacing them with a copy that&rsquo;s currently in the repository.</p>
 <p><img src="./../../static/gitstagingarea.png" alt="gitstaging" /></p>
-<h2 id="git-stash">Git STASH</h2>
+<h4 id="git-stash">Git STASH</h4>
 <p>This is usually a way to save uncommited work. The stash is <strong>safe</strong> from destructive operations.</p>
 <pre><code>changing between branches which requires you to have
 commited all your changes.
@@ -2521,8 +2521,12 @@ in your working area you could accidentally commit this file.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="exercise-2">Exercise 2</h2>
-<ol>
+<h2 id="follow-along-exercise--git-concepts">Follow along Exercise : Git Concepts</h2>
+<h3 id="prerequisite">Prerequisite</h3>
+<p>You should have the <a href="https://github.com/eduuh/Advanced-GitWorkshop"><code>advanced-git-exercises</code></a> repository cloned locally. Checkout the <code>git2</code> branch to begin:</p>
+<pre><code>$&gt; git checkout git3
+Switched to branch 'git2'
+</code></pre><ol>
 <li>Create a new folder and initialize it as a git repo</li>
 <li>Create a file, stage it, and commit it to your new repo</li>
 <li>Look at your <code>.git</code> folder, using <code>tree</code> if you have it</li>
@@ -2539,8 +2543,8 @@ $&gt; cd ~/projects/sample
 $&gt; git status
 fatal: Not a git repository (or any of the parent directories): .git
 
-$&gt; git init
-Initialized empty Git repository in /Users/nnja/projects/sample/.git/
+$&gt; git init  # if not using my repo
+Initialized empty Git repository in /eduuh/projects/sample/.git/
 </code></pre><h4 id="step-2---first-commit">Step 2 - First Commit</h4>
 <p>Create a new document, stage it for a commit, then commit it to your repository.</p>
 <pre><code>$&gt; echo 'Hello World!' &gt; hello.txt
@@ -2584,38 +2588,78 @@ $&gt; git commit -m &quot;Initial commit&quot;
 </code></pre><h4 id="step-4---inspect-the-objects">Step 4 - Inspect the Objects:</h4>
 <p>Note: The SHA1 hash for your commit will be different than the one displayed here. The SHA1 hash for your <code>blob</code> and <code>tree</code> will be the same as mine, as long as the content is the same.</p>
 <p>One of the objects should be a tree object. The tree contains the filename <code>hello.txt</code> and a pointer to the blob.</p>
-<pre><code>$&gt; git cat-file -t 581caa
+<p>If you are working on a big repository it might be obvious what your object is but you could use the <strong>commit</strong> to get to the tree.<br />
+Using the <strong>git cat-file</strong></p>
+<p>use git log to get the latest commit <strong>sha1</strong> key hash.</p>
+<p>The commit object contains a pointer to the tree, along with metadata for the commit, such as the author and commit message.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git log <span class="p">|</span> head -n <span class="m">1</span>
+
+<span class="c1"># git --no-pager log --oneline</span> 
+<span class="c1">#d49019</span>
+
+git cat-file -t d49019
+<span class="c1"># commit</span>
+
+
+git cat-file -p d49019
+
+tree f21db101b5860d09c98d808ae21aaa96fa512414
+parent dd160f7cbcaef119f7fb3063df6e9d0607b5e89c
+author eduuh &lt;edwinkamaumuraya0@outlook.com&gt; <span class="m">1582476695</span> +0300
+committer eduuh &lt;edwinkamaumuraya0@outlook.com&gt; <span class="m">1582476695</span> +0300
+</code></pre></td></tr></table>
+</div>
+</div><pre><code># inspect the tree
+$&gt; git cat-file -t f21db101b5860
 tree
 
-$&gt; git cat-file -p 581caa
-100644 blob 980a0d5f19a64b4b30a87d4206aade58726b60e3	hello.txt
+$&gt; git cat-file -p f21db101b5860
+100644 blob 88a21c6d5ef21e36b68142ccee7aaa6e8344acc2    LICENSE
+100644 blob 672c2366c2e9e734bb808b1acccc3722c3265800    README.md
+040000 tree 04b14ff559132da3a2223e7ff70fee0ad330b43e    exercises
+040000 tree 3dbfb8a9affa3a8eef5aee2b516a15716b940fda    gitimages
+100644 blob 18c5b29d788326339b39df657ad2c9134de2ac45    gitlogo.png
+100644 blob 24997081c3c51eeac9df4309dbcc9452112a8f1f    gitstuff.txt
+100644 blob 9f704ffe0495c8f1416cc004f5638e06e78bf14e    greeting.txt
+100644 blob 980a0d5f19a64b4b30a87d4206aade58726b60e3    hello.txt
+040000 tree d77e62d1e686822d0c406d06b559c0694d24d8d9    notes
+040000 tree cb9d9e857b50525267342b20a040c4911bc61416    scripts
 </code></pre><p>The blob object, pointed to by the tree, contains the contents of the file <code>hello.txt</code></p>
 <pre><code>$&gt; git cat-file -t 980a0d5
 blob
 
 $&gt; git cat-file -p 980a0d5
 Hello World!
-</code></pre><p>The commit object contains a pointer to the tree, along with metadata for the commit, such as the author and commit message.</p>
-<pre><code>$&gt; git cat-file -t 43388f
-commit
-
-$&gt; git cat-file -p 43388f
-tree 581caa0fe56cf01dc028cc0b089d364993e046b6
-author Nina Zakharenko &lt;nina@nnja.io&gt; 1507168309 -0700
-committer Nina Zakharenko &lt;nina@nnja.io&gt; 1507168309 -0700
-
-Initial commit
-</code></pre><p>Because this is our very first commit, it doesn&rsquo;t have a parent. The next commit we make will point to our initial commit as the parent.</p>
+</code></pre><h6 id="note-our-very-first-commit-it-doesnt-have-a-parent-the-next-commit-we-make-will-point-to-our-initial-commit-as-the-parent">Note: our very first commit, it doesn&rsquo;t have a parent. The next commit we make will point to our initial commit as the parent.</h6>
 <h4 id="step-5---look-at-refs">Step 5 - Look at refs</h4>
 <p>Let&rsquo;s look under the hood at our <code>HEAD</code> variable. <code>HEAD</code> is just git&rsquo;s pointer to &ldquo;where you are now,&rdquo; usually referring to the current branch. More on this later. We can see that right now, it points to our current branch - <code>master</code></p>
 <p>Now, if we look at our <code>master</code> reference, we can see that it points to the latest commit.</p>
 <pre><code>$&gt; cat .git/HEAD
-ref: refs/heads/master
+ref: refs/heads/git2
 
 $&gt; cat .git/refs/heads/master
-43388fee19744e8893467331d7853a6475a227b8
-</code></pre><p><code>43388f...</code> is the hash of the commit we saw in the last step. You can confirm this by running <code>git log</code></p>
-<pre><code>$&gt; git log --oneline
+d49019211c6a7a4afddd64b1bc5192a042b80ede
+</code></pre><p><code>d490192...</code> is the hash of the commit we saw in the last step. You can confirm this by running <code>git log</code></p>
+<pre><code>$&gt; git log --oneline | head -n 1
 43388f Initial commit
 </code></pre><p>Git stores references in the <code>.git/refs/heads/</code> directory, and the <code>HEAD</code> pointer in <code>.git/HEAD</code></p>
 <p>We can verify this by creating a new branch.</p>
@@ -2629,6 +2673,786 @@ $&gt; cat .git/refs/heads/master
 │   └── new_branch
 └── tags
 
+</code></pre><h5 id="note--to-create-a-branch-and-switch-to-it-you-could-use-the-checkout-command">Note : To create a branch and switch to it you could use the checkout command</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git checkout -b &lt;new_branch_name&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="merge-conflict">Merge Conflict</h2>
+<p>A <strong>Merge conflict</strong>* usually happens when you attempt to merge two branches, but the files have diverged in different ways. When this happens git stops until the conflict are resolved.</p>
+<h4 id="lets-create-a-conflict">Lets create a conflict</h4>
+<p>Initially am in master.</p>
+<p>Lets check all the files that are available in the current branch.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git ls-files  <span class="c1"># does this list untracked files ?</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Create a file <strong>hello.txt</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">touch hello.txt
+<span class="nb">echo</span> <span class="s2">&#34;Hello Edwin&#34;</span> &gt; hello.txt
+
+<span class="c1"># cat to see the content</span>
+cat hello.txt
+
+git ls-files <span class="c1"># this t</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Create a new branch form the master and switch to it. The simplest way to achieve this is</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git checkout -b git2
+
+<span class="c1"># Future me decides. the greeting should be in swahili and overwrites</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Habari Yako Bwana Edwin&#34;</span> &gt; hello.txt
+
+<span class="c1"># cat to see the content now</span>
+<span class="c1"># Habari Yako Bwana Edwin</span> 
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Add the new change to the staging area and commit the change.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git add hello.txt
+git commit -m <span class="s2">&#34;Changed the greating to Swahili&#34;</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Let checkout to <strong>master</strong> and try to merged the <strong>git2</strong> to master.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git merge git2
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="follow-along-exercise--references">Follow along Exercise- References</h2>
+<h3 id="overview">Overview</h3>
+<p>In this exercise, we&rsquo;ll take a look at our references (<code>refs</code>) and create some lightweight and annotated tags. Then we&rsquo;ll make a dangling commit from a &ldquo;detached HEAD&rdquo; state and learn why this isn&rsquo;t a great idea.</p>
+<h3 id="prerequisite-1">Prerequisite</h3>
+<p>You should have the <a href="https://github.com/eduuh/Advanced-GitWorkshop"><code>advanced-git-exercises</code></a> repository cloned locally. Checkout the <code>git3</code> branch to begin:</p>
+<pre><code>$&gt; git checkout git3
+Switched to branch 'exercise3'
+</code></pre><h3 id="exercise">Exercise</h3>
+<ol>
+<li>Check the value of your <code>HEAD</code> variable (hint: look in <code>.git</code>) and confirm you&rsquo;re pointed at the <code>git3</code> branch.</li>
+<li>Use <code>show-ref</code> to look at your other heads.</li>
+<li>Create a lightweight tag and confirm that it&rsquo;s pointing at the right commit.</li>
+<li>Create an annotated tag, and use <code>git show</code> to see more information about it.</li>
+<li>Get into a <strong>&ldquo;detached HEAD&rdquo;</strong> state by checking out a specific commit, then confirm that your HEAD is pointing at this commit rather than at a branch.</li>
+<li>Make a new commit, then switch branches to confirm that you&rsquo;re leaving a commit behind.</li>
+</ol>
+<h4 id="solutions-1">Solutions</h4>
+<h5 id="step-1---wheres-your-head">Step 1 - Where&rsquo;s your HEAD?</h5>
+<p>Assuming you checked out the <code>git3</code> branch in Step 0, your <code>HEAD</code> should be pointing to <code>git3</code>. You can corroborate this with <code>git branch</code>:</p>
+<pre><code>$&gt; cat .git/HEAD
+ref: refs/heads/exercise3
+
+$&gt; git branch
+  git1
+  git2
+* git3
+  master
+</code></pre><h5 id="step-2---where-are-your-refs">Step 2 - Where are your refs?</h5>
+<p>Use <code>git show-ref</code> to see which commits your HEADs are pointing at. You should see one for every branch you have, as well as every remote branch we&rsquo;ve interacted with. Yours may look slightly different.</p>
+<pre><code>$&gt; git show-ref --heads
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/heads/git1
+56b0fe1d853f9e09a131a851c93e2c92ba8a6bf2 refs/heads/git2
+d49019211c6a7a4afddd64b1bc5192a042b80ede refs/heads/git3
+d9a034a13998d11ed74e678bbe37e29259242beb refs/heads/master
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/remotes/origin/HEAD
+dd160f7cbcaef119f7fb3063df6e9d0607b5e89c refs/remotes/origin/git2
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/remotes/origin/master
+f94045e34e98329df15b098615268f91c2107eea refs/stash
+
+You can see for yourself that our `master` branch is pointing to our &quot;Initial commit&quot;
+
+
+$&gt; git cat-file -p d49019211c6a7a4afddd64b1bc5192a042b80ede
+tree f21db101b5860d09c98d808ae21aaa96fa512414
+parent dd160f7cbcaef119f7fb3063df6e9d0607b5e89c
+author eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1582476695 +0300
+committer eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1582476695 +0300
+
+Initial commit
+</code></pre><p>Whereas our <code>git3</code> branch is pointing to our newer commit from git2:</p>
+<pre><code>$&gt; git cat-file -p d49019211c6a7a4afddd64b1bc5192a042b80ede
+tree f21db101b5860d09c98d808ae21aaa96fa512414
+parent dd160f7cbcaef119f7fb3063df6e9d0607b5e89c
+author eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1582476695 +0300
+committer eduuh &lt;edwinkamaumuraya0@outlook.com&gt; 1582476695 +0300
+
+Initial commit
+</code></pre><h5 id="step-3---lightweight-tags">Step 3 - Lightweight Tags:</h5>
+<p>Lightweight tags are simply named pointers to a commit. Make a new tag, then confirm that it points to the correct commit using <code>show-ref</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; git tag git2tag
+
+$&gt; git show-ref 
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/heads/git1
+56b0fe1d853f9e09a131a851c93e2c92ba8a6bf2 refs/heads/git2
+d49019211c6a7a4afddd64b1bc5192a042b80ede refs/heads/git3
+d9a034a13998d11ed74e678bbe37e29259242beb refs/heads/master
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/remotes/origin/HEAD
+dd160f7cbcaef119f7fb3063df6e9d0607b5e89c refs/remotes/origin/git2
+3811dbf83556ffc5d50f9ac3a387b8f29c3d06c1 refs/remotes/origin/master
+f94045e34e98329df15b098615268f91c2107eea refs/stash
+d49019211c6a7a4afddd64b1bc5192a042b80ede refs/tags/git2tag
+
+$&gt; git show-ref --tags <span class="c1"># to filter only tages</span>
+d49019211c6a7a4afddd64b1bc5192a042b80ede refs/tags/git2tag
+</code></pre></td></tr></table>
+</div>
+</div><p>Our current HEAD, <code>.d490192..</code> has now been tagged as <code>git2tag</code>.</p>
+<p>You can also do a reverse lookup using <code>git tag --points-at</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; git tag --points-at d490192
+my-exercise3-tag
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="step-4---annotated-tags">Step 4 - Annotated Tags:</h5>
+<p>Annotated tags serve the same function as regular tags, but they also store additional metadata:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; git tag -a <span class="s2">&#34;git2tagannotatedtag&#34;</span> -m <span class="s2">&#34;this is my annotated tag for exercise3&#34;</span>
+
+$&gt; git show exercise3-annotated-tag
+tag git2tagannotatedtag
+Tagger: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb <span class="m">28</span> 11:27:03 <span class="m">2020</span> +0300
+
+this is my annotated tag <span class="k">for</span> exercise3
+
+commit d49019211c6a7a4afddd64b1bc5192a042b80ede <span class="o">(</span>HEAD -&gt; git3, tag: git2tagannotatedtag, tag: git2tag<span class="o">)</span>
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Sun Feb <span class="m">23</span> 19:51:35 <span class="m">2020</span> +0300
+
+    Initial commit
+
+diff --git a/hello.txt b/hello.txt
+new file mode <span class="m">100644</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Using <code>git show</code>, we can see all of the pertinent information about our <code>git2tagannotatedtag</code>We see the tag metadata at the top - who made the tag and when, as well as the tag message. Below that, we see the commit that was tagged, and then the diff between the tagged commit and its parent.</p>
+<h5 id="step-5---detached-head">Step 5 - Detached HEAD</h5>
+<p>Now we&rsquo;re going to venture into a &ldquo;detached HEAD&rdquo; state. Use <code>git checkout</code> to checkout the latest commit directly. You&rsquo;ll get a scary-looking warning about your HEAD being detached. You can confirm this by looking at <code>.git/HEAD</code> and seeing that it&rsquo;s now pointing to a commit hash, instead of <code>refs/heads/exercise3</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; git log --oneline
+d490192 <span class="o">(</span>HEAD -&gt; git3, tag: git2tagannotatedtag, tag: git2tag<span class="o">)</span> Initial commit
+dd160f7 <span class="o">(</span>origin/git2<span class="o">)</span> <span class="k">continue</span> reading the shell scripting book . finished today one hour
+96aa314  finished working on Section one part two
+3811dbf <span class="o">(</span>origin/master, origin/HEAD, git1<span class="o">)</span> Section one: part one covered
+9be8c2f Initial commite348ebc Testing the emergency git-casting system
+43388fe Initial commit
+
+$&gt; git checkout d49019 
+Note: checking out <span class="s1">&#39;d49019&#39;</span>.
+
+You are in <span class="s1">&#39;detached HEAD&#39;</span> state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+<span class="k">do</span> so <span class="o">(</span>now or later<span class="o">)</span> by using -b with the checkout <span class="nb">command</span> again. Example:
+
+  git checkout -b &lt;new-branch-name&gt;
+
+HEAD is now at e348ebc... Testing the emergency git-casting system
+
+$&gt; cat .git/HEAD
+e348ebc1187cb3b4066b1e9432a614b464bf9d07
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="step-6---create-a-dangling-commit">Step 6 - Create a Dangling Commit</h5>
+<p>Even though our <code>HEAD</code> is now pointing at a specific commit - instead of a branch or tag - we can still make commits. Go ahead and make a new commit, then confirm that our <code>HEAD</code> is now pointing at this new commit:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; <span class="nb">echo</span> <span class="s2">&#34;This is a test file&#34;</span> &gt; dangle.txt
+
+$&gt; git add dangle.txt
+
+$&gt; git commit -m <span class="s2">&#34;This is a dangling commit&#34;</span>
+<span class="o">[</span>detached HEAD 510b8d7<span class="o">]</span> this is a dangling commit
+ Date: Fri Feb <span class="m">28</span> 11:39:28 <span class="m">2020</span> +0300
+ <span class="m">1</span> files changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> dangle.txt
+ 
+$&gt; git log --oneline
+510b8d7 <span class="o">(</span>HEAD<span class="o">)</span> this is a dangling commit
+d490192 <span class="o">(</span>tag: git2tagannotatedtag, tag: git2tag, git3<span class="o">)</span> Initial commit
+dd160f7 <span class="o">(</span>origin/git2<span class="o">)</span> <span class="k">continue</span> reading the shell scripting book . finished today one hour
+96aa314  finished working on Section one part two
+3811dbf <span class="o">(</span>origin/master, origin/HEAD, git1<span class="o">)</span> Section one: part one covered
+9be8c2f Initial commit
+
+$&gt; cat .git/HEAD
+510b8d7e663539778d20a93a262e337b8115b080
+</code></pre></td></tr></table>
+</div>
+</div><p>But wait. Because our new commit - <code>510b8d7</code> in this case - was made in a detached <code>HEAD</code> state, it doesn&rsquo;t have any references pointing to it. It&rsquo;s not part of a branch, and has no tags. This is called a Dangling Commit. You&rsquo;ll see this warning if you try to switch branches:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$&gt; git checkout exercise3
+D       exercises/2.exercisetwo.md
+Warning: you are leaving <span class="m">1</span> commit behind, not connected to
+any of your branches:
+
+  510b8d7 this is a dangling commit
+
+If you want to keep it by creating a new branch, this may be a good <span class="nb">time</span>
+to <span class="k">do</span> so with:
+
+ git branch &lt;new-branch-name&gt; 510b8d7
+
+Switched to branch <span class="s1">&#39;git2&#39;</span>
+Your branch is ahead of <span class="s1">&#39;origin/git2&#39;</span> by <span class="m">3</span> commits.
+  <span class="o">(</span>use <span class="s2">&#34;git push&#34;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Here, git is warning you that you&rsquo;re leaving this commit dangling. If you wish, you may create a new branch that points to this commit. Git does a periodic garbage collection and will eventually delete any commits that don&rsquo;t have a reference pointing to them.</p>
+<h4 id="git-rerere">Git Rerere</h4>
+<p>Stands for <strong>(Reuse and Recorded Resolution)</strong><br />
+Git save how you resolve a conflict and when this conflict arise in the future git will use the same<br />
+resolution to solve the conflict.</p>
+<p>Useful for:</p>
+<ol>
+<li>Long lived feature branch and when you are perfoming a refactor.</li>
+<li>When rebasing a repository.</li>
+</ol>
+<p>Turn it on. It usually disabled by default.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># use --global flag to enable for all projects.</span>
+git config rerere.enabled <span class="nb">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Note: it would be nice you you activate this <code>feature per project basis.</code></p>
+<h3 id="some-common-commands">Some Common Commands</h3>
+<blockquote>
+<ol>
+<li>checkout a branch and create some changes.  Use `git checkout  <brachname></li>
+<li><code>git --no-pager log --online</code></li>
+<li>perform a git merge using the command <code>git merge &lt;branchname&gt;</code> Performs a merge using a <code>fast forward</code></li>
+<li>Use a <code>git reset --hard HEAD^</code></li>
+<li>Perfom a git merge without fastforward. <code>git merge --no-ff &lt;branchname&gt;</code></li>
+<li>Git log with a graph. <code>git log --no-pager --graph</code></li>
+<li>Switch to the previous branch. <code>git checkout -</code></li>
+<li>use git rerere diff to resolve your conflict. <code>git rerere diff</code></li>
+<li>lets reset to go back to where we were intially. <code>git reset --hard HEAD^</code></li>
+</ol>
+</blockquote>
+<h2 id="commits">Commits</h2>
+<h3 id="useful-commits">Useful commits.</h3>
+<p>Good commits are important since they help preserve the history of a <code>codebase</code>. the help with</p>
+<blockquote>
+<p>debugging and troubleshooting<br />
+creating release notes<br />
+code reviews<br />
+rolling back<br />
+assosiate the code with an issue to a ticket</p>
+</blockquote>
+<ul>
+<li>Commit message should be in future tense.</li>
+<li>Short Subject followed by a black line.</li>
+<li>A description of the current behaviour , a short summary of why the fix is needed and also mentions<br />
+side effects.</li>
+</ul>
+<h4 id="anatomy-of-a-good-commit">Anatomy of a Good Commit</h4>
+<ol>
+<li>Good commits messages</li>
+<li>Encapulates one logic idea.</li>
+<li>Does&rsquo;t have introduce breaking changes i.e test passes.</li>
+</ol>
+<h3 id="git-log---used-to-examine-history">Git log -&gt; Used to examine History</h3>
+<p>The vanilla <code>git log</code> is not very helpful but there are alot of flags that helps navigate our repo much easier.</p>
+<h4 id="case-scenario">Case scenario</h4>
+<p>You could notice that a bug was introduced  <code>20 minutes ago</code> and flags such as <code>since</code> could help your alot.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">   git log --since <span class="o">=</span> <span class="s2">&#34;yestaday&#34;</span>
+   git log --since <span class="o">=</span><span class="s2">&#34;2 weeks ago&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="git-log-follow">git log follow:</h4>
+<p>Used to track the changes of the files logs files that have been moved or renamed.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> git log --name-status --follow --&lt;file&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="git-log---grep">git log &ndash;grep</h4>
+<p>search for commits messages that match a reqular expressions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git log --grep &lt;regexp&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>This command can be mixed $ matched with other git flags.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git log --grep<span class="o">=</span>migrations --author<span class="o">=</span>edwin --since<span class="o">=</span><span class="s2">&#34;2 week ago&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="git-log-diff-filter">git log diff-filter</h4>
+<p>selectively incleds or exclude files that have been.</p>
+<ol>
+<li>(A)dded</li>
+<li>(D)eleted</li>
+<li>(M)odified</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> git log --diff-filter<span class="o">=</span>R --stat
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="referencing-commits">Referencing commits</h3>
+<p>This Stuff confused me and might confuse you as well. Take your time here.</p>
+<ol>
+<li>
+<p>^ or ^n</p>
+<ul>
+<li><no args> == ^1 : The parent commits</li>
+<li>n : the nth parent commit.</li>
+</ul>
+</li>
+<li>
+<p>~ or ~n</p>
+</li>
+</ol>
+<ul>
+<li><no args> : === ~1 the first commit back following the 1st parent.</li>
+<li>n(th) : nth number of commits back, following only the 1st parent.</li>
+</ul>
+<p>Note ^ and ~ can be combined.</p>
+<h3 id="referencing-commits--diagram">Referencing commits : Diagram</h3>
+<ul>
+<li>
+<p>Both commits nodes b and c are parent of commit node A. Parent commits are orderde left-right.</p>
+</li>
+<li>
+<p>How could we reference?</p>
+</li>
+</ul>
+<p>A  =  A^0<br />
+B  = A^  = A^1 = A~1<br />
+C  = A^2<br />
+D = A^^ = A^1^1 = A~2</p>
+<p>This refereces are usually usefull incase you want to <em>reset/revert</em><br />
+You could decide to revert to 3 commits back without loging to find the sha1 code and usind that.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git reset --hard HEAD^   / resets to the parent commit.
+git reset --hard HEAD^2  / resets to the second parent.
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="more-commands">More commands</h2>
+<h3 id="git-show">Git show</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git show &lt;commit-id&gt;  <span class="c1">#Show commits and content</span>
+git show &lt;commit-id&gt; --stat  <span class="c1">#show files changed in commit.</span> 
+git show &lt;commit&gt; Look at a file from another commits.
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="diff">Diff</h3>
+<p>Diff show you changes</p>
+<ol>
+<li>Between commits</li>
+<li>between the staging area and repository</li>
+<li>What&rsquo;s in the working area.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git diff   <span class="c1"># Unstaged changes</span>
+git diff --staged
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="diagram-diff-with-ven-diagram">Diagram diff with ven diagram</h3>
+<p><img src="/images/logdiffven.png" alt="logdiffvendiagram" /></p>
+<p>This will show all changes in Branche B that are not availabe in Branch A.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Examples</span>
+git diff scripting..master
+git diff scripting...master
+git diff scripting master
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="checking-merged-or-not-branches">Checking merged or not branches</h3>
+<p>Checking which branched are merge with master and could be cleaned up.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git branch --merged master
+
+git branch --no-merged master
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="exercise-five---history-and-diffs">Exercise Five - History and Diffs</h2>
+<h3 id="overview-1">Overview</h3>
+<p>In this exercise, we&rsquo;ll practice making a good commit, take a look at some of the interesting command line arguments for <code>git log</code>, use <code>git show</code> to get more information about a commit, then take a quick look at <code>git branch</code>.</p>
+<h3 id="prerequisite-2">Prerequisite</h3>
+<p>You should have the <a href="https://github.com/eduuh/Advanced-GitWorkshop"><code>advanced-git-exercises</code></a>  repository cloned locally. Checkout the <code>git4</code> branch:</p>
+<pre><code>$&gt; git checkout git4
+Switched to a new branch 'git4'
+</code></pre><h3 id="exercise-1">Exercise</h3>
+<ol>
+<li>Practice creating a well-crafted commit - look at the format given on the slides for help.</li>
+<li>Use <code>git log</code> to find commits created since yesterday. Rename a file and use the <code>--name-status</code> and <code>--follow</code> options to <code>git log</code> to track down when the file was renamed, and what it used to be called. Use <code>--grep</code> to search within commit messages, and <code>--diff-filter</code> to find renamed and modified files from <code>git log</code>.</li>
+<li>Use <code>git show</code> to get more information about a specific git hash.</li>
+<li>Try the <code>--merged</code> and <code>--no-merged</code> options to <code>git branch</code> to see which branches have been merged into <code>master</code> (or not).</li>
+</ol>
+<h3 id="solutions-2">Solutions</h3>
+<h4 id="step-1---make-a-good-commit">Step 1 - Make a Good Commit</h4>
+<p>We&rsquo;ve all made commits with short, &ldquo;silly&rdquo;, or otherwise unhelpful messages. Let&rsquo;s practice making a solid commit message for use in this example.</p>
+<pre><code># Change your `hello.txt` to say [greeting] [noun]! however you want to change it.
+
+$&gt; cat hello.txt
+[greeting] [noun]!
+
+# Rename hello.txt to hello.template
+
+$&gt; git mv hello.txt hello.template
+$&gt; # if you do a git status you will realize that hello.template is renamed.
+
+$&gt; git add hello.template
+
+$&gt; git commit
+
+# This will open your text editor
+# Type the following...
+Replacing greeting with tokens for i18n
+
+Currently, hello.txt contains both Spanish and English.
+Let's replace Hola with a [greeting] token, and Mundo
+with a [noun] token. That way, we can localize hello.txt for
+any language!
+
+# Save and exit your editor
+
+[exercise5 4b2b90e] Replacing greeting with tokens for i18n
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre><h4 id="step-2---git-log">Step 2 - Git Log</h4>
+<p>Let&rsquo;s take a look at our new commit using <code>git log</code>. First we&rsquo;ll see how to see all commits in the log since yesterday:</p>
+<pre><code>$&gt; git log --since=&quot;yesterday&quot;
+commit 886265f1cd786eec7bf48548f290d162d5307051 (HEAD -&gt; git4)
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:32:28 2020 +0300
+
+    Replaced greeting with varibles for i18n
+    
+    Currently, hello.txt contains both spanish and English.
+    Let's replace with a [greeting] token and Mundo with a [noun] token.
+    that way, we can localize hello.txt for any language!
+
+commit e7410d10d86edd1bca30f4fa4dbd2e80385518fd (master)
+Merge: d9a034a cb0ba30
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:00:46 2020 +0300
+
+    Merge branch 'git3'
+</code></pre><p>Things can get tricky when trying to track down changes to files when they&rsquo;ve been renamed. Here we see how to use <code>git log</code> to find the commit where <code>hello.txt</code> was renamed to <code>hello.template</code>. The <code>--follow</code> command will continue following the file backward in history, showing its filename for every commit:</p>
+<pre><code>$&gt; git log --name-status --follow --oneline hello.template
+886265f (HEAD -&gt; git4) Replaced greeting with varibles for i18n
+A       hello.template
+</code></pre><p>Ever spent too much time trying to track down a commit in Github? Use <code>git log --grep</code> to quickly find a commit. We can chain this with other flags. Let&rsquo;s find all the internationalization commits that the author <code>eduuh</code> has added in the last two weeks:</p>
+<pre><code>$&gt; git log --grep=i18n --author=eduuh --since=2.weeks
+commit 886265f1cd786eec7bf48548f290d162d5307051 (HEAD -&gt; git4)
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:32:28 2020 +0300
+
+    Replaced greeting with varibles for i18n
+    
+    Currently, hello.txt contains both spanish and English.
+    Let's replace with a [greeting] token and Mundo with a [noun] token.
+    that way, we can localize hello.txt for any language!
+
+</code></pre><p>We can use <code>--diff-filter</code> to find commits where files have been renamed:</p>
+<pre><code>$&gt; git log --diff-filter=R --find-renames
+4b2b90e Replacing greeting with tokens for i18n
+</code></pre><p>Or to find commits where files have been modified:</p>
+<pre><code>$&gt; git log --diff-filter=M --oneline
+fec9e7b Changing Hello to Hola
+afa34a6 Changing World to Mundo
+e348ebc Testing the emergency git-casting system
+</code></pre><h4 id="step-3---git-show">Step 3 - Git Show</h4>
+<p>Now that we&rsquo;ve mastered <code>git log</code>, how do we actually see what happened in a commit? Let&rsquo;s use <code>git show</code> to find out.</p>
+<pre><code>$&gt; git log --grep=i18n --oneline
+ 886265f1cd7 Replacing greeting with tokens for i18n
+
+# Let's see the full commit and diff for 4b2b90e
+
+$&gt; git show  886265f1cd7
+commit 886265f1cd786eec7bf48548f290d162d5307051 (HEAD -&gt; git4)
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:32:28 2020 +0300
+
+    Replaced greeting with varibles for i18n
+    
+    Currently, hello.txt contains both spanish and English.
+    Let's replace with a [greeting] token and Mundo with a [noun] token.
+    that way, we can localize hello.txt for any language!
+
+diff --git a/hello.template b/hello.template
+new file mode 100644
+index 0000000..7447c60
+--- /dev/null
++++ b/hello.template
+@@ -0,0 +1 @@
++[greeting] [noun]!
+:...skipping...
+commit 886265f1cd786eec7bf48548f290d162d5307051 (HEAD -&gt; git4)
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:32:28 2020 +0300
+
+    Replaced greeting with varibles for i18n
+    
+    Currently, hello.txt contains both spanish and English.
+    Let's replace with a [greeting] token and Mundo with a [noun] token.
+    that way, we can localize hello.txt for any language!
+
+diff --git a/hello.template b/hello.template
+new file mode 100644
+index 0000000..7447c60
+--- /dev/null
++++ b/hello.template
+@@ -0,0 +1 @@
++[greeting] [noun]!
+diff --git a/hello.txt b/hello.txt
+deleted file mode 100644
+index 349ec18..0000000
+--- a/hello.txt
++++ /dev/null
+@@ -1 +0,0 @@
+:...skipping...
+commit 886265f1cd786eec7bf48548f290d162d5307051 (HEAD -&gt; git4)
+Author: eduuh &lt;edwinkamaumuraya0@outlook.com&gt;
+Date:   Fri Feb 28 12:32:28 2020 +0300
+
+    Replaced greeting with varibles for i18n
+    
+    Currently, hello.txt contains both spanish and English.
+    Let's replace with a [greeting] token and Mundo with a [noun] token.
+    that way, we can localize hello.txt for any language!
+
+diff --git a/hello.template b/hello.template
+new file mode 100644
+index 0000000..7447c60
+--- /dev/null
++++ b/hello.template
+@@ -0,0 +1 @@
++[greeting] [noun]!
+diff --git a/hello.txt b/hello.txt
+deleted file mode 100644
+index 349ec18..0000000
+--- a/hello.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Hola! Edwin
+</code></pre><h4 id="step-4---git-branch">Step 4 - Git Branch</h4>
+<p>Let&rsquo;s say you&rsquo;re working on a complicated codebase with a <code>master</code> branch and lots of feature branches. Some of your coworkers forget to clean up their branches when they&rsquo;re done (we&rsquo;re all guilty). Which branches have been merged into <code>master</code> and can be cleaned up? Which branches haven&rsquo;t been merged yet? If you&rsquo;ve been following along, yours may look different.</p>
+<pre><code>$&gt; git branch --merged master
+  git1
+  git2
+  git3
+  master
+
+$&gt; git branch --no-merged master
+ * git4
 </code></pre>
     </article>
     <script>
@@ -3247,7 +4071,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </ul>
     </li>
     <li><a href="#useful-commands">Useful commands</a></li>
-    <li><a href="#exercise-1">Exercise 1</a></li>
+    <li><a href="#-exercise-1"> Exercise 1</a></li>
     <li><a href="#under-the-hood-of-a-commit">Under the Hood of a commit</a>
       <ul>
         <li>
@@ -3296,21 +4120,18 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><a href="#git-add--p">Git ADD -p</a></li>
           </ul>
         </li>
-        <li><a href="#unstage-files-fron-the-staging-area">Unstage files fron the staging area</a></li>
-      </ul>
-    </li>
-    <li><a href="#git-stash">Git STASH</a>
-      <ul>
-        <li>
+        <li><a href="#unstage-files-fron-the-staging-area">Unstage files fron the staging area</a>
           <ul>
+            <li><a href="#git-stash">Git STASH</a></li>
             <li><a href="#git-stash-basic-use">Git stash Basic use</a></li>
             <li><a href="#advanced-stashing---operations">Advanced STASHING - Operations</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#exercise-2">Exercise 2</a>
+    <li><a href="#follow-along-exercise--git-concepts">Follow along Exercise : Git Concepts</a>
       <ul>
+        <li><a href="#prerequisite">Prerequisite</a></li>
         <li><a href="#solutions">Solutions</a>
           <ul>
             <li><a href="#step-1---initialize-the-repo">Step 1 - Initialize the Repo</a></li>
@@ -3318,6 +4139,70 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><a href="#step-3---view-the-git-folder">Step 3 - View the .git Folder</a></li>
             <li><a href="#step-4---inspect-the-objects">Step 4 - Inspect the Objects:</a></li>
             <li><a href="#step-5---look-at-refs">Step 5 - Look at refs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#merge-conflict">Merge Conflict</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#lets-create-a-conflict">Lets create a conflict</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#follow-along-exercise--references">Follow along Exercise- References</a>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#prerequisite-1">Prerequisite</a></li>
+        <li><a href="#exercise">Exercise</a>
+          <ul>
+            <li><a href="#solutions-1">Solutions</a></li>
+            <li><a href="#git-rerere">Git Rerere</a></li>
+          </ul>
+        </li>
+        <li><a href="#some-common-commands">Some Common Commands</a></li>
+      </ul>
+    </li>
+    <li><a href="#commits">Commits</a>
+      <ul>
+        <li><a href="#useful-commits">Useful commits.</a>
+          <ul>
+            <li><a href="#anatomy-of-a-good-commit">Anatomy of a Good Commit</a></li>
+          </ul>
+        </li>
+        <li><a href="#git-log---used-to-examine-history">Git log -> Used to examine History</a>
+          <ul>
+            <li><a href="#case-scenario">Case scenario</a></li>
+            <li><a href="#git-log-follow">git log follow:</a></li>
+            <li><a href="#git-log---grep">git log &ndash;grep</a></li>
+            <li><a href="#git-log-diff-filter">git log diff-filter</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencing-commits">Referencing commits</a></li>
+        <li><a href="#referencing-commits--diagram">Referencing commits : Diagram</a></li>
+      </ul>
+    </li>
+    <li><a href="#more-commands">More commands</a>
+      <ul>
+        <li><a href="#git-show">Git show</a></li>
+        <li><a href="#diff">Diff</a></li>
+        <li><a href="#diagram-diff-with-ven-diagram">Diagram diff with ven diagram</a></li>
+        <li><a href="#checking-merged-or-not-branches">Checking merged or not branches</a></li>
+      </ul>
+    </li>
+    <li><a href="#exercise-five---history-and-diffs">Exercise Five - History and Diffs</a>
+      <ul>
+        <li><a href="#overview-1">Overview</a></li>
+        <li><a href="#prerequisite-2">Prerequisite</a></li>
+        <li><a href="#exercise-1">Exercise</a></li>
+        <li><a href="#solutions-2">Solutions</a>
+          <ul>
+            <li><a href="#step-1---make-a-good-commit">Step 1 - Make a Good Commit</a></li>
+            <li><a href="#step-2---git-log">Step 2 - Git Log</a></li>
+            <li><a href="#step-3---git-show">Step 3 - Git Show</a></li>
+            <li><a href="#step-4---git-branch">Step 4 - Git Branch</a></li>
           </ul>
         </li>
       </ul>
