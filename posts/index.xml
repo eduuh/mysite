@@ -62,6 +62,50 @@ What a dotfile Dotfile are file in the linux system that starts with a period.</
       </item>
       
       <item>
+        <title>Smart Caps Lock: Control and Escape functionality</title>
+        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
+        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
+        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows) Escape if you tap Caps Lock alone.
+ Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
+GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/capslock.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>windows</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Javascript deep Dive , Understanding the basic concepts</title>
         <link>https://eduuh.github.io/posts/jsupngoing/</link>
         <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
