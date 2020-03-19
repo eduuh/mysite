@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>vim on eduuh</title>
+    <link>https://eduuh.github.io/tags/vim/</link>
+    <description>Recent content in vim on eduuh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
+    <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 12 Feb 2020 11:37:37 +0300</lastBuildDate>
+    
+        <atom:link href="https://eduuh.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Smart Caps Lock: Control and Escape functionality</title>
+        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
+        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
+        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows) Escape if you tap Caps Lock alone.
+ Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
+GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/capslock.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>windows</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
