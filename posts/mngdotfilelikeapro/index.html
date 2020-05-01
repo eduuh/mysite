@@ -1223,7 +1223,7 @@
     <meta property="twitter:description" content="Efficient way to manage configuration files in a linux system.">
   
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.69.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1642,7 +1642,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Feb 12, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">🤖&nbsp;eduuh</span>
   
@@ -1665,40 +1665,30 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <h3 id="a-simpler-way-to-manage-your-dotfiles">A simpler way to manage your dotfiles</h3>
-<p>Hello am edd I have been having trouble with configuration since i started using <code>docker</code> for my <code>development</code>.<br />
-For consistecy and time saving , i decided it would be great to manage my dotfiles using <code>git and github</code> and when creating <code>new enviroments</code>.</p>
+<p>Hello am edd I have been having trouble with configuration since i started using <code>docker</code> for my <code>development</code>. For consistecy and time saving , i decided it would be great to manage my dotfiles using <code>git and github</code> and when creating <code>new enviroments</code>.</p>
 <p>I wrote the solution in this post, for easy reference if i need to in the future.</p>
-<h3 id="what-a-dotfile">What a dotfile</h3>
-<p>Dotfile are file in the linux system that starts with a period. They are<br />
-mainly used to store configuration files for the User instance for various<br />
-applications. For me the dotfiles that i would love to manage are as<br />
-follow.</p>
-<ol>
-<li>.bashrc or .zshrc (dependent on the shell your using.)</li>
-<li>.vimrc</li>
-<li>.setup.sh</li>
-</ol>
-<p>Yes <code>setup.sh</code> this is a custom setup script that i maintain to initially setup a new installation with all the setting and softwares i need in my<br />
-system.Could be used to</p>
+<h3 id="what-are-dotfile">What are dotfile</h3>
+<p>Dotfile are file in the linux system that starts with a period. They are mainly used to store configuration files for the User instance for various applications. For me the dotfiles that i would love to manage are as follow.</p>
+<p>Yes <code>setup.sh</code> this is a custom setup script that i maintain to initially setup a new installation with all the setting and softwares i need in my system. Could be used to</p>
 <ol>
 <li>setup the configuration files managed by the git repository.</li>
 <li>Setup my keyboard mapping to the way a need them to be .</li>
 </ol>
-<p>The keyboard mapping i love most, and spend alot of time setting it up<br />
-is `Remapping caps lock to act as a control key when pressed together wi  with other character, and behave as Escape when pressed alone.</p>
-<p>I would love to automate the process , so that i dont even think about it.<br />
-Like most folks, I use git to manage my dotfiles. This lets me have a<br />
-versioned backup for my configurations, and if something breaks (and it<br />
-often does) I can revert to a working configuration fairly easily. I came across a post of how to manage the dotfiles without the need for any<br />
-<code>symlinking</code>.</p>
-<p>The key idea is really simple: make <code>$HOME</code> the git <code>work-tree</code>. The normal way of doing this would be to do a <code>git init</code> in you <code>$HOME</code>, but that<br />
-would totally mess up git commands if you have other repositories in your<br />
-$HOME (also, you probably don&rsquo;t want your entire $HOME in a git repository.</p>
-<p>We will create a dummy folder and initialize a bare repository.Essentially<br />
-a git repo with no working directory) in there. All git commands will be run with our dummy as the git directory, but $HOME as the work directory.</p>
-<h3 id="first-time-setup">First Time Setup</h3>
-<p>Setting this method up the first time is really easy. First, let&rsquo;s create<br />
-our bare repository. I chose to name my placeholder <code>.dotfiles</code></p>
+<p>The keyboard mapping i love most, and spend alot of time setting it up is <code>Remapping caps lock to act as a control key when pressed together  with other character, and behave as Escape when pressed alone.</code></p>
+<p>I would love to automate the process , so that i don&rsquo;t even think about it. Like most folks, I use git to manage my &lsquo;dotfiles. This lets me have a versioned backup for my configurations, and if something breaks (and it often does) I can revert to a working configuration fairly easily. I came across a post of how to manage the dotfiles without the need for any<code>symlinking</code>.</p>
+<p>The key idea is really simple: make <code>$HOME</code> the git <code>work-tree</code>. The normal way of doing this would be to do a <code>git init</code> in you <code>$HOME</code>, but that would totally mess up git commands if you have other repositories in your <code>$HOME (also, you probably don't want your entire</code> $HOME in a git repository.</p>
+<p>We will create a dummy folder and initialize a bare repository.Essentially a git repo with no working directory in there. All git commands will be run with our dummy as the git directory, but $HOME as the work directory.</p>
+<h3 id="git-bare-repository">Git bare Repository.</h3>
+<p>A git repository is a repository that is created without a <code>Working Tree</code> but just the contents of what is typically in the .git directory.</p>
+<p>Why this setup?</p>
+<p>A bare repository is typically used as a Remote Repository that is sharing a repository amoung several different people. You don&rsquo;t do work right inside the remote repository so there&rsquo;s no working Tree.</p>
+<h3 id="manage-your-dotfiles-with-bare-repository-first-time">Manage your dotfiles with bare repository (First Time).</h3>
+<h3 id="requirements">Requirements.</h3>
+<ol>
+<li>Git installed.</li>
+<li>Create a remote dotfile repository on github or any other service.</li>
+</ol>
+<p>Setting this method up the first time is really easy. First, let&rsquo;s create our bare repository. I chose to name my placeholder <code>.dotfiles</code>. Ofcourse you can use any name.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1709,20 +1699,19 @@ our bare repository. I chose to name my placeholder <code>.dotfiles</code></p>
 git init --bare <span class="nv">$HOME</span>/.dotfiles
 </code></pre></td></tr></table>
 </div>
-</div><p>Now for fun part. We will make an alias for running git commands in our<br />
-<code>.dotfiles</code> repository. I&rsquo;m calling my alias <code>dotfiles:</code> .Make sure you reference the right <code>dotfiles</code><br />
-folder in you home folder.</p>
+</div><p>Now for fun part. We will make an alias for running git commands in our <code>.dotfiles</code> repository. I&rsquo;m calling my alias <code>dotfiles:</code> .Make sure you reference the right <code>dotfiles</code> folder which are anywhere within your $HOME folder.</p>
+<p>This alias references the <code>git binary</code> and also indicates the Home folder as your working tree.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">	<span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Add this alias to your <code>.bashrc</code>. From now any git operation you would like to do in the .dotfiles repository can be done by the dotfiles alias. The<br />
-cool thing is that you can run dotfiles from anywhere.</p>
-<p>Lets add a remote and also set status now to show untracked files.</p>
+</div><p>Add this alias to your <code>.bashrc</code>. From now any git operation you would like to do in the .dotfiles repository can be done by the dotfiles alias. The cool thing is that you can run dotfiles from anywhere.</p>
+<p>Source the url of the remote dotfiles folder and use it to configure the origin.<br />
+Lets add a remote and also set status now to show untracked files since there will be a long list of Untracked files. You will only track a few of the files.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1733,9 +1722,69 @@ cool thing is that you can run dotfiles from anywhere.</p>
 dotfiles remote add origin https://github.com/eduuh/dotfiles.git
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="setting-up-a-new-machine">Setting Up a New Machine</h3>
-<p>To set up a new machine to use your version controlled config files, all<br />
-you need to do is to clone the repository on your new machine telling git that it is a bare repository:</p>
+</div><h2 id="adding-the-conf-to-source-control">Adding the conf to Source control.</h2>
+<p>Note: Avoid using  <code>dotfiles add .</code> since you don&rsquo;t want to and your home folder to your dotfile repository.</p>
+<p>example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles add .bashrc
+dotfiles commit -m <span class="s2">&#34;added bash configuration file to source control&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Note that we create an <code>alias for the current session.</code> In order to make the alias to be available we need to add the line to the configuration file of the terminal that you use. For me I added the line in my .zshrc.</p>
+<h3 id="setting-up-a-new-machine-with-existing-configuration">Setting Up a New Machine With existing Configuration.</h3>
+<h4 id="method-1">Method 1</h4>
+<p>Assumtion is that you are using the above described method to store your <code>dotfiles</code>.Make a backup folder first and backup the default configuration available for your application. But in most cases you man not have them.</p>
+<p>Setting this method up the first time is really easy. First, let&rsquo;s create our bare repository. I chose to name my placeholder <code>.dotfiles</code>. Ofcourse you can use any name.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/.dotfiles
+git init --bare <span class="nv">$HOME</span>/.dotfiles
+</code></pre></td></tr></table>
+</div>
+</div><p>Set up the alias for the current session using the command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Set up the remote github repository.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles config --local status.showUntrackedFiles no
+dotfiles remote add origin https://github.com/eduuh/dotfiles.git
+</code></pre></td></tr></table>
+</div>
+</div><p>Pull in the changes form your remote repository.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles pull origin master
+dotfiles reset --hard HEAD   <span class="c1"># ovewrites the Home Directory</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="method-2">Method 2</h4>
+<p>Assuming that your configuration are in github. To set up your computer using your configs is simple.</p>
+<p>To set up a new machine to use your version controlled config files, all you need to do is to clone the repository on your new machine telling git that it is a bare repository:</p>
+<p>Perform the above steps.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1762,26 +1811,24 @@ you need to do is to clone the repository on your new machine telling git that i
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git --recursive --verbose --exclude <span class="s1">&#39;.git&#39;</span> tmpdotfiles/ <span class="nv">$HOME</span>/  
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone --separate-git-dir<span class="o">=</span><span class="nv">$HOME</span>/.dotfiles https://github.com/eduuh/dotfiles.git --recursive --verbose --exclude <span class="s1">&#39;.git&#39;</span> tmpdotfiles/ <span class="nv">$HOME</span>/
 
-$ rm -r tmpdotfiles
+ rm -r tmpdotfiles
 
 </code></pre></td></tr></table>
 </div>
-</div><p>The last step is to add the <code>dotfile</code> alias in your <code>bashrc</code> or <code>zshrc</code> according to the shell you are<br />
-using.</p>
+</div><p>The last step is to add the <code>dotfile</code> alias in your <code>bashrc</code> or <code>zshrc</code> according to the shell you are using.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">  $ <span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>c 
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">dotfiles</span><span class="o">=</span><span class="s1">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span>c
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="using-the-dotfiles-alias">Using the <code>dotfiles alias</code></h4>
-<p>For the Dotfiles repository, Your will use <code>dotfiles instead of git</code>. Use it as you normally use git<br />
-commands.</p>
-<p>Example of some Commands:</p>
+<p>For the Dotfiles repository, Your will use <code>dotfiles instead of git</code>. Use it as you normally use git commands.<br />
+Example of some Commands:</p>
 <p>A <code>commit</code> command.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1792,7 +1839,7 @@ commands.</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ dotfiles commit -m <span class="s2">&#34;zshrc =&gt; zsh oh my god configuration files &#34;</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles commit -m <span class="s2">&#34;zshrc =&gt; zsh oh my god configuration files &#34;</span>
 <span class="o">[</span>master 64a553b<span class="o">]</span> <span class="nv">zshrc</span> <span class="o">=</span>&gt; zsh oh my god configuration files
  <span class="m">1</span> file changed, <span class="m">91</span> insertions<span class="o">(</span>+<span class="o">)</span>
  create mode <span class="m">100644</span> .zshrc
@@ -1813,7 +1860,7 @@ commands.</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ dotfiles push
+<pre class="chroma"><code class="language-bash" data-lang="bash">dotfiles push
 Enumerating objects: 4, <span class="k">done</span>.
 Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
 Delta compression using up to <span class="m">4</span> threads
@@ -1824,9 +1871,7 @@ To https://github.com/eduuh/dotfiles.git
    7d507e7..64a553b  master -&gt; master
 </code></pre></td></tr></table>
 </div>
-</div><p>The repository will be downloaded but there might exist some configuration files in your home<br />
-directory to make sure you are using the right configuration file use git checkout to actually copy<br />
-the copy in your repository to the working directory.</p>
+</div><p>The repository will be downloaded but there might exist some configuration files in your home directory to make sure you are using the right configuration file use git checkout to actually copy the copy in your repository to the working directory.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1847,8 +1892,7 @@ HEAD is now at 64a553b <span class="nv">zshrc</span> <span class="o">=</span>&gt
 </code></pre></td></tr></table>
 </div>
 </div><p><code>64a553b</code> at this time this is my latest commit.<br />
-Do not worry <code>git reset --hard</code> copied files available in your <code>repository</code> to both the <strong>staging area</strong> and the <strong>working area</strong> . It should not mess with your untracted files which i believe they are<br />
-many, since this is a repository monitoring the $HOME directory.</p>
+Do not worry <code>git reset --hard</code> copied files available in your <code>repository</code> to both the <strong>staging area</strong> and the <strong>working area</strong> . It should not mess with your untracted files which i believe they are many, since this is a repository monitoring the $HOME directory.</p>
 <p>There you go. No symlink mess.</p>
 <p>My dotfiles are <a href="https://github.com/eduuh/dotfiles">here</a> for reference.</p>
 
@@ -2059,31 +2103,16 @@ many, since this is a repository monitoring the $HOME directory.</p>
     <section class="related">
     
     
-    <h1 class="related__title">
-      <hr class="hr-dots"/>
-      <div>
-        See Also
-      </div>
-      <hr class="hr-dots"/>
-    </h1>
-    <ul class="related-ul">
-        
-        <li>
-          <a href="/posts/mappingcapstoctrlandescape/" class="related__link">Smart Caps Lock: Control and Escape functionality</a>
-        </li>
-        
-    </ul>
-    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://eduuh.github.io/posts/mappingcapstoctrlandescape/" class="pagination-single__left">
+      <a href="https://eduuh.github.io/posts/jsupngoing/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Smart Caps Lock: Control and Escape functionality</div>      
+        <div class="pagination-single__left-title">Javascript deep Dive , Understanding the basic concepts</div>      
       </a>
     
     <div class="grow"></div>
@@ -2447,10 +2476,18 @@ document.addEventListener('DOMContentLoaded', function () {
     <li>
       <ul>
         <li><a href="#a-simpler-way-to-manage-your-dotfiles">A simpler way to manage your dotfiles</a></li>
-        <li><a href="#what-a-dotfile">What a dotfile</a></li>
-        <li><a href="#first-time-setup">First Time Setup</a></li>
-        <li><a href="#setting-up-a-new-machine">Setting Up a New Machine</a>
+        <li><a href="#what-are-dotfile">What are dotfile</a></li>
+        <li><a href="#git-bare-repository">Git bare Repository.</a></li>
+        <li><a href="#manage-your-dotfiles-with-bare-repository-first-time">Manage your dotfiles with bare repository (First Time).</a></li>
+        <li><a href="#requirements">Requirements.</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-the-conf-to-source-control">Adding the conf to Source control.</a>
+      <ul>
+        <li><a href="#setting-up-a-new-machine-with-existing-configuration">Setting Up a New Machine With existing Configuration.</a>
           <ul>
+            <li><a href="#method-1">Method 1</a></li>
+            <li><a href="#method-2">Method 2</a></li>
             <li><a href="#using-the-dotfiles-alias">Using the <code>dotfiles alias</code></a></li>
           </ul>
         </li>

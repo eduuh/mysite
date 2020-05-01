@@ -50,10 +50,9 @@
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
         <guid>https://eduuh.github.io/posts/mngdotfilelikeapro/</guid>
-        <description>A simpler way to manage your dotfiles Hello am edd I have been having trouble with configuration since i started using docker for my development.
-For consistecy and time saving , i decided it would be great to manage my dotfiles using git and github and when creating new enviroments.
+        <description>A simpler way to manage your dotfiles Hello am edd I have been having trouble with configuration since i started using docker for my development. For consistecy and time saving , i decided it would be great to manage my dotfiles using git and github and when creating new enviroments.
 I wrote the solution in this post, for easy reference if i need to in the future.
-What a dotfile Dotfile are file in the linux system that starts with a period.</description>
+What are dotfile Dotfile are file in the linux system that starts with a period.</description>
         
         <dc:creator>eduuh</dc:creator>
         <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -76,50 +75,6 @@ What a dotfile Dotfile are file in the linux system that starts with a period.</
           
             
               <category>linux</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Smart Caps Lock: Control and Escape functionality</title>
-        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
-        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
-        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows) Escape if you tap Caps Lock alone.
- Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
-GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
-        
-        <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/capslock.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>productivity</category>
-            
-          
-            
-              <category>vim</category>
-            
-          
-        
-        
-          
-            
-              <category>comandline</category>
-            
-          
-            
-              <category>linux</category>
-            
-          
-            
-              <category>windows</category>
             
           
         
@@ -291,6 +246,24 @@ After a bit we will have some exercise for you to practise what we were going th
  React React Native Dotnet core Linux Terminal  Maintainer A Self Taught Developer : Edwin Muraya Currenty A BSC Geomatic and Geospartial Information System Student at Dedan Kimathi University</description>
         
         <dc:creator>eduuh</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title></title>
+        <link>https://eduuh.github.io/posts/tmux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.github.io/posts/tmux/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
         
         
         
