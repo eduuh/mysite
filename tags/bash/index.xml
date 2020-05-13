@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>bash on eduuh</title>
+    <link>https://eduuh.github.io/tags/bash/</link>
+    <description>Recent content in bash on eduuh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
+    <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 11 Apr 2020 16:02:40 +0300</lastBuildDate>
+    
+        <atom:link href="https://eduuh.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Learn CLI and Bash Scripting</title>
+        <link>https://eduuh.github.io/posts/bashscripting/</link>
+        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Sat, 11 Apr 2020 16:02:40 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/bashscripting/</guid>
+        <description>The Linux Command Line Before you can dive into working with the linux command line and shells, you should first understand what linux is, where it came from and how it works.
+ What is Linux  If you&amp;rsquo;ve never worked with Linux before, you may be confused about so many different versions are available.
+First, Four main part makes up a linux system:
+ The Linux kernel The Gnu Utilities A graphical desktop enviroment Application software.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/bash.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+              <category>bash</category>
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

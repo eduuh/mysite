@@ -44,6 +44,43 @@
 
       
       <item>
+        <title>Mappingcapstoctrlandescape</title>
+        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
+        <pubDate>Thu, 19 Mar 2020 07:41:06 -0700</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Thu, 19 Mar 2020 07:41:06 -0700</atom:modified>
+        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
+        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows)  Send Escape if you tap Caps Lock alone. Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
+GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Managing Dotfiles Like a Pro</title>
         <link>https://eduuh.github.io/posts/mngdotfilelikeapro/</link>
         <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
@@ -82,115 +119,40 @@ What are dotfile Dotfile are file in the linux system that starts with a period.
       </item>
       
       <item>
-        <title>Javascript deep Dive , Understanding the basic concepts</title>
-        <link>https://eduuh.github.io/posts/jsupngoing/</link>
-        <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
+        <title>Learn CLI and Bash Scripting</title>
+        <link>https://eduuh.github.io/posts/bashscripting/</link>
+        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Sat, 08 Feb 2020 08:13:40 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/jsupngoing/</guid>
-        <description>Javascript deep dive tutorial This note are inspired by KYLE SIMPSON javascrip book series. I like how the ideas in the book are shared.
-I have being doing c# for the backend and to complete my journey for becoming a full stack developer.
-I needed to do alot of javascript, so immediately i started using typescript for my web development and i would say the experience with typescript is supper great.</description>
+        <atom:modified>Sat, 11 Apr 2020 16:02:40 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/bashscripting/</guid>
+        <description>The Linux Command Line Before you can dive into working with the linux command line and shells, you should first understand what linux is, where it came from and how it works.
+ What is Linux  If you&amp;rsquo;ve never worked with Linux before, you may be confused about so many different versions are available.
+First, Four main part makes up a linux system:
+ The Linux kernel The Gnu Utilities A graphical desktop enviroment Application software.</description>
         
         <dc:creator>eduuh</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>backend</category>
-            
-          
-            
-              <category>frontend</category>
-            
-          
-        
-        
-          
-            
-              <category>programming</category>
-            
-          
-            
-              <category>Js</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Quickstart to Installing React and React ES6 Review</title>
-        <link>https://eduuh.github.io/posts/gettingstartedwithreact/</link>
-        <pubDate>Wed, 29 Jan 2020 05:16:56 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 29 Jan 2020 05:16:56 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/gettingstartedwithreact/</guid>
-        <description>Quickstart to React  React is a Javascript library created by Facebook. React is a User Interface (UI) library. React is a tool for building UI components React is used to build single page components React allow us to create reusable components.
-You see how i repeat myself here. You get the point Its react! am writing about.  Before jumping to react you will need to have the basics of the following:</description>
-        
-        <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/react.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.github.ioimages/bash.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
             
-              <category>React</category>
+              <category>productivity</category>
+            
+          
+            
+              <category>bash</category>
             
           
         
         
           
             
-              <category>Javascript</category>
+              <category>comandline</category>
             
           
             
-              <category>Frontend</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>JavaScript Algorithm and Data Structures</title>
-        <link>https://eduuh.github.io/posts/jsargorithms/</link>
-        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Sun, 26 Jan 2020 20:40:22 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/jsargorithms/</guid>
-        <description>Algorithms What makes an algorithm fast? To answer this question, it tend to be grouped in two categories. With respect to input size
-and also assuming the worst case scenario.
- Time complexity Space Comlexity  Time complexity Here we answer the question of how many primitive operations are executed?
-Time complexity of an algorithm signifies the total time required by the program to run to completion. The tim complexity of algorithms is</description>
-        
-        <dc:creator>eduuh</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Js</category>
-            
-          
-            
-              <category>DataStructures</category>
-            
-          
-        
-        
-          
-            
-              <category>JavaScript</category>
-            
-          
-            
-              <category>Development</category>
+              <category>linux</category>
             
           
         

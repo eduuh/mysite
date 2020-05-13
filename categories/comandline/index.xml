@@ -14,13 +14,50 @@
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 11:37:37 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 16:02:40 +0300</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/categories/comandline/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Mappingcapstoctrlandescape</title>
+        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
+        <pubDate>Thu, 19 Mar 2020 07:41:06 -0700</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Thu, 19 Mar 2020 07:41:06 -0700</atom:modified>
+        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
+        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows)  Send Escape if you tap Caps Lock alone. Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
+GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Managing Dotfiles Like a Pro</title>
@@ -43,6 +80,47 @@ What are dotfile Dotfile are file in the linux system that starts with a period.
               <category>productivity</category>
             
           
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Learn CLI and Bash Scripting</title>
+        <link>https://eduuh.github.io/posts/bashscripting/</link>
+        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Sat, 11 Apr 2020 16:02:40 +0300</atom:modified>
+        <guid>https://eduuh.github.io/posts/bashscripting/</guid>
+        <description>The Linux Command Line Before you can dive into working with the linux command line and shells, you should first understand what linux is, where it came from and how it works.
+ What is Linux  If you&amp;rsquo;ve never worked with Linux before, you may be confused about so many different versions are available.
+First, Four main part makes up a linux system:
+ The Linux kernel The Gnu Utilities A graphical desktop enviroment Application software.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.github.ioimages/bash.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+              <category>bash</category>
             
           
         

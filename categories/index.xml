@@ -14,7 +14,7 @@
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 11:37:37 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 16:02:40 +0300</lastBuildDate>
     
         <atom:link href="https://eduuh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,7 +25,7 @@
       <item>
         <title>comandline</title>
         <link>https://eduuh.github.io/categories/comandline/</link>
-        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         
         <guid>https://eduuh.github.io/categories/comandline/</guid>
@@ -43,100 +43,10 @@
       <item>
         <title>linux</title>
         <link>https://eduuh.github.io/categories/linux/</link>
-        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         
         <guid>https://eduuh.github.io/categories/linux/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Js</title>
-        <link>https://eduuh.github.io/categories/js/</link>
-        <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        
-        <guid>https://eduuh.github.io/categories/js/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>programming</title>
-        <link>https://eduuh.github.io/categories/programming/</link>
-        <pubDate>Sat, 08 Feb 2020 08:13:40 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        
-        <guid>https://eduuh.github.io/categories/programming/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Frontend</title>
-        <link>https://eduuh.github.io/categories/frontend/</link>
-        <pubDate>Wed, 29 Jan 2020 05:16:56 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        
-        <guid>https://eduuh.github.io/categories/frontend/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Javascript</title>
-        <link>https://eduuh.github.io/categories/javascript/</link>
-        <pubDate>Wed, 29 Jan 2020 05:16:56 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        
-        <guid>https://eduuh.github.io/categories/javascript/</guid>
-        <description></description>
-        
-        <dc:creator>Eduuh Muraya</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Development</title>
-        <link>https://eduuh.github.io/categories/development/</link>
-        <pubDate>Sun, 26 Jan 2020 20:40:22 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        
-        <guid>https://eduuh.github.io/categories/development/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
