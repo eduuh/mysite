@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>git on eduuh</title>
-    <link>https://eduuh.github.io/tags/git/</link>
+    <link>https://eduuh.codes/tags/git/</link>
     <description>Recent content in git on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,24 +15,68 @@
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 19:45:20 +0900</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
+        <title>Dotfiles sync with bare repository</title>
+        <link>https://eduuh.codes/posts/dotfilesmanagement/</link>
+        <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        <atom:modified>Mon, 29 Jun 2020 08:29:17 +0000</atom:modified>
+        <guid>https://eduuh.codes/posts/dotfilesmanagement/</guid>
+        <description>A simpler way to manage your dotfiles Hey there am edd. I was having trouble with configuration files since I started using docker for my development. I realized I was reconfiguring each time I recreated a new environment. For consistecy and time saving , I decided it would be great if could sync my dotfiles using git and github and when creating new enviroments.
+I wrote the solution in this post, for easy reference if i need to in the future.</description>
+        
+        <dc:creator>eduuh</dc:creator>
+        <media:content url="https://eduuh.codesimages/dotfiles.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>productivity</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>git</category>
+            
+          
+        
+        
+          
+            
+              <category>comandline</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>First</title>
-        <link>https://eduuh.github.io/presentation/gitworkshop/</link>
+        <link>https://eduuh.codes/presentation/gitworkshop/</link>
         <pubDate>Mon, 30 Mar 2020 19:45:20 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Mon, 30 Mar 2020 19:45:20 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/gitworkshop/</guid>
+        <atom:modified>Thu, 20 Feb 2020 11:16:07 +0300</atom:modified>
+        <guid>https://eduuh.codes/presentation/gitworkshop/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -64,17 +108,17 @@
       
       <item>
         <title>Advanced Git WorkShop</title>
-        <link>https://eduuh.github.io/workshops/git/advancedgit/</link>
+        <link>https://eduuh.codes/workshops/git/advancedgit/</link>
         <pubDate>Wed, 19 Feb 2020 12:00:06 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 19 Feb 2020 12:00:06 +0900</atom:modified>
-        <guid>https://eduuh.github.io/workshops/git/advancedgit/</guid>
+        <atom:modified>Mon, 01 Jun 2020 04:44:11 +0000</atom:modified>
+        <guid>https://eduuh.codes/workshops/git/advancedgit/</guid>
         <description>Advanced Git WorkShop Hello am Edd and I will be taking you through this workshop.By the end of this workshop, if you follow along you have a completely different understanding of Git and how you work with it.
 How we will go along I will start will a short demo on the command line to introduce the new material.
 After a bit we will have some exercise for you to practise what we were going through.</description>
         
         <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

@@ -3,155 +3,233 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eduuh.github.io/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+    <loc>https://eduuh.codes/showcase/eduuh/dotfiles/</loc>
+    <lastmod>2020-06-06T18:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/showcase/hugo/hugo-theme-zdoc/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+    <loc>https://eduuh.codes/showcase/eduuh/personalsite/</loc>
+    <lastmod>2020-06-06T18:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</loc>
-    <lastmod>2020-03-19T07:41:06-07:00</lastmod>
+    <loc>https://eduuh.codes/posts/ranger/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/mngdotfilelikeapro/</loc>
-    <lastmod>2020-02-12T11:37:37+03:00</lastmod>
+    <loc>https://eduuh.codes/posts/fzfinstallationusage/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/bash/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/posts/remaps/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/categories/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/posts/dotfilesmanagement/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/categories/comandline/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/categories/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/categories/linux/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/posts/cheatsheet/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/tags/linux/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/productivity/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/categories/productivity/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/series/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/bashscripting/</loc>
-    <lastmod>2020-04-11T16:02:40+03:00</lastmod>
+    <loc>https://eduuh.codes/tags/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/presentation/gitworkshop/</loc>
-    <lastmod>2020-03-30T19:45:20+09:00</lastmod>
+    <loc>https://eduuh.codes/series/workspace/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/git/</loc>
-    <lastmod>2020-03-30T19:45:20+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/commandline/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/github/</loc>
-    <lastmod>2020-03-30T19:45:20+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/productivity/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/presentation/</loc>
-    <lastmod>2020-03-30T19:45:20+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/tmux/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/source/</loc>
-    <lastmod>2020-03-30T19:45:20+09:00</lastmod>
+    <loc>https://eduuh.codes/series/tmux/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/workshops/git/advancedgit/</loc>
-    <lastmod>2020-02-19T12:00:06+09:00</lastmod>
+    <loc>https://eduuh.codes/workshops/tmux/tmux/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/version-control/</loc>
-    <lastmod>2020-02-19T12:00:06+09:00</lastmod>
+    <loc>https://eduuh.codes/workshops/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/workshops/</loc>
-    <lastmod>2020-02-19T12:00:06+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/cli/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/showcase/hugo/</loc>
-    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
+    <loc>https://eduuh.codes/categories/comandline/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/showcase/</loc>
-    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
+    <loc>https://eduuh.codes/categories/linux/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/gallery/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/ranger/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/gallery/hackassembly/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <loc>https://eduuh.codes/tags/comandline/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/gallery/photo/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <loc>https://eduuh.codes/categories/fuzzyfinder/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <loc>https://eduuh.codes/presentation/gitworkshop/</loc>
+    <lastmod>2020-02-20T11:16:07+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>https://eduuh.codes/tags/git/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>https://eduuh.codes/tags/github/</loc>
+    <lastmod>2020-06-01T04:44:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/posts/tmux/</loc>
+    <loc>https://eduuh.codes/tags/source/</loc>
+    <lastmod>2020-02-20T11:16:07+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/tags/index/</loc>
+    <loc>https://eduuh.codes/tags/colemak/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eduuh.github.io/series/</loc>
+    <loc>https://eduuh.codes/tags/keyboard/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/categories/keyboardcentric/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/tags/touchtyping/</loc>
+    <lastmod>2020-06-29T08:29:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/workshops/git/advancedgit/</loc>
+    <lastmod>2020-06-01T04:44:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/tags/version-control/</loc>
+    <lastmod>2020-06-01T04:44:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/showcase/eduuh/</loc>
+    <lastmod>2020-05-26T00:09:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/showcase/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/gallery/</loc>
+    <lastmod>2020-02-19T19:54:06+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/gallery/hackassembly/</loc>
+    <lastmod>2020-02-19T19:54:06+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/gallery/photo/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/archive/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/</loc>
+    <lastmod>2020-06-04T21:53:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/workshops/typescript/typescript/</loc>
+    <lastmod>2020-06-27T04:41:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/tags/index/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/posts/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduuh.codes/presentation/</loc>
+    <lastmod>2020-02-19T18:19:31+03:00</lastmod>
   </url>
   
 </urlset>

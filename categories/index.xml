@@ -7,28 +7,47 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on eduuh</title>
-    <link>https://eduuh.github.io/categories/</link>
+    <link>https://eduuh.codes/categories/</link>
     <description>Recent content in Categories on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 11 Apr 2020 16:02:40 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 16:03:42 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>comandline</title>
-        <link>https://eduuh.github.io/categories/comandline/</link>
-        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
+        <title>Productivity</title>
+        <link>https://eduuh.codes/categories/productivity/</link>
+        <pubDate>Sun, 28 Jun 2020 16:03:42 +0000</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         
-        <guid>https://eduuh.github.io/categories/comandline/</guid>
+        <guid>https://eduuh.codes/categories/productivity/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>comandline</title>
+        <link>https://eduuh.codes/categories/comandline/</link>
+        <pubDate>Wed, 27 May 2020 15:03:52 +0000</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.codes/categories/comandline/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
@@ -42,11 +61,47 @@
       
       <item>
         <title>linux</title>
-        <link>https://eduuh.github.io/categories/linux/</link>
-        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
+        <link>https://eduuh.codes/categories/linux/</link>
+        <pubDate>Wed, 27 May 2020 15:03:52 +0000</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
         
-        <guid>https://eduuh.github.io/categories/linux/</guid>
+        <guid>https://eduuh.codes/categories/linux/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Fuzzyfinder</title>
+        <link>https://eduuh.codes/categories/fuzzyfinder/</link>
+        <pubDate>Sun, 19 Apr 2020 07:41:06 -0700</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.codes/categories/fuzzyfinder/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>KeyboardCentric</title>
+        <link>https://eduuh.codes/categories/keyboardcentric/</link>
+        <pubDate>Thu, 19 Mar 2020 07:41:06 -0700</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.codes/categories/keyboardcentric/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>

@@ -7,19 +7,57 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on eduuh</title>
-    <link>https://eduuh.github.io/series/</link>
+    <link>https://eduuh.codes/series/</link>
     <description>Recent content in Series on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 28 Jun 2020 16:03:42 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>workspace</title>
+        <link>https://eduuh.codes/series/workspace/</link>
+        <pubDate>Sun, 28 Jun 2020 16:03:42 +0000</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.codes/series/workspace/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>tmux</title>
+        <link>https://eduuh.codes/series/tmux/</link>
+        <pubDate>Fri, 26 Jun 2020 20:51:14 +0000</pubDate>
+        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
+        
+        <guid>https://eduuh.codes/series/tmux/</guid>
+        <description></description>
+        
+        <dc:creator>Eduuh Muraya</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
 
     

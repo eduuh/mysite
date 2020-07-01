@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on eduuh</title>
-    <link>https://eduuh.github.io/gallery/</link>
+    <link>https://eduuh.codes/gallery/</link>
     <description>Recent content in Galleries on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,8 +15,9 @@
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +25,11 @@
       
       <item>
         <title>HackAssembly</title>
-        <link>https://eduuh.github.io/gallery/hackassembly/</link>
+        <link>https://eduuh.codes/gallery/hackassembly/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>https://eduuh.github.io/gallery/hackassembly/</guid>
+        <atom:modified>Wed, 19 Feb 2020 19:54:06 +0300</atom:modified>
+        <guid>https://eduuh.codes/gallery/hackassembly/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
@@ -42,15 +43,15 @@
       
       <item>
         <title>Photo</title>
-        <link>https://eduuh.github.io/gallery/photo/</link>
+        <link>https://eduuh.codes/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>https://eduuh.github.io/gallery/photo/</guid>
+        <atom:modified>Wed, 19 Feb 2020 18:19:31 +0300</atom:modified>
+        <guid>https://eduuh.codes/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

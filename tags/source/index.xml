@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>source on eduuh</title>
-    <link>https://eduuh.github.io/tags/source/</link>
+    <link>https://eduuh.codes/tags/source/</link>
     <description>Recent content in source on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,8 +15,9 @@
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 19:45:20 +0900</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/tags/source/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/tags/source/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +25,15 @@
       
       <item>
         <title>First</title>
-        <link>https://eduuh.github.io/presentation/gitworkshop/</link>
+        <link>https://eduuh.codes/presentation/gitworkshop/</link>
         <pubDate>Mon, 30 Mar 2020 19:45:20 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Mon, 30 Mar 2020 19:45:20 +0900</atom:modified>
-        <guid>https://eduuh.github.io/presentation/gitworkshop/</guid>
+        <atom:modified>Thu, 20 Feb 2020 11:16:07 +0300</atom:modified>
+        <guid>https://eduuh.codes/presentation/gitworkshop/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/git/giticon.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

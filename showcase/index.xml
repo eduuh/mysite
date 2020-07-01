@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Showcase overview on eduuh</title>
-    <link>https://eduuh.github.io/showcase/</link>
+    <link>https://eduuh.codes/showcase/</link>
     <description>Recent content in Showcase overview on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,20 +15,21 @@
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 15:43:38 +0900</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/showcase/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>Hugo</title>
-        <link>https://eduuh.github.io/showcase/hugo/</link>
+        <title>eduuh</title>
+        <link>https://eduuh.codes/showcase/eduuh/</link>
         <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
-        <guid>https://eduuh.github.io/showcase/hugo/</guid>
+        <atom:modified>Tue, 26 May 2020 00:09:12 +0000</atom:modified>
+        <guid>https://eduuh.codes/showcase/eduuh/</guid>
         <description></description>
         
         <dc:creator>Eduuh Muraya</dc:creator>

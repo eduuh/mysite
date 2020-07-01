@@ -7,33 +7,36 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>comandline on eduuh</title>
-    <link>https://eduuh.github.io/categories/comandline/</link>
+    <link>https://eduuh.codes/categories/comandline/</link>
     <description>Recent content in comandline on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</managingEditor>
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 11 Apr 2020 16:02:40 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 15:03:52 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/categories/comandline/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/categories/comandline/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>Mappingcapstoctrlandescape</title>
-        <link>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</link>
-        <pubDate>Thu, 19 Mar 2020 07:41:06 -0700</pubDate>
+        <title>Ranger - Visual file manager</title>
+        <link>https://eduuh.codes/posts/ranger/</link>
+        <pubDate>Wed, 27 May 2020 15:03:52 +0000</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Thu, 19 Mar 2020 07:41:06 -0700</atom:modified>
-        <guid>https://eduuh.github.io/posts/mappingcapstoctrlandescape/</guid>
-        <description>Smart Caps Lock: Remap to Control AND Escape (Linux, Mac, Windows)  Send Escape if you tap Caps Lock alone. Send Control if you press Caps Lock with another key. send caps lock if you press both shift keys together  For vim , emacs and normal day typing
-GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configure modifier keys to act as other keys when pressed and released on their own.</description>
+        <atom:modified>Mon, 29 Jun 2020 08:29:17 +0000</atom:modified>
+        <guid>https://eduuh.codes/posts/ranger/</guid>
+        <description>Ranger Ranger is a console / terminal visual file manager written in Python and with VI key bindings. Ranger is a file manager with a different graphical interface.
+Ranger use the Miller colums visual modes support up to nine tabs and most of the key bindings are the same off vi/ vim text editor.
+Objective. Install and configure the Ranger file manager.
+ Installation.  To install ranger is pretty simple using your package manager.</description>
         
         <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/ranger.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -42,6 +45,12 @@ GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configu
               <category>productivity</category>
             
           
+            
+              <category>ranger</category>
+            
+          
+            
+              <category>cli</category>
             
           
         
@@ -60,18 +69,17 @@ GNU/Linux Step 1. Install XCAPE Install XCAPE (xcape). (Linux utility to configu
       </item>
       
       <item>
-        <title>Managing Dotfiles Like a Pro</title>
-        <link>https://eduuh.github.io/posts/mngdotfilelikeapro/</link>
+        <title>Dotfiles sync with bare repository</title>
+        <link>https://eduuh.codes/posts/dotfilesmanagement/</link>
         <pubDate>Wed, 12 Feb 2020 11:37:37 +0300</pubDate>
         <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Wed, 12 Feb 2020 11:37:37 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/mngdotfilelikeapro/</guid>
-        <description>A simpler way to manage your dotfiles Hello am edd I have been having trouble with configuration since i started using docker for my development. For consistecy and time saving , i decided it would be great to manage my dotfiles using git and github and when creating new enviroments.
-I wrote the solution in this post, for easy reference if i need to in the future.
-What are dotfile Dotfile are file in the linux system that starts with a period.</description>
+        <atom:modified>Mon, 29 Jun 2020 08:29:17 +0000</atom:modified>
+        <guid>https://eduuh.codes/posts/dotfilesmanagement/</guid>
+        <description>A simpler way to manage your dotfiles Hey there am edd. I was having trouble with configuration files since I started using docker for my development. I realized I was reconfiguring each time I recreated a new environment. For consistecy and time saving , I decided it would be great if could sync my dotfiles using git and github and when creating new enviroments.
+I wrote the solution in this post, for easy reference if i need to in the future.</description>
         
         <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/configurations.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://eduuh.codesimages/dotfiles.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -81,46 +89,11 @@ What are dotfile Dotfile are file in the linux system that starts with a period.
             
           
             
-          
-        
-        
-          
-            
-              <category>comandline</category>
+              <category>cli</category>
             
           
             
-              <category>linux</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Learn CLI and Bash Scripting</title>
-        <link>https://eduuh.github.io/posts/bashscripting/</link>
-        <pubDate>Sat, 11 Apr 2020 16:02:40 +0300</pubDate>
-        <author>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</author>
-        <atom:modified>Sat, 11 Apr 2020 16:02:40 +0300</atom:modified>
-        <guid>https://eduuh.github.io/posts/bashscripting/</guid>
-        <description>The Linux Command Line Before you can dive into working with the linux command line and shells, you should first understand what linux is, where it came from and how it works.
- What is Linux  If you&amp;rsquo;ve never worked with Linux before, you may be confused about so many different versions are available.
-First, Four main part makes up a linux system:
- The Linux kernel The Gnu Utilities A graphical desktop enviroment Application software.</description>
-        
-        <dc:creator>eduuh</dc:creator>
-        <media:content url="https://eduuh.github.ioimages/bash.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>productivity</category>
-            
-          
-            
-              <category>bash</category>
+              <category>git</category>
             
           
         

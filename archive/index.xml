@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Archive on eduuh</title>
-    <link>https://eduuh.github.io/archive/</link>
+    <link>https://eduuh.codes/archive/</link>
     <description>Recent content in Archive on eduuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,8 +15,9 @@
     <webMaster>edwinkamaumuraya0@outlook.com (Eduuh Muraya)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://eduuh.github.io/archive/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://eduuh.codes/archive/index.xml" rel="self" type="application/rss+xml" />
     
     
     
